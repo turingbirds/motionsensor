@@ -92,7 +92,7 @@ Overview
 
 The device is based around a compact radar module. Radar waves penetrate glass and other materials, allowing the device to operate completely hidden from sight, unlike traditional passive infrared (PIR) motion detectors. The principle of operation for motion detection is the doppler effect. The module acts simultaneously as a sender and receiver of radar waves. Part of the emitted waves are reflected in the environment and fall back onto the sensor. If, meanwhile, an object in the environment has a motion component normal to the sensor, a doppler shift will be introduced in the reflected radio waves, proportional to the velocity of the object. The resulting frequency change (between emitted and received frequency) is demodulated by the module and output as a signal in the audio band. The rest of the device amplifies this signal and digitises it for further processing with the microcontroller and (optionally) relay to a connected USB host as an audio stream.
 
-Many radar module are commercially available for less than $10. This repository contains all the information necessary to build a complete USB/standalone motion detector based on such a module.
+Many radar modules are commercially available for less than $10. This repository contains all the information necessary to build a complete USB/standalone motion detector based on such a module.
 
 
 USB operation
