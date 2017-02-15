@@ -1,0 +1,33 @@
+<html>
+<head>
+
+<script src="jquery-1.8.3.min.js"></script> 
+<script>
+function swap_img_waterfall() {
+	d = new Date();
+	$("#img_doppler_waterfall").attr("src", "http://127.0.0.1:8080/doppler_radio.png?"+d.getTime());
+}
+
+function swap_img_log() {
+	d = new Date();
+	time.innerHTML = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
+	$("#img_doppler_log").attr("src", "http://127.0.0.1:8092/doppler_radio.png?"+d.getTime());
+}
+
+$(document).ready(function() {
+	window.setInterval(swap_img_log, 1000);
+	window.setInterval(swap_img_waterfall, 250);
+});
+</script>
+
+</head>
+<body>
+
+Doppler Radio (<span id="time"></span>)
+
+<div><img id="img_doppler_log" border="1" src=""></div>
+<div><img id="img_doppler_waterfall" border="1" src=""></div>
+
+</body>
+</html>
+

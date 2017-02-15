@@ -1,0 +1,2180 @@
+Product: MDK-ARM Standard 5.10
+Component: ARM Compiler 5.04 update 1 (build 49)
+Tool: armlink [5040049]
+
+==============================================================================
+
+Section Cross References
+
+    startup_stm32f10x_hd.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_hd.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_hd.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_hd.o(RESET) refers to startup_stm32f10x_hd.o(STACK) for __initial_sp
+    startup_stm32f10x_hd.o(RESET) refers to startup_stm32f10x_hd.o(.text) for Reset_Handler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.NMI_Handler) for NMI_Handler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.HardFault_Handler) for HardFault_Handler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.MemManage_Handler) for MemManage_Handler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.BusFault_Handler) for BusFault_Handler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.UsageFault_Handler) for UsageFault_Handler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.SVC_Handler) for SVC_Handler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.DebugMon_Handler) for DebugMon_Handler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.PendSV_Handler) for PendSV_Handler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.SysTick_Handler) for SysTick_Handler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.WWDG_IRQHandler) for WWDG_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.PVD_IRQHandler) for PVD_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.TAMPER_IRQHandler) for TAMPER_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.RTC_IRQHandler) for RTC_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.FLASH_IRQHandler) for FLASH_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.RCC_IRQHandler) for RCC_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.EXTI0_IRQHandler) for EXTI0_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.EXTI1_IRQHandler) for EXTI1_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.EXTI2_IRQHandler) for EXTI2_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.EXTI3_IRQHandler) for EXTI3_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.EXTI4_IRQHandler) for EXTI4_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.DMA1_Channel1_IRQHandler) for DMA1_Channel1_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.DMA1_Channel2_IRQHandler) for DMA1_Channel2_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.DMA1_Channel3_IRQHandler) for DMA1_Channel3_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.DMA1_Channel4_IRQHandler) for DMA1_Channel4_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.DMA1_Channel5_IRQHandler) for DMA1_Channel5_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.DMA1_Channel6_IRQHandler) for DMA1_Channel6_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.DMA1_Channel7_IRQHandler) for DMA1_Channel7_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.ADC1_2_IRQHandler) for ADC1_2_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.USB_HP_CAN1_TX_IRQHandler) for USB_HP_CAN1_TX_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.USB_LP_CAN1_RX0_IRQHandler) for USB_LP_CAN1_RX0_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.CAN1_RX1_IRQHandler) for CAN1_RX1_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.CAN1_SCE_IRQHandler) for CAN1_SCE_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.EXTI9_5_IRQHandler) for EXTI9_5_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.TIM1_BRK_IRQHandler) for TIM1_BRK_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.TIM1_UP_IRQHandler) for TIM1_UP_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.TIM1_TRG_COM_IRQHandler) for TIM1_TRG_COM_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.TIM1_CC_IRQHandler) for TIM1_CC_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.TIM2_IRQHandler) for TIM2_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.TIM3_IRQHandler) for TIM3_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.TIM4_IRQHandler) for TIM4_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.I2C1_EV_IRQHandler) for I2C1_EV_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.I2C1_ER_IRQHandler) for I2C1_ER_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.I2C2_EV_IRQHandler) for I2C2_EV_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.I2C2_ER_IRQHandler) for I2C2_ER_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.SPI1_IRQHandler) for SPI1_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.SPI2_IRQHandler) for SPI2_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.USART1_IRQHandler) for USART1_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.USART2_IRQHandler) for USART2_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.USART3_IRQHandler) for USART3_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.EXTI15_10_IRQHandler) for EXTI15_10_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.RTCAlarm_IRQHandler) for RTCAlarm_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.USBWakeUp_IRQHandler) for USBWakeUp_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.TIM8_BRK_IRQHandler) for TIM8_BRK_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.TIM8_UP_IRQHandler) for TIM8_UP_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.TIM8_TRG_COM_IRQHandler) for TIM8_TRG_COM_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.TIM8_CC_IRQHandler) for TIM8_CC_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.ADC3_IRQHandler) for ADC3_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.FSMC_IRQHandler) for FSMC_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.SDIO_IRQHandler) for SDIO_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.TIM5_IRQHandler) for TIM5_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.SPI3_IRQHandler) for SPI3_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.UART4_IRQHandler) for UART4_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.UART5_IRQHandler) for UART5_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.TIM6_IRQHandler) for TIM6_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.TIM7_IRQHandler) for TIM7_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.DMA2_Channel1_IRQHandler) for DMA2_Channel1_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.DMA2_Channel2_IRQHandler) for DMA2_Channel2_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.DMA2_Channel3_IRQHandler) for DMA2_Channel3_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.DMA2_Channel4_5_IRQHandler) for DMA2_Channel4_5_IRQHandler
+    startup_stm32f10x_hd.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_hd.o(.text) refers to system_stm32f10x.o(i.SystemInit) for SystemInit
+    startup_stm32f10x_hd.o(.text) refers to __main.o(!!!main) for __main
+    startup_stm32f10x_hd.o(.text) refers to startup_stm32f10x_hd.o(HEAP) for Heap_Mem
+    startup_stm32f10x_hd.o(.text) refers to startup_stm32f10x_hd.o(STACK) for Stack_Mem
+    system_stm32f10x.o(i.SystemCoreClockUpdate) refers to system_stm32f10x.o(.data) for .data
+    system_stm32f10x.o(i.SystemInit) refers to system_stm32f10x.o(i.SetSysClockTo48) for SetSysClockTo48
+    stm32f10x_gpio.o(i.GPIO_AFIODeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_gpio.o(i.GPIO_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_rcc.o(i.RCC_GetClocksFreq) refers to stm32f10x_rcc.o(.data) for .data
+    stm32f10x_rcc.o(i.RCC_WaitForHSEStartUp) refers to stm32f10x_rcc.o(i.RCC_GetFlagStatus) for RCC_GetFlagStatus
+    stm32f10x_usart.o(i.USART_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_usart.o(i.USART_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd) for RCC_APB1PeriphResetCmd
+    stm32f10x_usart.o(i.USART_Init) refers to stm32f10x_rcc.o(i.RCC_GetClocksFreq) for RCC_GetClocksFreq
+    stm32f10x_tim.o(i.TIM_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd) for RCC_APB1PeriphResetCmd
+    stm32f10x_tim.o(i.TIM_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_tim.o(i.TIM_ETRClockMode1Config) refers to stm32f10x_tim.o(i.TIM_ETRConfig) for TIM_ETRConfig
+    stm32f10x_tim.o(i.TIM_ETRClockMode2Config) refers to stm32f10x_tim.o(i.TIM_ETRConfig) for TIM_ETRConfig
+    stm32f10x_tim.o(i.TIM_ICInit) refers to stm32f10x_tim.o(i.TI1_Config) for TI1_Config
+    stm32f10x_tim.o(i.TIM_ICInit) refers to stm32f10x_tim.o(i.TIM_SetIC1Prescaler) for TIM_SetIC1Prescaler
+    stm32f10x_tim.o(i.TIM_ICInit) refers to stm32f10x_tim.o(i.TI2_Config) for TI2_Config
+    stm32f10x_tim.o(i.TIM_ICInit) refers to stm32f10x_tim.o(i.TIM_SetIC2Prescaler) for TIM_SetIC2Prescaler
+    stm32f10x_tim.o(i.TIM_ICInit) refers to stm32f10x_tim.o(i.TIM_SetIC3Prescaler) for TIM_SetIC3Prescaler
+    stm32f10x_tim.o(i.TIM_ICInit) refers to stm32f10x_tim.o(i.TIM_SetIC4Prescaler) for TIM_SetIC4Prescaler
+    stm32f10x_tim.o(i.TIM_ITRxExternalClockConfig) refers to stm32f10x_tim.o(i.TIM_SelectInputTrigger) for TIM_SelectInputTrigger
+    stm32f10x_tim.o(i.TIM_PWMIConfig) refers to stm32f10x_tim.o(i.TI2_Config) for TI2_Config
+    stm32f10x_tim.o(i.TIM_PWMIConfig) refers to stm32f10x_tim.o(i.TIM_SetIC2Prescaler) for TIM_SetIC2Prescaler
+    stm32f10x_tim.o(i.TIM_PWMIConfig) refers to stm32f10x_tim.o(i.TI1_Config) for TI1_Config
+    stm32f10x_tim.o(i.TIM_PWMIConfig) refers to stm32f10x_tim.o(i.TIM_SetIC1Prescaler) for TIM_SetIC1Prescaler
+    stm32f10x_tim.o(i.TIM_TIxExternalClockConfig) refers to stm32f10x_tim.o(i.TI1_Config) for TI1_Config
+    stm32f10x_tim.o(i.TIM_TIxExternalClockConfig) refers to stm32f10x_tim.o(i.TIM_SelectInputTrigger) for TIM_SelectInputTrigger
+    stm32f10x_tim.o(i.TIM_TIxExternalClockConfig) refers to stm32f10x_tim.o(i.TI2_Config) for TI2_Config
+    stm32f10x_adc.o(i.ADC_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_spi.o(i.I2S_Init) refers to stm32f10x_rcc.o(i.RCC_GetClocksFreq) for RCC_GetClocksFreq
+    stm32f10x_spi.o(i.SPI_I2S_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_spi.o(i.SPI_I2S_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd) for RCC_APB1PeriphResetCmd
+    usb_core.o(i.DataStageIn) refers to usb_regs.o(i.GetEPTxAddr) for GetEPTxAddr
+    usb_core.o(i.DataStageIn) refers to usb_mem.o(i.UserToPMABufferCopy) for UserToPMABufferCopy
+    usb_core.o(i.DataStageIn) refers to usb_regs.o(i.SetEPTxCount) for SetEPTxCount
+    usb_core.o(i.DataStageIn) refers to usb_init.o(.data) for pInformation
+    usb_core.o(i.DataStageIn) refers to usb_int.o(.data) for SaveTState
+    usb_core.o(i.DataStageIn) refers to usb_core.o(.data) for .data
+    usb_core.o(i.DataStageOut) refers to usb_regs.o(i.GetEPRxAddr) for GetEPRxAddr
+    usb_core.o(i.DataStageOut) refers to usb_mem.o(i.PMAToUserBufferCopy) for PMAToUserBufferCopy
+    usb_core.o(i.DataStageOut) refers to usb_regs.o(i.SetEPTxCount) for SetEPTxCount
+    usb_core.o(i.DataStageOut) refers to usb_init.o(.data) for pInformation
+    usb_core.o(i.DataStageOut) refers to usb_int.o(.data) for SaveTState
+    usb_core.o(i.Data_Setup0) refers to usb_core.o(i.DataStageIn) for DataStageIn
+    usb_core.o(i.Data_Setup0) refers to usb_init.o(.data) for pInformation
+    usb_core.o(i.Data_Setup0) refers to usb_core.o(i.Standard_GetStatus) for Standard_GetStatus
+    usb_core.o(i.Data_Setup0) refers to usb_prop.o(.data) for Device_Table
+    usb_core.o(i.Data_Setup0) refers to usb_core.o(i.Standard_GetConfiguration) for Standard_GetConfiguration
+    usb_core.o(i.Data_Setup0) refers to usb_core.o(i.Standard_GetInterface) for Standard_GetInterface
+    usb_core.o(i.Data_Setup0) refers to usb_core.o(.data) for .data
+    usb_core.o(i.Data_Setup0) refers to usb_int.o(.data) for SaveRState
+    usb_core.o(i.In0_Process) refers to usb_core.o(i.DataStageIn) for DataStageIn
+    usb_core.o(i.In0_Process) refers to usb_core.o(i.SetDeviceAddress) for SetDeviceAddress
+    usb_core.o(i.In0_Process) refers to usb_core.o(i.Post0_Process) for Post0_Process
+    usb_core.o(i.In0_Process) refers to usb_init.o(.data) for pInformation
+    usb_core.o(i.NoData_Setup0) refers to usb_core.o(i.Standard_SetConfiguration) for Standard_SetConfiguration
+    usb_core.o(i.NoData_Setup0) refers to usb_core.o(i.Standard_SetDeviceFeature) for Standard_SetDeviceFeature
+    usb_core.o(i.NoData_Setup0) refers to usb_core.o(i.Standard_SetInterface) for Standard_SetInterface
+    usb_core.o(i.NoData_Setup0) refers to usb_core.o(i.Standard_ClearFeature) for Standard_ClearFeature
+    usb_core.o(i.NoData_Setup0) refers to usb_core.o(i.Standard_SetEndPointFeature) for Standard_SetEndPointFeature
+    usb_core.o(i.NoData_Setup0) refers to usb_init.o(.data) for pInformation
+    usb_core.o(i.NoData_Setup0) refers to usb_int.o(.data) for SaveTState
+    usb_core.o(i.Out0_Process) refers to usb_core.o(i.DataStageOut) for DataStageOut
+    usb_core.o(i.Out0_Process) refers to usb_core.o(i.Post0_Process) for Post0_Process
+    usb_core.o(i.Out0_Process) refers to usb_init.o(.data) for pInformation
+    usb_core.o(i.Post0_Process) refers to usb_regs.o(i.SetEPRxCount) for SetEPRxCount
+    usb_core.o(i.Post0_Process) refers to usb_prop.o(.data) for Device_Property
+    usb_core.o(i.Post0_Process) refers to usb_init.o(.data) for pInformation
+    usb_core.o(i.Post0_Process) refers to usb_int.o(.data) for SaveRState
+    usb_core.o(i.SetDeviceAddress) refers to usb_prop.o(.data) for Device_Table
+    usb_core.o(i.Setup0_Process) refers to usb_regs.o(i.ByteSwap) for ByteSwap
+    usb_core.o(i.Setup0_Process) refers to usb_core.o(i.Data_Setup0) for Data_Setup0
+    usb_core.o(i.Setup0_Process) refers to usb_core.o(i.Post0_Process) for Post0_Process
+    usb_core.o(i.Setup0_Process) refers to usb_core.o(i.NoData_Setup0) for NoData_Setup0
+    usb_core.o(i.Setup0_Process) refers to usb_init.o(.data) for pInformation
+    usb_core.o(i.Standard_ClearFeature) refers to usb_regs.o(i.ClearDTOG_TX) for ClearDTOG_TX
+    usb_core.o(i.Standard_ClearFeature) refers to usb_regs.o(i.SetEPTxStatus) for SetEPTxStatus
+    usb_core.o(i.Standard_ClearFeature) refers to usb_regs.o(i.ClearDTOG_RX) for ClearDTOG_RX
+    usb_core.o(i.Standard_ClearFeature) refers to usb_regs.o(i.SetEPRxCount) for SetEPRxCount
+    usb_core.o(i.Standard_ClearFeature) refers to usb_init.o(.data) for pInformation
+    usb_core.o(i.Standard_ClearFeature) refers to usb_prop.o(.data) for Device_Table
+    usb_core.o(i.Standard_ClearFeature) refers to usb_prop.o(.data) for Device_Property
+    usb_core.o(i.Standard_GetConfiguration) refers to usb_init.o(.data) for pInformation
+    usb_core.o(i.Standard_GetDescriptorData) refers to usb_init.o(.data) for pInformation
+    usb_core.o(i.Standard_GetInterface) refers to usb_init.o(.data) for pInformation
+    usb_core.o(i.Standard_GetStatus) refers to usb_init.o(.data) for pInformation
+    usb_core.o(i.Standard_GetStatus) refers to usb_core.o(.data) for .data
+    usb_core.o(i.Standard_SetConfiguration) refers to usb_init.o(.data) for pInformation
+    usb_core.o(i.Standard_SetConfiguration) refers to usb_prop.o(.data) for Device_Table
+    usb_core.o(i.Standard_SetDeviceFeature) refers to usb_init.o(.data) for pInformation
+    usb_core.o(i.Standard_SetEndPointFeature) refers to usb_init.o(.data) for pInformation
+    usb_core.o(i.Standard_SetEndPointFeature) refers to usb_prop.o(.data) for Device_Table
+    usb_core.o(i.Standard_SetInterface) refers to usb_init.o(.data) for pInformation
+    usb_init.o(i.USB_Init) refers to usb_init.o(.bss) for .bss
+    usb_init.o(i.USB_Init) refers to usb_init.o(.data) for .data
+    usb_init.o(i.USB_Init) refers to usb_prop.o(.data) for Device_Property
+    usb_init.o(i.USB_Init) refers to usb_prop.o(.data) for User_Standard_Requests
+    usb_int.o(i.CTR_HP) refers to usb_istr.o(.data) for wIstr
+    usb_int.o(i.CTR_HP) refers to usb_init.o(.data) for EPindex
+    usb_int.o(i.CTR_HP) refers to usb_istr.o(.data) for pEpInt_OUT
+    usb_int.o(i.CTR_HP) refers to usb_istr.o(.data) for pEpInt_IN
+    usb_int.o(i.CTR_LP) refers to usb_core.o(i.In0_Process) for In0_Process
+    usb_int.o(i.CTR_LP) refers to usb_core.o(i.Setup0_Process) for Setup0_Process
+    usb_int.o(i.CTR_LP) refers to usb_core.o(i.Out0_Process) for Out0_Process
+    usb_int.o(i.CTR_LP) refers to usb_istr.o(.data) for wIstr
+    usb_int.o(i.CTR_LP) refers to usb_init.o(.data) for EPindex
+    usb_int.o(i.CTR_LP) refers to usb_istr.o(.data) for pEpInt_OUT
+    usb_int.o(i.CTR_LP) refers to usb_istr.o(.data) for pEpInt_IN
+    usb_int.o(i.CTR_LP) refers to usb_int.o(.data) for .data
+    usb_regs.o(i.SetDouBleBuffEPStall) refers to usb_regs.o(i.GetENDPOINT) for GetENDPOINT
+    usb_sil.o(i.USB_SIL_Init) refers to usb_init.o(.data) for wInterrupt_Mask
+    usb_sil.o(i.USB_SIL_Read) refers to usb_regs.o(i.GetEPRxCount) for GetEPRxCount
+    usb_sil.o(i.USB_SIL_Read) refers to usb_regs.o(i.GetEPRxAddr) for GetEPRxAddr
+    usb_sil.o(i.USB_SIL_Read) refers to usb_mem.o(i.PMAToUserBufferCopy) for PMAToUserBufferCopy
+    usb_sil.o(i.USB_SIL_Write) refers to usb_regs.o(i.GetEPTxAddr) for GetEPTxAddr
+    usb_sil.o(i.USB_SIL_Write) refers to usb_mem.o(i.UserToPMABufferCopy) for UserToPMABufferCopy
+    usb_sil.o(i.USB_SIL_Write) refers to usb_regs.o(i.SetEPTxCount) for SetEPTxCount
+    usb_istr.o(i.EP1_IN_Callback) refers to usb_regs.o(i.GetENDPOINT) for GetENDPOINT
+    usb_istr.o(i.EP1_IN_Callback) refers to usb_regs.o(i.SetEPDblBuf0Count) for SetEPDblBuf0Count
+    usb_istr.o(i.EP1_IN_Callback) refers to usb_regs.o(i.SetEPDblBuf1Count) for SetEPDblBuf1Count
+    usb_istr.o(i.EP1_IN_Callback) refers to usb_regs.o(i.FreeUserBuffer) for FreeUserBuffer
+    usb_istr.o(i.EP1_IN_Callback) refers to usb_regs.o(i.SetEPTxValid) for SetEPTxValid
+    usb_istr.o(i.EP1_IN_Callback) refers to platform.o(.data) for adcbuf_idx_write
+    usb_istr.o(i.EP1_IN_Callback) refers to platform.o(.bss) for adcbuf
+    usb_istr.o(i.EP1_IN_Callback) refers to usb_istr.o(.data) for .data
+    usb_istr.o(i.SOF_Callback) refers to usb_istr.o(.data) for .data
+    usb_istr.o(i.USB_LP_IRQHandler) refers to usb_int.o(i.CTR_LP) for CTR_LP
+    usb_istr.o(i.USB_LP_IRQHandler) refers to usb_pwr.o(i.Resume) for Resume
+    usb_istr.o(i.USB_LP_IRQHandler) refers to usb_pwr.o(i.Suspend) for Suspend
+    usb_istr.o(i.USB_LP_IRQHandler) refers to usb_istr.o(i.SOF_Callback) for SOF_Callback
+    usb_istr.o(i.USB_LP_IRQHandler) refers to usb_istr.o(.data) for .data
+    usb_istr.o(i.USB_LP_IRQHandler) refers to usb_init.o(.data) for wInterrupt_Mask
+    usb_istr.o(i.USB_LP_IRQHandler) refers to usb_prop.o(.data) for Device_Property
+    usb_istr.o(i.USB_LP_IRQHandler) refers to usb_pwr.o(.data) for fSuspendEnabled
+    usb_istr.o(.data) refers to usb_istr.o(i.EP1_IN_Callback) for EP1_IN_Callback
+    usb_istr.o(.data) refers to usb_core.o(i.NOP_Process) for NOP_Process
+    usb_istr.o(.data) refers to usb_core.o(i.NOP_Process) for NOP_Process
+    usb_prop.o(i.Get_Cur_Command) refers to usb_init.o(.data) for pInformation
+    usb_prop.o(i.Get_Cur_Command) refers to usb_prop.o(.data) for .data
+    usb_prop.o(i.Get_Max_Command) refers to usb_prop.o(.constdata) for .constdata
+    usb_prop.o(i.Get_Max_Command) refers to usb_init.o(.data) for pInformation
+    usb_prop.o(i.Get_Min_Command) refers to usb_prop.o(.constdata) for .constdata
+    usb_prop.o(i.Get_Min_Command) refers to usb_init.o(.data) for pInformation
+    usb_prop.o(i.Get_Res_Command) refers to usb_prop.o(.constdata) for .constdata
+    usb_prop.o(i.Get_Res_Command) refers to usb_init.o(.data) for pInformation
+    usb_prop.o(i.Get_SerialNum) refers to usb_prop.o(i.IntToUnicode) for IntToUnicode
+    usb_prop.o(i.Get_SerialNum) refers to usb_desc.o(.data) for Joystick_StringSerial
+    usb_prop.o(i.Joystick_Data_Setup) refers to usb_init.o(.data) for pInformation
+    usb_prop.o(i.Joystick_Data_Setup) refers to usb_prop.o(i.Vendor_Command_IN) for Vendor_Command_IN
+    usb_prop.o(i.Joystick_Data_Setup) refers to usb_prop.o(i.Vendor_Command_OUT) for Vendor_Command_OUT
+    usb_prop.o(i.Joystick_Data_Setup) refers to usb_prop.o(i.Get_Cur_Command) for Get_Cur_Command
+    usb_prop.o(i.Joystick_Data_Setup) refers to usb_prop.o(i.Set_Cur_Command) for Set_Cur_Command
+    usb_prop.o(i.Joystick_Data_Setup) refers to usb_prop.o(i.Get_Min_Command) for Get_Min_Command
+    usb_prop.o(i.Joystick_Data_Setup) refers to usb_prop.o(i.Get_Max_Command) for Get_Max_Command
+    usb_prop.o(i.Joystick_Data_Setup) refers to usb_prop.o(i.Get_Res_Command) for Get_Res_Command
+    usb_prop.o(i.Joystick_Data_Setup) refers to usb_prop.o(i.Joystick_GetReportDescriptor) for Joystick_GetReportDescriptor
+    usb_prop.o(i.Joystick_Data_Setup) refers to usb_prop.o(i.Joystick_GetHIDDescriptor) for Joystick_GetHIDDescriptor
+    usb_prop.o(i.Joystick_Data_Setup) refers to usb_prop.o(i.Joystick_GetProtocolValue) for Joystick_GetProtocolValue
+    usb_prop.o(i.Joystick_Data_Setup) refers to usb_prop.o(.data) for .data
+    usb_prop.o(i.Joystick_Data_Setup) refers to platform.o(.data) for log_integration_window
+    usb_prop.o(i.Joystick_GetConfigDescriptor) refers to usb_core.o(i.Standard_GetDescriptorData) for Standard_GetDescriptorData
+    usb_prop.o(i.Joystick_GetConfigDescriptor) refers to usb_prop.o(.data) for .data
+    usb_prop.o(i.Joystick_GetDeviceDescriptor) refers to usb_core.o(i.Standard_GetDescriptorData) for Standard_GetDescriptorData
+    usb_prop.o(i.Joystick_GetDeviceDescriptor) refers to usb_prop.o(.data) for .data
+    usb_prop.o(i.Joystick_GetHIDDescriptor) refers to usb_core.o(i.Standard_GetDescriptorData) for Standard_GetDescriptorData
+    usb_prop.o(i.Joystick_GetHIDDescriptor) refers to usb_prop.o(.data) for .data
+    usb_prop.o(i.Joystick_GetProtocolValue) refers to usb_prop.o(.data) for .data
+    usb_prop.o(i.Joystick_GetProtocolValue) refers to usb_init.o(.data) for pInformation
+    usb_prop.o(i.Joystick_GetReportDescriptor) refers to usb_core.o(i.Standard_GetDescriptorData) for Standard_GetDescriptorData
+    usb_prop.o(i.Joystick_GetReportDescriptor) refers to usb_prop.o(.data) for .data
+    usb_prop.o(i.Joystick_GetStringDescriptor) refers to usb_core.o(i.Standard_GetDescriptorData) for Standard_GetDescriptorData
+    usb_prop.o(i.Joystick_GetStringDescriptor) refers to usb_init.o(.data) for pInformation
+    usb_prop.o(i.Joystick_GetStringDescriptor) refers to usb_prop.o(.data) for .data
+    usb_prop.o(i.Joystick_NoData_Setup) refers to usb_prop.o(i.Joystick_SetProtocol) for Joystick_SetProtocol
+    usb_prop.o(i.Joystick_NoData_Setup) refers to usb_init.o(.data) for pInformation
+    usb_prop.o(i.Joystick_Reset) refers to usb_regs.o(i.SetBTABLE) for SetBTABLE
+    usb_prop.o(i.Joystick_Reset) refers to usb_regs.o(i.SetEPType) for SetEPType
+    usb_prop.o(i.Joystick_Reset) refers to usb_regs.o(i.SetEPTxStatus) for SetEPTxStatus
+    usb_prop.o(i.Joystick_Reset) refers to usb_regs.o(i.SetEPRxAddr) for SetEPRxAddr
+    usb_prop.o(i.Joystick_Reset) refers to usb_regs.o(i.SetEPTxAddr) for SetEPTxAddr
+    usb_prop.o(i.Joystick_Reset) refers to usb_regs.o(i.Clear_Status_Out) for Clear_Status_Out
+    usb_prop.o(i.Joystick_Reset) refers to usb_regs.o(i.SetEPRxCount) for SetEPRxCount
+    usb_prop.o(i.Joystick_Reset) refers to usb_regs.o(i.SetEPTxCount) for SetEPTxCount
+    usb_prop.o(i.Joystick_Reset) refers to usb_regs.o(i.SetEPRxValid) for SetEPRxValid
+    usb_prop.o(i.Joystick_Reset) refers to usb_regs.o(i.SetEPDblBuffAddr) for SetEPDblBuffAddr
+    usb_prop.o(i.Joystick_Reset) refers to usb_regs.o(i.SetEPDblBuffCount) for SetEPDblBuffCount
+    usb_prop.o(i.Joystick_Reset) refers to usb_regs.o(i.SetEPDblBuf0Count) for SetEPDblBuf0Count
+    usb_prop.o(i.Joystick_Reset) refers to usb_regs.o(i.SetEPDblBuf1Count) for SetEPDblBuf1Count
+    usb_prop.o(i.Joystick_Reset) refers to usb_regs.o(i.ClearDTOG_RX) for ClearDTOG_RX
+    usb_prop.o(i.Joystick_Reset) refers to usb_regs.o(i.ClearDTOG_TX) for ClearDTOG_TX
+    usb_prop.o(i.Joystick_Reset) refers to usb_regs.o(i.ToggleDTOG_TX) for ToggleDTOG_TX
+    usb_prop.o(i.Joystick_Reset) refers to usb_regs.o(i.SetEPRxStatus) for SetEPRxStatus
+    usb_prop.o(i.Joystick_Reset) refers to usb_core.o(i.SetDeviceAddress) for SetDeviceAddress
+    usb_prop.o(i.Joystick_Reset) refers to usb_init.o(.data) for pInformation
+    usb_prop.o(i.Joystick_Reset) refers to usb_desc.o(.constdata) for Joystick_ConfigDescriptor
+    usb_prop.o(i.Joystick_Reset) refers to usb_prop.o(.data) for .data
+    usb_prop.o(i.Joystick_Reset) refers to usb_pwr.o(.data) for bDeviceState
+    usb_prop.o(i.Joystick_SetConfiguration) refers to usb_init.o(.bss) for Device_Info
+    usb_prop.o(i.Joystick_SetConfiguration) refers to usb_pwr.o(.data) for bDeviceState
+    usb_prop.o(i.Joystick_SetDeviceAddress) refers to usb_pwr.o(.data) for bDeviceState
+    usb_prop.o(i.Joystick_SetProtocol) refers to usb_init.o(.data) for pInformation
+    usb_prop.o(i.Joystick_SetProtocol) refers to usb_prop.o(.data) for .data
+    usb_prop.o(i.Joystick_init) refers to usb_prop.o(i.Get_SerialNum) for Get_SerialNum
+    usb_prop.o(i.Joystick_init) refers to usb_pwr.o(i.PowerOn) for PowerOn
+    usb_prop.o(i.Joystick_init) refers to usb_sil.o(i.USB_SIL_Init) for USB_SIL_Init
+    usb_prop.o(i.Joystick_init) refers to usb_init.o(.data) for pInformation
+    usb_prop.o(i.Joystick_init) refers to usb_pwr.o(.data) for bDeviceState
+    usb_prop.o(i.Set_Cur_Command) refers to usb_init.o(.data) for pInformation
+    usb_prop.o(i.Set_Cur_Command) refers to usb_prop.o(.data) for .data
+    usb_prop.o(i.Vendor_Command_IN) refers to usb_prop.o(.data) for .data
+    usb_prop.o(i.Vendor_Command_IN) refers to platform.o(.data) for log_integration_window
+    usb_prop.o(i.Vendor_Command_IN) refers to usb_init.o(.data) for pInformation
+    usb_prop.o(i.Vendor_Command_IN) refers to platform.o(.data) for prev_log_signal_level
+    usb_prop.o(i.Vendor_Command_OUT) refers to usb_prop.o(.data) for .data
+    usb_prop.o(i.Vendor_Command_OUT) refers to usb_init.o(.data) for pInformation
+    usb_prop.o(.data) refers to usb_desc.o(.constdata) for Joystick_DeviceDescriptor
+    usb_prop.o(.data) refers to usb_desc.o(.constdata) for Joystick_ConfigDescriptor
+    usb_prop.o(.data) refers to usb_desc.o(.constdata) for Joystick_ReportDescriptor
+    usb_prop.o(.data) refers to usb_prop.o(i.Joystick_init) for Joystick_init
+    usb_prop.o(.data) refers to usb_prop.o(i.Joystick_Reset) for Joystick_Reset
+    usb_prop.o(.data) refers to usb_prop.o(i.Joystick_Status_In) for Joystick_Status_In
+    usb_prop.o(.data) refers to usb_prop.o(i.Joystick_Status_Out) for Joystick_Status_Out
+    usb_prop.o(.data) refers to usb_prop.o(i.Joystick_Data_Setup) for Joystick_Data_Setup
+    usb_prop.o(.data) refers to usb_prop.o(i.Joystick_NoData_Setup) for Joystick_NoData_Setup
+    usb_prop.o(.data) refers to usb_prop.o(i.Joystick_Get_Interface_Setting) for Joystick_Get_Interface_Setting
+    usb_prop.o(.data) refers to usb_prop.o(i.Joystick_GetDeviceDescriptor) for Joystick_GetDeviceDescriptor
+    usb_prop.o(.data) refers to usb_prop.o(i.Joystick_GetConfigDescriptor) for Joystick_GetConfigDescriptor
+    usb_prop.o(.data) refers to usb_prop.o(i.Joystick_GetStringDescriptor) for Joystick_GetStringDescriptor
+    usb_prop.o(.data) refers to usb_desc.o(.constdata) for Joystick_StringLangID
+    usb_prop.o(.data) refers to usb_desc.o(.constdata) for Joystick_StringVendor
+    usb_prop.o(.data) refers to usb_desc.o(.constdata) for Joystick_StringProduct
+    usb_prop.o(.data) refers to usb_desc.o(.data) for Joystick_StringSerial
+    usb_prop.o(.data) refers to usb_core.o(i.NOP_Process) for NOP_Process
+    usb_prop.o(.data) refers to usb_prop.o(i.Joystick_SetConfiguration) for Joystick_SetConfiguration
+    usb_prop.o(.data) refers to usb_prop.o(i.Joystick_SetDeviceFeature) for Joystick_SetDeviceFeature
+    usb_prop.o(.data) refers to usb_prop.o(i.Joystick_SetDeviceAddress) for Joystick_SetDeviceAddress
+    usb_pwr.o(i.PowerOff) refers to platform.o(i.USB_Cable_Config) for USB_Cable_Config
+    usb_pwr.o(i.PowerOn) refers to platform.o(i.USB_Cable_Config) for USB_Cable_Config
+    usb_pwr.o(i.PowerOn) refers to usb_init.o(.data) for wInterrupt_Mask
+    usb_pwr.o(i.Resume) refers to usb_pwr.o(i.Resume_Init) for Resume_Init
+    usb_pwr.o(i.Resume) refers to usb_pwr.o(.data) for .data
+    usb_pwr.o(i.Resume_Init) refers to platform.o(i.Leave_LowPowerMode) for Leave_LowPowerMode
+    usb_pwr.o(i.Suspend) refers to platform.o(i.Enter_LowPowerMode) for Enter_LowPowerMode
+    platform.o(i.Enter_LowPowerMode) refers to usb_pwr.o(.data) for bDeviceState
+    platform.o(i.GPIO_AINConfig) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    platform.o(i.GPIO_AINConfig) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    platform.o(i.LED_PWM_init) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    platform.o(i.LED_PWM_init) refers to stm32f10x_gpio.o(i.GPIO_PinRemapConfig) for GPIO_PinRemapConfig
+    platform.o(i.LED_PWM_init) refers to stm32f10x_gpio.o(i.GPIO_StructInit) for GPIO_StructInit
+    platform.o(i.LED_PWM_init) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    platform.o(i.LED_PWM_init) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd) for RCC_APB1PeriphClockCmd
+    platform.o(i.LED_PWM_init) refers to stm32f10x_tim.o(i.TIM_DeInit) for TIM_DeInit
+    platform.o(i.LED_PWM_init) refers to stm32f10x_tim.o(i.TIM_TimeBaseStructInit) for TIM_TimeBaseStructInit
+    platform.o(i.LED_PWM_init) refers to stm32f10x_tim.o(i.TIM_TimeBaseInit) for TIM_TimeBaseInit
+    platform.o(i.LED_PWM_init) refers to stm32f10x_tim.o(i.TIM_OCStructInit) for TIM_OCStructInit
+    platform.o(i.LED_PWM_init) refers to stm32f10x_tim.o(i.TIM_OC4Init) for TIM_OC4Init
+    platform.o(i.LED_PWM_init) refers to stm32f10x_tim.o(i.TIM_OC4PreloadConfig) for TIM_OC4PreloadConfig
+    platform.o(i.LED_PWM_init) refers to stm32f10x_tim.o(i.TIM_ARRPreloadConfig) for TIM_ARRPreloadConfig
+    platform.o(i.LED_PWM_init) refers to stm32f10x_tim.o(i.TIM_Cmd) for TIM_Cmd
+    platform.o(i.LED_PWM_init) refers to stm32f10x_tim.o(i.TIM_CtrlPWMOutputs) for TIM_CtrlPWMOutputs
+    platform.o(i.Leave_LowPowerMode) refers to usb_init.o(.bss) for Device_Info
+    platform.o(i.Leave_LowPowerMode) refers to usb_pwr.o(.data) for bDeviceState
+    platform.o(i.Set_USBClock) refers to stm32f10x_rcc.o(i.RCC_USBCLKConfig) for RCC_USBCLKConfig
+    platform.o(i.Set_USBClock) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd) for RCC_APB1PeriphClockCmd
+    platform.o(i.USB_Cable_Config) refers to stm32f10x_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    platform.o(i.USB_Cable_Config) refers to stm32f10x_gpio.o(i.GPIO_ResetBits) for GPIO_ResetBits
+    platform.o(i.USB_Interrupts_Config) refers to misc.o(i.NVIC_Init) for NVIC_Init
+    platform.o(i.adc_buf_init) refers to platform.o(.data) for .data
+    platform.o(i.adc_buf_init) refers to platform.o(.bss) for .bss
+    platform.o(i.calibrate_adc_offset) refers to platform.o(i.grab_adc_sample) for grab_adc_sample
+    platform.o(i.calibrate_adc_offset) refers to cyccnt_delay.o(i.DWT_Delay) for DWT_Delay
+    platform.o(i.calibrate_adc_offset) refers to platform.o(i.logical_right_shift) for logical_right_shift
+    platform.o(i.calibrate_adc_offset) refers to platform.o(.data) for .data
+    platform.o(i.grab_adc_sample) refers to stm32f10x_gpio.o(i.GPIO_ResetBits) for GPIO_ResetBits
+    platform.o(i.grab_adc_sample) refers to stm32f10x_spi.o(i.SPI_I2S_GetFlagStatus) for SPI_I2S_GetFlagStatus
+    platform.o(i.grab_adc_sample) refers to stm32f10x_spi.o(i.SPI_I2S_SendData) for SPI_I2S_SendData
+    platform.o(i.grab_adc_sample) refers to stm32f10x_spi.o(i.SPI_I2S_ReceiveData) for SPI_I2S_ReceiveData
+    platform.o(i.grab_adc_sample) refers to stm32f10x_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    platform.o(i.init_ADC_alarm) refers to stm32f10x_rcc.o(i.RCC_ADCCLKConfig) for RCC_ADCCLKConfig
+    platform.o(i.init_ADC_alarm) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    platform.o(i.init_ADC_alarm) refers to stm32f10x_adc.o(i.ADC_Init) for ADC_Init
+    platform.o(i.init_ADC_alarm) refers to stm32f10x_adc.o(i.ADC_RegularChannelConfig) for ADC_RegularChannelConfig
+    platform.o(i.init_ADC_alarm) refers to stm32f10x_adc.o(i.ADC_ExternalTrigConvCmd) for ADC_ExternalTrigConvCmd
+    platform.o(i.init_ADC_alarm) refers to stm32f10x_adc.o(i.ADC_ITConfig) for ADC_ITConfig
+    platform.o(i.init_ADC_alarm) refers to stm32f10x_adc.o(i.ADC_Cmd) for ADC_Cmd
+    platform.o(i.init_ADC_alarm) refers to stm32f10x_adc.o(i.ADC_ResetCalibration) for ADC_ResetCalibration
+    platform.o(i.init_ADC_alarm) refers to stm32f10x_adc.o(i.ADC_GetResetCalibrationStatus) for ADC_GetResetCalibrationStatus
+    platform.o(i.init_ADC_alarm) refers to stm32f10x_adc.o(i.ADC_StartCalibration) for ADC_StartCalibration
+    platform.o(i.init_ADC_alarm) refers to stm32f10x_adc.o(i.ADC_GetCalibrationStatus) for ADC_GetCalibrationStatus
+    platform.o(i.init_ADC_timer) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    platform.o(i.init_ADC_timer) refers to stm32f10x_tim.o(i.TIM_TimeBaseStructInit) for TIM_TimeBaseStructInit
+    platform.o(i.init_ADC_timer) refers to stm32f10x_tim.o(i.TIM_TimeBaseInit) for TIM_TimeBaseInit
+    platform.o(i.init_ADC_timer) refers to stm32f10x_tim.o(i.TIM_OC1Init) for TIM_OC1Init
+    platform.o(i.init_ADC_timer) refers to stm32f10x_tim.o(i.TIM_ITConfig) for TIM_ITConfig
+    platform.o(i.init_ADC_timer) refers to misc.o(i.NVIC_Init) for NVIC_Init
+    platform.o(i.init_ADC_timer) refers to stm32f10x_tim.o(i.TIM_Cmd) for TIM_Cmd
+    platform.o(i.init_ADC_timer) refers to stm32f10x_tim.o(i.TIM_CtrlPWMOutputs) for TIM_CtrlPWMOutputs
+    platform.o(i.init_NVIC) refers to misc.o(i.NVIC_PriorityGroupConfig) for NVIC_PriorityGroupConfig
+    platform.o(i.init_adc_spi) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    platform.o(i.init_adc_spi) refers to stm32f10x_spi.o(i.SPI_Init) for SPI_Init
+    platform.o(i.init_adc_spi) refers to stm32f10x_spi.o(i.SPI_Cmd) for SPI_Cmd
+    platform.o(i.init_adc_spi) refers to stm32f10x_spi.o(i.SPI_I2S_ITConfig) for SPI_I2S_ITConfig
+    platform.o(i.init_adc_spi) refers to misc.o(i.NVIC_Init) for NVIC_Init
+    platform.o(i.init_adc_spi) refers to stm32f10x_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    platform.o(i.init_adc_spi) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    platform.o(i.init_alarm_led) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    platform.o(i.init_alarm_led) refers to stm32f10x_gpio.o(i.GPIO_ResetBits) for GPIO_ResetBits
+    platform.o(i.init_alarm_led) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    platform.o(i.init_alarm_led) refers to stm32f10x_it.o(.data) for blink_period
+    platform.o(i.init_boost_osc) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    platform.o(i.init_boost_osc) refers to stm32f10x_gpio.o(i.GPIO_StructInit) for GPIO_StructInit
+    platform.o(i.init_boost_osc) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    platform.o(i.init_boost_osc) refers to stm32f10x_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    platform.o(i.init_daq_timer) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd) for RCC_APB1PeriphClockCmd
+    platform.o(i.init_daq_timer) refers to stm32f10x_tim.o(i.TIM_DeInit) for TIM_DeInit
+    platform.o(i.init_daq_timer) refers to stm32f10x_tim.o(i.TIM_TimeBaseStructInit) for TIM_TimeBaseStructInit
+    platform.o(i.init_daq_timer) refers to stm32f10x_tim.o(i.TIM_TimeBaseInit) for TIM_TimeBaseInit
+    platform.o(i.init_daq_timer) refers to misc.o(i.NVIC_Init) for NVIC_Init
+    platform.o(i.init_daq_timer) refers to stm32f10x_tim.o(i.TIM_ITConfig) for TIM_ITConfig
+    platform.o(i.init_daq_timer) refers to stm32f10x_tim.o(i.TIM_Cmd) for TIM_Cmd
+    platform.o(i.init_digipot_spi) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd) for RCC_APB1PeriphClockCmd
+    platform.o(i.init_digipot_spi) refers to stm32f10x_spi.o(i.SPI_Init) for SPI_Init
+    platform.o(i.init_digipot_spi) refers to stm32f10x_spi.o(i.SPI_CalculateCRC) for SPI_CalculateCRC
+    platform.o(i.init_digipot_spi) refers to stm32f10x_spi.o(i.SPI_Cmd) for SPI_Cmd
+    platform.o(i.init_digipot_spi) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    platform.o(i.init_digipot_spi) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    platform.o(i.init_digipot_spi) refers to platform.o(i.set_wiper) for set_wiper
+    platform.o(i.init_digipot_spi) refers to platform.o(.data) for .data
+    platform.o(i.init_log) refers to platform.o(.data) for .data
+    platform.o(i.init_rf_module_power_management) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    platform.o(i.init_rf_module_power_management) refers to stm32f10x_gpio.o(i.GPIO_StructInit) for GPIO_StructInit
+    platform.o(i.init_rf_module_power_management) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    platform.o(i.init_rf_module_power_management) refers to stm32f10x_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    platform.o(i.init_usb_enable_pin) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    platform.o(i.init_usb_enable_pin) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    platform.o(i.platform_init) refers to platform.o(i.GPIO_AINConfig) for GPIO_AINConfig
+    platform.o(i.platform_init) refers to misc.o(i.NVIC_PriorityGroupConfig) for NVIC_PriorityGroupConfig
+    platform.o(i.platform_init) refers to platform.o(i.init_alarm_led) for init_alarm_led
+    platform.o(i.platform_init) refers to platform.o(i.init_usb_enable_pin) for init_usb_enable_pin
+    platform.o(i.platform_init) refers to platform.o(i.init_rf_module_power_management) for init_rf_module_power_management
+    platform.o(i.platform_init) refers to platform.o(i.init_boost_osc) for init_boost_osc
+    platform.o(i.platform_init) refers to platform.o(i.init_adc_spi) for init_adc_spi
+    platform.o(i.platform_init) refers to platform.o(i.init_digipot_spi) for init_digipot_spi
+    platform.o(i.platform_init) refers to platform.o(i.init_log) for init_log
+    platform.o(i.platform_init) refers to cyccnt_delay.o(i.DWT_Delay) for DWT_Delay
+    platform.o(i.platform_init) refers to platform.o(i.adc_buf_init) for adc_buf_init
+    platform.o(i.platform_init) refers to platform.o(i.init_ADC_alarm) for init_ADC_alarm
+    platform.o(i.platform_init) refers to platform.o(i.init_ADC_timer) for init_ADC_timer
+    platform.o(i.platform_init) refers to platform.o(i.init_daq_timer) for init_daq_timer
+    platform.o(i.platform_init) refers to platform.o(i.LED_PWM_init) for LED_PWM_init
+    platform.o(i.platform_init) refers to stm32f10x_it.o(.data) for throw_alarm
+    platform.o(i.platform_init) refers to platform.o(.data) for .data
+    platform.o(i.read_alarm_setlevel) refers to stm32f10x_adc.o(i.ADC_RegularChannelConfig) for ADC_RegularChannelConfig
+    platform.o(i.read_alarm_setlevel) refers to stm32f10x_adc.o(i.ADC_SoftwareStartConvCmd) for ADC_SoftwareStartConvCmd
+    platform.o(i.read_alarm_setlevel) refers to stm32f10x_adc.o(i.ADC_GetFlagStatus) for ADC_GetFlagStatus
+    platform.o(i.read_alarm_setlevel) refers to stm32f10x_adc.o(i.ADC_GetConversionValue) for ADC_GetConversionValue
+    platform.o(i.set_alarm_enable) refers to platform.o(.data) for .data
+    platform.o(i.set_wiper) refers to stm32f10x_gpio.o(i.GPIO_ResetBits) for GPIO_ResetBits
+    platform.o(i.set_wiper) refers to stm32f10x_spi.o(i.SPI_I2S_SendData) for SPI_I2S_SendData
+    platform.o(i.set_wiper) refers to stm32f10x_spi.o(i.SPI_I2S_GetFlagStatus) for SPI_I2S_GetFlagStatus
+    platform.o(i.set_wiper) refers to stm32f10x_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    main.o(i.main) refers to cyccnt_delay.o(i.DWT_Init) for DWT_Init
+    main.o(i.main) refers to platform.o(i.platform_init) for platform_init
+    main.o(i.main) refers to platform.o(i.USB_Interrupts_Config) for USB_Interrupts_Config
+    main.o(i.main) refers to platform.o(i.Set_USBClock) for Set_USBClock
+    main.o(i.main) refers to usb_init.o(i.USB_Init) for USB_Init
+    main.o(i.main) refers to cyccnt_delay.o(i.DWT_Delay) for DWT_Delay
+    main.o(i.main) refers to platform.o(i.set_alarm_enable) for set_alarm_enable
+    stm32f10x_it.o(i.ADC1_2_IRQHandler) refers to stm32f10x_adc.o(i.ADC_GetITStatus) for ADC_GetITStatus
+    stm32f10x_it.o(i.ADC1_2_IRQHandler) refers to stm32f10x_adc.o(i.ADC_ClearITPendingBit) for ADC_ClearITPendingBit
+    stm32f10x_it.o(i.ADC1_2_IRQHandler) refers to platform.o(.data) for alarm_lvl
+    stm32f10x_it.o(i.SPI1_IRQHandler) refers to stm32f10x_spi.o(i.SPI_Cmd) for SPI_Cmd
+    stm32f10x_it.o(i.SPI1_IRQHandler) refers to stm32f10x_spi.o(i.SPI_I2S_ReceiveData) for SPI_I2S_ReceiveData
+    stm32f10x_it.o(i.SPI1_IRQHandler) refers to stm32f10x_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    stm32f10x_it.o(i.SPI1_IRQHandler) refers to platform.o(i.set_LED_brightness) for set_LED_brightness
+    stm32f10x_it.o(i.SPI1_IRQHandler) refers to platform.o(.data) for input_level
+    stm32f10x_it.o(i.SPI1_IRQHandler) refers to platform.o(.data) for input_level_tracker_LED
+    stm32f10x_it.o(i.SPI1_IRQHandler) refers to platform.o(.data) for input_level_tracked_fast
+    stm32f10x_it.o(i.SPI1_IRQHandler) refers to platform.o(.data) for log_integration_window_counter
+    stm32f10x_it.o(i.SPI1_IRQHandler) refers to platform.o(.data) for prev_log_signal_level
+    stm32f10x_it.o(i.SPI1_IRQHandler) refers to platform.o(.data) for alarm_lvl
+    stm32f10x_it.o(i.SPI1_IRQHandler) refers to stm32f10x_it.o(.data) for .data
+    stm32f10x_it.o(i.SPI1_IRQHandler) refers to usb_prop.o(.data) for MUTE_DATA
+    stm32f10x_it.o(i.SPI1_IRQHandler) refers to platform.o(.bss) for adcbuf
+    stm32f10x_it.o(i.SPI1_IRQHandler) refers to stm32f10x_it.o(.constdata) for .constdata
+    stm32f10x_it.o(i.SPI1_IRQHandler) refers to usb_prop.o(.constdata) for MAX_DATA
+    stm32f10x_it.o(i.TIM1_CC_IRQHandler) refers to platform.o(i.read_alarm_setlevel) for read_alarm_setlevel
+    stm32f10x_it.o(i.TIM1_CC_IRQHandler) refers to platform.o(i.set_wiper) for set_wiper
+    stm32f10x_it.o(i.TIM1_CC_IRQHandler) refers to stm32f10x_gpio.o(i.GPIO_ResetBits) for GPIO_ResetBits
+    stm32f10x_it.o(i.TIM1_CC_IRQHandler) refers to stm32f10x_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    stm32f10x_it.o(i.TIM1_CC_IRQHandler) refers to usb_regs.o(i.GetCNTR) for GetCNTR
+    stm32f10x_it.o(i.TIM1_CC_IRQHandler) refers to usb_regs.o(i.SetCNTR) for SetCNTR
+    stm32f10x_it.o(i.TIM1_CC_IRQHandler) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    stm32f10x_it.o(i.TIM1_CC_IRQHandler) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    stm32f10x_it.o(i.TIM1_CC_IRQHandler) refers to usb_pwr.o(i.Resume) for Resume
+    stm32f10x_it.o(i.TIM1_CC_IRQHandler) refers to stm32f10x_tim.o(i.TIM_ClearITPendingBit) for TIM_ClearITPendingBit
+    stm32f10x_it.o(i.TIM1_CC_IRQHandler) refers to platform.o(.data) for alarm_lvl
+    stm32f10x_it.o(i.TIM1_CC_IRQHandler) refers to usb_pwr.o(.data) for bDeviceState
+    stm32f10x_it.o(i.TIM1_CC_IRQHandler) refers to usb_prop.o(.data) for VOLUME_DATA
+    stm32f10x_it.o(i.TIM1_CC_IRQHandler) refers to stm32f10x_it.o(.data) for .data
+    stm32f10x_it.o(i.TIM1_CC_IRQHandler) refers to usb_init.o(.data) for pInformation
+    stm32f10x_it.o(i.TIM1_CC_IRQHandler) refers to platform.o(.data) for input_level_tracker_LED
+    stm32f10x_it.o(i.TIM2_IRQHandler) refers to stm32f10x_tim.o(i.TIM_ClearITPendingBit) for TIM_ClearITPendingBit
+    stm32f10x_it.o(i.TIM3_IRQHandler) refers to stm32f10x_gpio.o(i.GPIO_ResetBits) for GPIO_ResetBits
+    stm32f10x_it.o(i.TIM3_IRQHandler) refers to stm32f10x_spi.o(i.SPI_Cmd) for SPI_Cmd
+    stm32f10x_it.o(i.TIM3_IRQHandler) refers to stm32f10x_spi.o(i.SPI_I2S_SendData) for SPI_I2S_SendData
+    stm32f10x_it.o(i.TIM3_IRQHandler) refers to stm32f10x_tim.o(i.TIM_ClearITPendingBit) for TIM_ClearITPendingBit
+    stm32f10x_it.o(i.USB_HP_CAN1_TX_IRQHandler) refers to usb_int.o(i.CTR_HP) for CTR_HP
+    stm32f10x_it.o(i.USB_LP_CAN1_RX0_IRQHandler) refers to usb_istr.o(i.USB_LP_IRQHandler) for USB_LP_IRQHandler
+    stm32f10x_it.o(i.USB_LP_CAN1_RX0_IRQHandler) refers to stm32f10x_it.o(.data) for .data
+    cyccnt_delay.o(i.DWT_Delay) refers to system_stm32f10x.o(.data) for SystemCoreClock
+    __main.o(!!!main) refers to rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
+    rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
+    rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
+    rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
+    rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
+    rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
+    rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
+    rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
+    rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to main.o(i.main) for main
+    rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
+    rtentry2.o(.ARM.exidx) refers to rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
+    rtentry2.o(.ARM.exidx) refers to rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
+    rtentry2.o(.ARM.exidx) refers to rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for .ARM.Collect$$rtentry$$0000000A
+    rtentry2.o(.ARM.exidx) refers to rtentry2.o(.ARM.Collect$$rtentry$$0000000B) for .ARM.Collect$$rtentry$$0000000B
+    rtentry2.o(.ARM.exidx) refers to rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
+    rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
+    rtentry4.o(.ARM.exidx) refers to rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
+    sys_stackheap_outer.o(.text) refers to startup_stm32f10x_hd.o(.text) for __user_initial_stackheap
+    exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002C) for __rt_lib_init_alloca_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002A) for __rt_lib_init_argv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000019) for __rt_lib_init_atexit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_clock_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000030) for __rt_lib_init_cpp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002E) for __rt_lib_init_exceptions_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000002) for __rt_lib_init_fp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001D) for __rt_lib_init_fp_trap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000021) for __rt_lib_init_getenv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000008) for __rt_lib_init_heap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000F) for __rt_lib_init_lc_collate_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000011) for __rt_lib_init_lc_ctype_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000013) for __rt_lib_init_lc_monetary_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000015) for __rt_lib_init_lc_numeric_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000017) for __rt_lib_init_lc_time_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000C) for __rt_lib_init_rand_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000031) for __rt_lib_init_return
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001B) for __rt_lib_init_signal_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000023) for __rt_lib_init_stdio_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000A) for __rt_lib_init_user_alloc_1
+    libspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for .ARM.Collect$$rtexit$$00000000
+    libinit2.o(.ARM.Collect$$libinit$$0000000E) refers to libinit2.o(.ARM.Collect$$libinit$$0000000D) for .ARM.Collect$$libinit$$0000000D
+    libinit2.o(.ARM.Collect$$libinit$$00000010) refers to libinit2.o(.ARM.Collect$$libinit$$0000000D) for .ARM.Collect$$libinit$$0000000D
+    libinit2.o(.ARM.Collect$$libinit$$00000012) refers to libinit2.o(.ARM.Collect$$libinit$$0000000D) for .ARM.Collect$$libinit$$0000000D
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers to libinit2.o(.ARM.Collect$$libinit$$0000000D) for .ARM.Collect$$libinit$$0000000D
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers to libinit2.o(.ARM.Collect$$libinit$$0000000D) for .ARM.Collect$$libinit$$0000000D
+    libinit2.o(.ARM.Collect$$libinit$$00000024) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    libinit2.o(.ARM.Collect$$libinit$$00000025) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    rtexit2.o(.ARM.Collect$$rtexit$$00000003) refers to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    rtexit2.o(.ARM.Collect$$rtexit$$00000004) refers to sys_exit.o(.text) for _sys_exit
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000001) for .ARM.Collect$$rtexit$$00000001
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for .ARM.Collect$$rtexit$$00000003
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for .ARM.Collect$$rtexit$$00000004
+    argv_veneer.o(.emb_text) refers to no_argv.o(.text) for __ARM_get_argv
+    sys_exit.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    _get_argv_nomalloc.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv_nomalloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv_nomalloc.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000006) for __rt_lib_shutdown_fp_trap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E) for __rt_lib_shutdown_heap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F) for __rt_lib_shutdown_return
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000009) for __rt_lib_shutdown_signal_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000003) for __rt_lib_shutdown_stdio_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000B) for __rt_lib_shutdown_user_alloc_1
+    sys_command.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig_rtmem_outer.o(.text) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_rtmem_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtmem_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_exit.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to sys_wrch.o(.text) for _ttywrch
+    sys_wrch.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig.o(CL$$defsig) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing system_stm32f10x.o(.rev16_text), (4 bytes).
+    Removing system_stm32f10x.o(.revsh_text), (4 bytes).
+    Removing system_stm32f10x.o(i.SystemCoreClockUpdate), (104 bytes).
+    Removing stm32f10x_gpio.o(.rev16_text), (4 bytes).
+    Removing stm32f10x_gpio.o(.revsh_text), (4 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_AFIODeInit), (22 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_DeInit), (180 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ETH_MediaInterfaceConfig), (12 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_EXTILineConfig), (40 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_EventOutputCmd), (12 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_EventOutputConfig), (28 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_PinLockConfig), (16 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ReadInputData), (6 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ReadInputDataBit), (14 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ReadOutputData), (6 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ReadOutputDataBit), (14 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_Write), (4 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_WriteBit), (10 bytes).
+    Removing stm32f10x_rcc.o(.rev16_text), (4 bytes).
+    Removing stm32f10x_rcc.o(.revsh_text), (4 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd), (24 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_AdjustHSICalibrationValue), (20 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_BackupResetCmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ClearFlag), (16 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ClearITPendingBit), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ClockSecuritySystemCmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_DeInit), (64 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_GetClocksFreq), (148 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_GetFlagStatus), (48 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_GetITStatus), (20 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_GetSYSCLKSource), (16 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_HCLKConfig), (20 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_HSEConfig), (52 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_HSICmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ITConfig), (24 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_LSEConfig), (32 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_LSICmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_MCOConfig), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_PCLK1Config), (20 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_PCLK2Config), (20 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_PLLCmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_PLLConfig), (20 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_RTCCLKCmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_RTCCLKConfig), (16 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_SYSCLKConfig), (20 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_WaitForHSEStartUp), (44 bytes).
+    Removing stm32f10x_rcc.o(.data), (20 bytes).
+    Removing stm32f10x_usart.o(.rev16_text), (4 bytes).
+    Removing stm32f10x_usart.o(.revsh_text), (4 bytes).
+    Removing stm32f10x_usart.o(i.USART_ClearFlag), (6 bytes).
+    Removing stm32f10x_usart.o(i.USART_ClearITPendingBit), (12 bytes).
+    Removing stm32f10x_usart.o(i.USART_ClockInit), (30 bytes).
+    Removing stm32f10x_usart.o(i.USART_ClockStructInit), (12 bytes).
+    Removing stm32f10x_usart.o(i.USART_Cmd), (20 bytes).
+    Removing stm32f10x_usart.o(i.USART_DMACmd), (16 bytes).
+    Removing stm32f10x_usart.o(i.USART_DeInit), (116 bytes).
+    Removing stm32f10x_usart.o(i.USART_GetFlagStatus), (14 bytes).
+    Removing stm32f10x_usart.o(i.USART_GetITStatus), (62 bytes).
+    Removing stm32f10x_usart.o(i.USART_HalfDuplexCmd), (20 bytes).
+    Removing stm32f10x_usart.o(i.USART_ITConfig), (48 bytes).
+    Removing stm32f10x_usart.o(i.USART_Init), (172 bytes).
+    Removing stm32f10x_usart.o(i.USART_IrDACmd), (20 bytes).
+    Removing stm32f10x_usart.o(i.USART_IrDAConfig), (16 bytes).
+    Removing stm32f10x_usart.o(i.USART_LINBreakDetectLengthConfig), (16 bytes).
+    Removing stm32f10x_usart.o(i.USART_LINCmd), (20 bytes).
+    Removing stm32f10x_usart.o(i.USART_OneBitMethodCmd), (20 bytes).
+    Removing stm32f10x_usart.o(i.USART_OverSampling8Cmd), (20 bytes).
+    Removing stm32f10x_usart.o(i.USART_ReceiveData), (8 bytes).
+    Removing stm32f10x_usart.o(i.USART_ReceiverWakeUpCmd), (20 bytes).
+    Removing stm32f10x_usart.o(i.USART_SendBreak), (10 bytes).
+    Removing stm32f10x_usart.o(i.USART_SendData), (8 bytes).
+    Removing stm32f10x_usart.o(i.USART_SetAddress), (16 bytes).
+    Removing stm32f10x_usart.o(i.USART_SetGuardTime), (16 bytes).
+    Removing stm32f10x_usart.o(i.USART_SetPrescaler), (16 bytes).
+    Removing stm32f10x_usart.o(i.USART_SmartCardCmd), (20 bytes).
+    Removing stm32f10x_usart.o(i.USART_SmartCardNACKCmd), (20 bytes).
+    Removing stm32f10x_usart.o(i.USART_StructInit), (22 bytes).
+    Removing stm32f10x_usart.o(i.USART_WakeUpConfig), (16 bytes).
+    Removing misc.o(.rev16_text), (4 bytes).
+    Removing misc.o(.revsh_text), (4 bytes).
+    Removing misc.o(i.NVIC_SetVectorTable), (20 bytes).
+    Removing misc.o(i.NVIC_SystemLPConfig), (24 bytes).
+    Removing misc.o(i.SysTick_CLKSourceConfig), (24 bytes).
+    Removing stm32f10x_tim.o(.rev16_text), (4 bytes).
+    Removing stm32f10x_tim.o(.revsh_text), (4 bytes).
+    Removing stm32f10x_tim.o(i.TI1_Config), (108 bytes).
+    Removing stm32f10x_tim.o(i.TI2_Config), (124 bytes).
+    Removing stm32f10x_tim.o(i.TIM_BDTRConfig), (34 bytes).
+    Removing stm32f10x_tim.o(i.TIM_BDTRStructInit), (18 bytes).
+    Removing stm32f10x_tim.o(i.TIM_CCPreloadControl), (20 bytes).
+    Removing stm32f10x_tim.o(i.TIM_CCxCmd), (22 bytes).
+    Removing stm32f10x_tim.o(i.TIM_CCxNCmd), (22 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ClearFlag), (6 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ClearOC1Ref), (12 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ClearOC2Ref), (20 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ClearOC3Ref), (12 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ClearOC4Ref), (20 bytes).
+    Removing stm32f10x_tim.o(i.TIM_CounterModeConfig), (12 bytes).
+    Removing stm32f10x_tim.o(i.TIM_DMACmd), (16 bytes).
+    Removing stm32f10x_tim.o(i.TIM_DMAConfig), (8 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ETRClockMode1Config), (18 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ETRClockMode2Config), (18 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ETRConfig), (24 bytes).
+    Removing stm32f10x_tim.o(i.TIM_EncoderInterfaceConfig), (50 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ForcedOC1Config), (12 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ForcedOC2Config), (20 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ForcedOC3Config), (12 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ForcedOC4Config), (20 bytes).
+    Removing stm32f10x_tim.o(i.TIM_GenerateEvent), (4 bytes).
+    Removing stm32f10x_tim.o(i.TIM_GetCapture1), (4 bytes).
+    Removing stm32f10x_tim.o(i.TIM_GetCapture2), (4 bytes).
+    Removing stm32f10x_tim.o(i.TIM_GetCapture3), (4 bytes).
+    Removing stm32f10x_tim.o(i.TIM_GetCapture4), (6 bytes).
+    Removing stm32f10x_tim.o(i.TIM_GetCounter), (4 bytes).
+    Removing stm32f10x_tim.o(i.TIM_GetFlagStatus), (14 bytes).
+    Removing stm32f10x_tim.o(i.TIM_GetITStatus), (24 bytes).
+    Removing stm32f10x_tim.o(i.TIM_GetPrescaler), (4 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ICInit), (300 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ICStructInit), (16 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ITRxExternalClockConfig), (18 bytes).
+    Removing stm32f10x_tim.o(i.TIM_InternalClockConfig), (10 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC1FastConfig), (12 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC1NPolarityConfig), (12 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC1PolarityConfig), (12 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC1PreloadConfig), (12 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC2FastConfig), (20 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC2Init), (128 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC2NPolarityConfig), (20 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC2PolarityConfig), (20 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC2PreloadConfig), (20 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC3FastConfig), (12 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC3Init), (124 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC3NPolarityConfig), (20 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC3PolarityConfig), (20 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC3PreloadConfig), (12 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC4FastConfig), (20 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC4PolarityConfig), (20 bytes).
+    Removing stm32f10x_tim.o(i.TIM_PWMIConfig), (108 bytes).
+    Removing stm32f10x_tim.o(i.TIM_PrescalerConfig), (6 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SelectCCDMA), (20 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SelectCOM), (20 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SelectHallSensor), (20 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SelectInputTrigger), (12 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SelectMasterSlaveMode), (16 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SelectOCxM), (70 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SelectOnePulseMode), (16 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SelectOutputTrigger), (16 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SelectSlaveMode), (16 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetAutoreload), (4 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetClockDivision), (16 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetCompare1), (4 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetCompare2), (4 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetCompare3), (4 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetCompare4), (6 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetCounter), (4 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetIC1Prescaler), (16 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetIC2Prescaler), (24 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetIC3Prescaler), (16 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetIC4Prescaler), (24 bytes).
+    Removing stm32f10x_tim.o(i.TIM_TIxExternalClockConfig), (46 bytes).
+    Removing stm32f10x_tim.o(i.TIM_UpdateDisableConfig), (20 bytes).
+    Removing stm32f10x_tim.o(i.TIM_UpdateRequestConfig), (20 bytes).
+    Removing stm32f10x_dma.o(.rev16_text), (4 bytes).
+    Removing stm32f10x_dma.o(.revsh_text), (4 bytes).
+    Removing stm32f10x_dma.o(i.DMA_ClearFlag), (24 bytes).
+    Removing stm32f10x_dma.o(i.DMA_ClearITPendingBit), (24 bytes).
+    Removing stm32f10x_dma.o(i.DMA_Cmd), (22 bytes).
+    Removing stm32f10x_dma.o(i.DMA_DeInit), (228 bytes).
+    Removing stm32f10x_dma.o(i.DMA_GetCurrDataCounter), (6 bytes).
+    Removing stm32f10x_dma.o(i.DMA_GetFlagStatus), (32 bytes).
+    Removing stm32f10x_dma.o(i.DMA_GetITStatus), (32 bytes).
+    Removing stm32f10x_dma.o(i.DMA_ITConfig), (16 bytes).
+    Removing stm32f10x_dma.o(i.DMA_Init), (58 bytes).
+    Removing stm32f10x_dma.o(i.DMA_SetCurrDataCounter), (4 bytes).
+    Removing stm32f10x_dma.o(i.DMA_StructInit), (26 bytes).
+    Removing stm32f10x_adc.o(.rev16_text), (4 bytes).
+    Removing stm32f10x_adc.o(.revsh_text), (4 bytes).
+    Removing stm32f10x_adc.o(i.ADC_AnalogWatchdogCmd), (16 bytes).
+    Removing stm32f10x_adc.o(i.ADC_AnalogWatchdogSingleChannelConfig), (12 bytes).
+    Removing stm32f10x_adc.o(i.ADC_AnalogWatchdogThresholdsConfig), (6 bytes).
+    Removing stm32f10x_adc.o(i.ADC_AutoInjectedConvCmd), (20 bytes).
+    Removing stm32f10x_adc.o(i.ADC_ClearFlag), (6 bytes).
+    Removing stm32f10x_adc.o(i.ADC_DMACmd), (20 bytes).
+    Removing stm32f10x_adc.o(i.ADC_DeInit), (68 bytes).
+    Removing stm32f10x_adc.o(i.ADC_DiscModeChannelCountConfig), (16 bytes).
+    Removing stm32f10x_adc.o(i.ADC_DiscModeCmd), (20 bytes).
+    Removing stm32f10x_adc.o(i.ADC_ExternalTrigInjectedConvCmd), (20 bytes).
+    Removing stm32f10x_adc.o(i.ADC_ExternalTrigInjectedConvConfig), (12 bytes).
+    Removing stm32f10x_adc.o(i.ADC_GetDualModeConversionValue), (12 bytes).
+    Removing stm32f10x_adc.o(i.ADC_GetInjectedConversionValue), (14 bytes).
+    Removing stm32f10x_adc.o(i.ADC_GetSoftwareStartConvStatus), (14 bytes).
+    Removing stm32f10x_adc.o(i.ADC_GetSoftwareStartInjectedConvCmdStatus), (14 bytes).
+    Removing stm32f10x_adc.o(i.ADC_InjectedChannelConfig), (74 bytes).
+    Removing stm32f10x_adc.o(i.ADC_InjectedDiscModeCmd), (20 bytes).
+    Removing stm32f10x_adc.o(i.ADC_InjectedSequencerLengthConfig), (16 bytes).
+    Removing stm32f10x_adc.o(i.ADC_SetInjectedOffset), (10 bytes).
+    Removing stm32f10x_adc.o(i.ADC_SoftwareStartInjectedConvCmd), (20 bytes).
+    Removing stm32f10x_adc.o(i.ADC_StructInit), (18 bytes).
+    Removing stm32f10x_adc.o(i.ADC_TempSensorVrefintCmd), (28 bytes).
+    Removing stm32f10x_spi.o(.rev16_text), (4 bytes).
+    Removing stm32f10x_spi.o(.revsh_text), (4 bytes).
+    Removing stm32f10x_spi.o(i.I2S_Cmd), (20 bytes).
+    Removing stm32f10x_spi.o(i.I2S_Init), (150 bytes).
+    Removing stm32f10x_spi.o(i.I2S_StructInit), (18 bytes).
+    Removing stm32f10x_spi.o(i.SPI_BiDirectionalLineConfig), (22 bytes).
+    Removing stm32f10x_spi.o(i.SPI_DataSizeConfig), (16 bytes).
+    Removing stm32f10x_spi.o(i.SPI_GetCRC), (12 bytes).
+    Removing stm32f10x_spi.o(i.SPI_GetCRCPolynomial), (4 bytes).
+    Removing stm32f10x_spi.o(i.SPI_I2S_ClearFlag), (6 bytes).
+    Removing stm32f10x_spi.o(i.SPI_I2S_ClearITPendingBit), (14 bytes).
+    Removing stm32f10x_spi.o(i.SPI_I2S_DMACmd), (16 bytes).
+    Removing stm32f10x_spi.o(i.SPI_I2S_DeInit), (84 bytes).
+    Removing stm32f10x_spi.o(i.SPI_I2S_GetITStatus), (44 bytes).
+    Removing stm32f10x_spi.o(i.SPI_NSSInternalSoftwareConfig), (24 bytes).
+    Removing stm32f10x_spi.o(i.SPI_SSOutputCmd), (20 bytes).
+    Removing stm32f10x_spi.o(i.SPI_StructInit), (24 bytes).
+    Removing stm32f10x_spi.o(i.SPI_TransmitCRC), (10 bytes).
+    Removing usb_core.o(.rev16_text), (4 bytes).
+    Removing usb_core.o(.revsh_text), (4 bytes).
+    Removing usb_init.o(.rev16_text), (4 bytes).
+    Removing usb_init.o(.revsh_text), (4 bytes).
+    Removing usb_init.o(.data), (2 bytes).
+    Removing usb_int.o(.rev16_text), (4 bytes).
+    Removing usb_int.o(.revsh_text), (4 bytes).
+    Removing usb_mem.o(.rev16_text), (4 bytes).
+    Removing usb_mem.o(.revsh_text), (4 bytes).
+    Removing usb_mem.o(i.MyUserToPMABufferCopy), (32 bytes).
+    Removing usb_regs.o(.rev16_text), (4 bytes).
+    Removing usb_regs.o(.revsh_text), (4 bytes).
+    Removing usb_regs.o(i.ClearEPDoubleBuff), (32 bytes).
+    Removing usb_regs.o(i.ClearEP_CTR_RX), (28 bytes).
+    Removing usb_regs.o(i.ClearEP_CTR_TX), (28 bytes).
+    Removing usb_regs.o(i.ClearEP_KIND), (32 bytes).
+    Removing usb_regs.o(i.GetBTABLE), (12 bytes).
+    Removing usb_regs.o(i.GetDADDR), (12 bytes).
+    Removing usb_regs.o(i.GetEPAddress), (20 bytes).
+    Removing usb_regs.o(i.GetEPDblBuf0Addr), (28 bytes).
+    Removing usb_regs.o(i.GetEPDblBuf0Count), (32 bytes).
+    Removing usb_regs.o(i.GetEPDblBuf1Addr), (32 bytes).
+    Removing usb_regs.o(i.GetEPDblBuf1Count), (32 bytes).
+    Removing usb_regs.o(i.GetEPDblBufDir), (60 bytes).
+    Removing usb_regs.o(i.GetEPRxCount), (32 bytes).
+    Removing usb_regs.o(i.GetEPRxStatus), (24 bytes).
+    Removing usb_regs.o(i.GetEPTxCount), (32 bytes).
+    Removing usb_regs.o(i.GetEPTxStatus), (24 bytes).
+    Removing usb_regs.o(i.GetEPType), (24 bytes).
+    Removing usb_regs.o(i.GetFNR), (12 bytes).
+    Removing usb_regs.o(i.GetISTR), (12 bytes).
+    Removing usb_regs.o(i.GetRxStallStatus), (28 bytes).
+    Removing usb_regs.o(i.GetTxStallStatus), (28 bytes).
+    Removing usb_regs.o(i.SetDADDR), (12 bytes).
+    Removing usb_regs.o(i.SetDouBleBuffEPStall), (44 bytes).
+    Removing usb_regs.o(i.SetENDPOINT), (16 bytes).
+    Removing usb_regs.o(i.SetEPAddress), (36 bytes).
+    Removing usb_regs.o(i.SetEPCountRxReg), (38 bytes).
+    Removing usb_regs.o(i.SetEPDblBuf0Addr), (32 bytes).
+    Removing usb_regs.o(i.SetEPDblBuf1Addr), (32 bytes).
+    Removing usb_regs.o(i.SetEPDoubleBuff), (32 bytes).
+    Removing usb_regs.o(i.SetEP_KIND), (32 bytes).
+    Removing usb_regs.o(i.SetISTR), (12 bytes).
+    Removing usb_regs.o(i.Set_Status_Out), (32 bytes).
+    Removing usb_regs.o(i.ToWord), (6 bytes).
+    Removing usb_regs.o(i.ToggleDTOG_RX), (32 bytes).
+    Removing usb_sil.o(.rev16_text), (4 bytes).
+    Removing usb_sil.o(.revsh_text), (4 bytes).
+    Removing usb_sil.o(i.USB_SIL_Read), (36 bytes).
+    Removing usb_sil.o(i.USB_SIL_Write), (38 bytes).
+    Removing usb_desc.o(.rev16_text), (4 bytes).
+    Removing usb_desc.o(.revsh_text), (4 bytes).
+    Removing usb_istr.o(.rev16_text), (4 bytes).
+    Removing usb_istr.o(.revsh_text), (4 bytes).
+    Removing usb_istr.o(.data), (1 bytes).
+    Removing usb_istr.o(.data), (2 bytes).
+    Removing usb_prop.o(.rev16_text), (4 bytes).
+    Removing usb_prop.o(.revsh_text), (4 bytes).
+    Removing usb_prop.o(.data), (1 bytes).
+    Removing usb_pwr.o(.rev16_text), (4 bytes).
+    Removing usb_pwr.o(.revsh_text), (4 bytes).
+    Removing usb_pwr.o(i.PowerOff), (32 bytes).
+    Removing platform.o(.rev16_text), (4 bytes).
+    Removing platform.o(.revsh_text), (4 bytes).
+    Removing platform.o(i.calibrate_adc_offset), (48 bytes).
+    Removing platform.o(i.grab_adc_sample), (108 bytes).
+    Removing platform.o(i.init_DMA), (2 bytes).
+    Removing platform.o(i.init_NVIC), (8 bytes).
+    Removing platform.o(i.logical_right_shift), (12 bytes).
+    Removing platform.o(i.perform_usb_remote_wakeup), (2 bytes).
+    Removing platform.o(.data), (4 bytes).
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing stm32f10x_it.o(.rev16_text), (4 bytes).
+    Removing stm32f10x_it.o(.revsh_text), (4 bytes).
+    Removing stm32f10x_it.o(i.hard_fault_handler_c), (2 bytes).
+    Removing stm32f10x_it.o(.data), (1 bytes).
+    Removing stm32f10x_it.o(.data), (1 bytes).
+    Removing stm32f10x_it.o(.data), (1 bytes).
+    Removing stm32f10x_it.o(.data), (1 bytes).
+    Removing stm32f10x_it.o(.data), (1 bytes).
+    Removing stm32f10x_it.o(.data), (2 bytes).
+    Removing stm32f10x_it.o(.data), (1 bytes).
+    Removing stm32f10x_it.o(.data), (2 bytes).
+    Removing stm32f10x_it.o(.data), (1 bytes).
+    Removing stm32f10x_it.o(.data), (1 bytes).
+    Removing stm32f10x_it.o(.data), (4 bytes).
+    Removing stm32f10x_it.o(.data), (2 bytes).
+    Removing cyccnt_delay.o(.rev16_text), (4 bytes).
+    Removing cyccnt_delay.o(.revsh_text), (4 bytes).
+    Removing cyccnt_delay.o(i.DWT_Get), (12 bytes).
+
+309 unused section(s) (total 7018 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/dczerorl2.s                0x00000000   Number         0  __dczerorl2.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtentry4.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtentry2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtentry.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
+    ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
+    ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
+    ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
+    ../fplib/fpinit.s                        0x00000000   Number         0  fpinit.o ABSOLUTE
+    ..\Lib\STM32_USB-FS-Device_Lib\src\usb_core.c 0x00000000   Number         0  usb_core.o ABSOLUTE
+    ..\Lib\STM32_USB-FS-Device_Lib\src\usb_init.c 0x00000000   Number         0  usb_init.o ABSOLUTE
+    ..\Lib\STM32_USB-FS-Device_Lib\src\usb_int.c 0x00000000   Number         0  usb_int.o ABSOLUTE
+    ..\Lib\STM32_USB-FS-Device_Lib\src\usb_mem.c 0x00000000   Number         0  usb_mem.o ABSOLUTE
+    ..\Lib\STM32_USB-FS-Device_Lib\src\usb_regs.c 0x00000000   Number         0  usb_regs.o ABSOLUTE
+    ..\Lib\STM32_USB-FS-Device_Lib\src\usb_sil.c 0x00000000   Number         0  usb_sil.o ABSOLUTE
+    ..\Lib\src\misc.c                        0x00000000   Number         0  misc.o ABSOLUTE
+    ..\Lib\src\stm32f10x_adc.c               0x00000000   Number         0  stm32f10x_adc.o ABSOLUTE
+    ..\Lib\src\stm32f10x_dma.c               0x00000000   Number         0  stm32f10x_dma.o ABSOLUTE
+    ..\Lib\src\stm32f10x_gpio.c              0x00000000   Number         0  stm32f10x_gpio.o ABSOLUTE
+    ..\Lib\src\stm32f10x_rcc.c               0x00000000   Number         0  stm32f10x_rcc.o ABSOLUTE
+    ..\Lib\src\stm32f10x_spi.c               0x00000000   Number         0  stm32f10x_spi.o ABSOLUTE
+    ..\Lib\src\stm32f10x_tim.c               0x00000000   Number         0  stm32f10x_tim.o ABSOLUTE
+    ..\Lib\src\stm32f10x_usart.c             0x00000000   Number         0  stm32f10x_usart.o ABSOLUTE
+    ..\Lib\startup\arm\startup_stm32f10x_hd.s 0x00000000   Number         0  startup_stm32f10x_hd.o ABSOLUTE
+    ..\User\USB\usb_desc.c                   0x00000000   Number         0  usb_desc.o ABSOLUTE
+    ..\User\USB\usb_istr.c                   0x00000000   Number         0  usb_istr.o ABSOLUTE
+    ..\User\USB\usb_prop.c                   0x00000000   Number         0  usb_prop.o ABSOLUTE
+    ..\User\USB\usb_pwr.c                    0x00000000   Number         0  usb_pwr.o ABSOLUTE
+    ..\User\cyccnt_delay.c                   0x00000000   Number         0  cyccnt_delay.o ABSOLUTE
+    ..\User\main.c                           0x00000000   Number         0  main.o ABSOLUTE
+    ..\User\platform.c                       0x00000000   Number         0  platform.o ABSOLUTE
+    ..\User\stm32f10x_it.c                   0x00000000   Number         0  stm32f10x_it.o ABSOLUTE
+    ..\User\system_stm32f10x.c               0x00000000   Number         0  system_stm32f10x.o ABSOLUTE
+    ..\\Lib\\STM32_USB-FS-Device_Lib\\src\\usb_core.c 0x00000000   Number         0  usb_core.o ABSOLUTE
+    ..\\Lib\\STM32_USB-FS-Device_Lib\\src\\usb_init.c 0x00000000   Number         0  usb_init.o ABSOLUTE
+    ..\\Lib\\STM32_USB-FS-Device_Lib\\src\\usb_int.c 0x00000000   Number         0  usb_int.o ABSOLUTE
+    ..\\Lib\\STM32_USB-FS-Device_Lib\\src\\usb_mem.c 0x00000000   Number         0  usb_mem.o ABSOLUTE
+    ..\\Lib\\STM32_USB-FS-Device_Lib\\src\\usb_regs.c 0x00000000   Number         0  usb_regs.o ABSOLUTE
+    ..\\Lib\\STM32_USB-FS-Device_Lib\\src\\usb_sil.c 0x00000000   Number         0  usb_sil.o ABSOLUTE
+    ..\\Lib\\src\\misc.c                     0x00000000   Number         0  misc.o ABSOLUTE
+    ..\\Lib\\src\\stm32f10x_adc.c            0x00000000   Number         0  stm32f10x_adc.o ABSOLUTE
+    ..\\Lib\\src\\stm32f10x_dma.c            0x00000000   Number         0  stm32f10x_dma.o ABSOLUTE
+    ..\\Lib\\src\\stm32f10x_gpio.c           0x00000000   Number         0  stm32f10x_gpio.o ABSOLUTE
+    ..\\Lib\\src\\stm32f10x_rcc.c            0x00000000   Number         0  stm32f10x_rcc.o ABSOLUTE
+    ..\\Lib\\src\\stm32f10x_spi.c            0x00000000   Number         0  stm32f10x_spi.o ABSOLUTE
+    ..\\Lib\\src\\stm32f10x_tim.c            0x00000000   Number         0  stm32f10x_tim.o ABSOLUTE
+    ..\\Lib\\src\\stm32f10x_usart.c          0x00000000   Number         0  stm32f10x_usart.o ABSOLUTE
+    ..\\User\\USB\\usb_desc.c                0x00000000   Number         0  usb_desc.o ABSOLUTE
+    ..\\User\\USB\\usb_istr.c                0x00000000   Number         0  usb_istr.o ABSOLUTE
+    ..\\User\\USB\\usb_prop.c                0x00000000   Number         0  usb_prop.o ABSOLUTE
+    ..\\User\\USB\\usb_pwr.c                 0x00000000   Number         0  usb_pwr.o ABSOLUTE
+    ..\\User\\cyccnt_delay.c                 0x00000000   Number         0  cyccnt_delay.o ABSOLUTE
+    ..\\User\\main.c                         0x00000000   Number         0  main.o ABSOLUTE
+    ..\\User\\platform.c                     0x00000000   Number         0  platform.o ABSOLUTE
+    ..\\User\\stm32f10x_it.c                 0x00000000   Number         0  stm32f10x_it.o ABSOLUTE
+    ..\\User\\system_stm32f10x.c             0x00000000   Number         0  system_stm32f10x.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    RESET                                    0x08000000   Section      304  startup_stm32f10x_hd.o(RESET)
+    !!!main                                  0x08000130   Section        8  __main.o(!!!main)
+    !!!scatter                               0x08000138   Section       52  __scatter.o(!!!scatter)
+    !!dczerorl2                              0x0800016c   Section       90  __dczerorl2.o(!!dczerorl2)
+    !!handler_zi                             0x080001c8   Section       28  __scatter_zi.o(!!handler_zi)
+    .ARM.Collect$$libinit$$00000000          0x080001e4   Section        2  libinit.o(.ARM.Collect$$libinit$$00000000)
+    .ARM.Collect$$libinit$$00000002          0x080001e6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    .ARM.Collect$$libinit$$00000008          0x080001e6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000008)
+    .ARM.Collect$$libinit$$0000000A          0x080001e6   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    .ARM.Collect$$libinit$$0000000C          0x080001e6   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    .ARM.Collect$$libinit$$0000000F          0x080001e6   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000F)
+    .ARM.Collect$$libinit$$00000011          0x080001e6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    .ARM.Collect$$libinit$$00000013          0x080001e6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    .ARM.Collect$$libinit$$00000015          0x080001e6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    .ARM.Collect$$libinit$$00000017          0x080001e6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    .ARM.Collect$$libinit$$00000019          0x080001e6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    .ARM.Collect$$libinit$$0000001B          0x080001e6   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    .ARM.Collect$$libinit$$0000001D          0x080001e6   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    .ARM.Collect$$libinit$$0000001F          0x080001e6   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    .ARM.Collect$$libinit$$00000021          0x080001e6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    .ARM.Collect$$libinit$$00000023          0x080001e6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    .ARM.Collect$$libinit$$0000002A          0x080001e6   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002A)
+    .ARM.Collect$$libinit$$0000002C          0x080001e6   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    .ARM.Collect$$libinit$$0000002E          0x080001e6   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    .ARM.Collect$$libinit$$00000030          0x080001e6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    .ARM.Collect$$libinit$$00000031          0x080001e6   Section        2  libinit2.o(.ARM.Collect$$libinit$$00000031)
+    .ARM.Collect$$libshutdown$$00000000      0x080001e8   Section        2  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    .ARM.Collect$$libshutdown$$00000003      0x080001ea   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000003)
+    .ARM.Collect$$libshutdown$$00000006      0x080001ea   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000006)
+    .ARM.Collect$$libshutdown$$00000009      0x080001ea   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000009)
+    .ARM.Collect$$libshutdown$$0000000B      0x080001ea   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000B)
+    .ARM.Collect$$libshutdown$$0000000E      0x080001ea   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E)
+    .ARM.Collect$$libshutdown$$0000000F      0x080001ea   Section        2  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    .ARM.Collect$$rtentry$$00000000          0x080001ec   Section        0  rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    .ARM.Collect$$rtentry$$00000002          0x080001ec   Section        0  rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    .ARM.Collect$$rtentry$$00000004          0x080001ec   Section        6  rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    .ARM.Collect$$rtentry$$00000009          0x080001f2   Section        0  rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    .ARM.Collect$$rtentry$$0000000A          0x080001f2   Section        4  rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    .ARM.Collect$$rtentry$$0000000C          0x080001f6   Section        0  rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    .ARM.Collect$$rtentry$$0000000D          0x080001f6   Section        8  rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    .ARM.Collect$$rtexit$$00000000           0x080001fe   Section        2  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    .ARM.Collect$$rtexit$$00000002           0x08000200   Section        0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    .ARM.Collect$$rtexit$$00000003           0x08000200   Section        4  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    .ARM.Collect$$rtexit$$00000004           0x08000204   Section        6  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    .text                                    0x0800020c   Section       64  startup_stm32f10x_hd.o(.text)
+    .text                                    0x0800024c   Section        0  heapauxi.o(.text)
+    .text                                    0x08000252   Section       74  sys_stackheap_outer.o(.text)
+    .text                                    0x0800029c   Section        0  exit.o(.text)
+    .text                                    0x080002a8   Section        8  libspace.o(.text)
+    .text                                    0x080002b0   Section        0  sys_exit.o(.text)
+    .text                                    0x080002bc   Section        2  use_no_semi.o(.text)
+    .text                                    0x080002be   Section        0  indicate_semi.o(.text)
+    i.ADC1_2_IRQHandler                      0x080002c0   Section        0  stm32f10x_it.o(i.ADC1_2_IRQHandler)
+    i.ADC3_IRQHandler                        0x08000314   Section        0  stm32f10x_it.o(i.ADC3_IRQHandler)
+    i.ADC_ClearITPendingBit                  0x08000316   Section        0  stm32f10x_adc.o(i.ADC_ClearITPendingBit)
+    i.ADC_Cmd                                0x0800031e   Section        0  stm32f10x_adc.o(i.ADC_Cmd)
+    i.ADC_ExternalTrigConvCmd                0x08000332   Section        0  stm32f10x_adc.o(i.ADC_ExternalTrigConvCmd)
+    i.ADC_GetCalibrationStatus               0x08000346   Section        0  stm32f10x_adc.o(i.ADC_GetCalibrationStatus)
+    i.ADC_GetConversionValue                 0x08000354   Section        0  stm32f10x_adc.o(i.ADC_GetConversionValue)
+    i.ADC_GetFlagStatus                      0x0800035a   Section        0  stm32f10x_adc.o(i.ADC_GetFlagStatus)
+    i.ADC_GetITStatus                        0x08000368   Section        0  stm32f10x_adc.o(i.ADC_GetITStatus)
+    i.ADC_GetResetCalibrationStatus          0x08000384   Section        0  stm32f10x_adc.o(i.ADC_GetResetCalibrationStatus)
+    i.ADC_ITConfig                           0x08000392   Section        0  stm32f10x_adc.o(i.ADC_ITConfig)
+    i.ADC_Init                               0x080003a4   Section        0  stm32f10x_adc.o(i.ADC_Init)
+    i.ADC_RegularChannelConfig               0x080003ec   Section        0  stm32f10x_adc.o(i.ADC_RegularChannelConfig)
+    i.ADC_ResetCalibration                   0x08000460   Section        0  stm32f10x_adc.o(i.ADC_ResetCalibration)
+    i.ADC_SoftwareStartConvCmd               0x0800046a   Section        0  stm32f10x_adc.o(i.ADC_SoftwareStartConvCmd)
+    i.ADC_StartCalibration                   0x0800047e   Section        0  stm32f10x_adc.o(i.ADC_StartCalibration)
+    i.BusFault_Handler                       0x08000488   Section        0  stm32f10x_it.o(i.BusFault_Handler)
+    i.ByteSwap                               0x0800048a   Section        0  usb_regs.o(i.ByteSwap)
+    i.CAN1_RX1_IRQHandler                    0x08000494   Section        0  stm32f10x_it.o(i.CAN1_RX1_IRQHandler)
+    i.CAN1_SCE_IRQHandler                    0x08000496   Section        0  stm32f10x_it.o(i.CAN1_SCE_IRQHandler)
+    i.CTR_HP                                 0x08000498   Section        0  usb_int.o(i.CTR_HP)
+    i.CTR_LP                                 0x08000510   Section        0  usb_int.o(i.CTR_LP)
+    i.ClearDTOG_RX                           0x08000658   Section        0  usb_regs.o(i.ClearDTOG_RX)
+    i.ClearDTOG_TX                           0x08000680   Section        0  usb_regs.o(i.ClearDTOG_TX)
+    i.Clear_Status_Out                       0x080006a8   Section        0  usb_regs.o(i.Clear_Status_Out)
+    i.DMA1_Channel1_IRQHandler               0x080006c8   Section        0  stm32f10x_it.o(i.DMA1_Channel1_IRQHandler)
+    i.DMA1_Channel2_IRQHandler               0x080006ca   Section        0  stm32f10x_it.o(i.DMA1_Channel2_IRQHandler)
+    i.DMA1_Channel3_IRQHandler               0x080006cc   Section        0  stm32f10x_it.o(i.DMA1_Channel3_IRQHandler)
+    i.DMA1_Channel4_IRQHandler               0x080006ce   Section        0  stm32f10x_it.o(i.DMA1_Channel4_IRQHandler)
+    i.DMA1_Channel5_IRQHandler               0x080006d0   Section        0  stm32f10x_it.o(i.DMA1_Channel5_IRQHandler)
+    i.DMA1_Channel6_IRQHandler               0x080006d2   Section        0  stm32f10x_it.o(i.DMA1_Channel6_IRQHandler)
+    i.DMA1_Channel7_IRQHandler               0x080006d4   Section        0  stm32f10x_it.o(i.DMA1_Channel7_IRQHandler)
+    i.DMA2_Channel1_IRQHandler               0x080006d6   Section        0  stm32f10x_it.o(i.DMA2_Channel1_IRQHandler)
+    i.DMA2_Channel2_IRQHandler               0x080006d8   Section        0  stm32f10x_it.o(i.DMA2_Channel2_IRQHandler)
+    i.DMA2_Channel3_IRQHandler               0x080006da   Section        0  stm32f10x_it.o(i.DMA2_Channel3_IRQHandler)
+    i.DMA2_Channel4_5_IRQHandler             0x080006dc   Section        0  stm32f10x_it.o(i.DMA2_Channel4_5_IRQHandler)
+    i.DWT_Delay                              0x080006e0   Section        0  cyccnt_delay.o(i.DWT_Delay)
+    i.DWT_Init                               0x0800070c   Section        0  cyccnt_delay.o(i.DWT_Init)
+    i.DataStageIn                            0x08000734   Section        0  usb_core.o(i.DataStageIn)
+    DataStageIn                              0x08000735   Thumb Code   156  usb_core.o(i.DataStageIn)
+    i.DataStageOut                           0x080007e8   Section        0  usb_core.o(i.DataStageOut)
+    DataStageOut                             0x080007e9   Thumb Code   142  usb_core.o(i.DataStageOut)
+    i.Data_Setup0                            0x0800088c   Section        0  usb_core.o(i.Data_Setup0)
+    Data_Setup0                              0x0800088d   Thumb Code   376  usb_core.o(i.Data_Setup0)
+    i.DebugMon_Handler                       0x08000a28   Section        0  stm32f10x_it.o(i.DebugMon_Handler)
+    i.EP1_IN_Callback                        0x08000a2c   Section        0  usb_istr.o(i.EP1_IN_Callback)
+    i.EXTI0_IRQHandler                       0x08000b2c   Section        0  stm32f10x_it.o(i.EXTI0_IRQHandler)
+    i.EXTI15_10_IRQHandler                   0x08000b2e   Section        0  stm32f10x_it.o(i.EXTI15_10_IRQHandler)
+    i.EXTI1_IRQHandler                       0x08000b30   Section        0  stm32f10x_it.o(i.EXTI1_IRQHandler)
+    i.EXTI2_IRQHandler                       0x08000b32   Section        0  stm32f10x_it.o(i.EXTI2_IRQHandler)
+    i.EXTI3_IRQHandler                       0x08000b34   Section        0  stm32f10x_it.o(i.EXTI3_IRQHandler)
+    i.EXTI4_IRQHandler                       0x08000b36   Section        0  stm32f10x_it.o(i.EXTI4_IRQHandler)
+    i.EXTI9_5_IRQHandler                     0x08000b38   Section        0  stm32f10x_it.o(i.EXTI9_5_IRQHandler)
+    i.Enter_LowPowerMode                     0x08000b3c   Section        0  platform.o(i.Enter_LowPowerMode)
+    i.FLASH_IRQHandler                       0x08000b48   Section        0  stm32f10x_it.o(i.FLASH_IRQHandler)
+    i.FSMC_IRQHandler                        0x08000b4a   Section        0  stm32f10x_it.o(i.FSMC_IRQHandler)
+    i.FreeUserBuffer                         0x08000b4c   Section        0  usb_regs.o(i.FreeUserBuffer)
+    i.GPIO_AINConfig                         0x08000b80   Section        0  platform.o(i.GPIO_AINConfig)
+    i.GPIO_Init                              0x08000be0   Section        0  stm32f10x_gpio.o(i.GPIO_Init)
+    i.GPIO_PinRemapConfig                    0x08000c7c   Section        0  stm32f10x_gpio.o(i.GPIO_PinRemapConfig)
+    i.GPIO_ResetBits                         0x08000cd4   Section        0  stm32f10x_gpio.o(i.GPIO_ResetBits)
+    i.GPIO_SetBits                           0x08000cd8   Section        0  stm32f10x_gpio.o(i.GPIO_SetBits)
+    i.GPIO_StructInit                        0x08000cdc   Section        0  stm32f10x_gpio.o(i.GPIO_StructInit)
+    i.GetCNTR                                0x08000cec   Section        0  usb_regs.o(i.GetCNTR)
+    i.GetENDPOINT                            0x08000cf8   Section        0  usb_regs.o(i.GetENDPOINT)
+    i.GetEPRxAddr                            0x08000d0c   Section        0  usb_regs.o(i.GetEPRxAddr)
+    i.GetEPTxAddr                            0x08000d2c   Section        0  usb_regs.o(i.GetEPTxAddr)
+    i.Get_Cur_Command                        0x08000d48   Section        0  usb_prop.o(i.Get_Cur_Command)
+    i.Get_Max_Command                        0x08000d6c   Section        0  usb_prop.o(i.Get_Max_Command)
+    i.Get_Min_Command                        0x08000d8c   Section        0  usb_prop.o(i.Get_Min_Command)
+    i.Get_Res_Command                        0x08000da4   Section        0  usb_prop.o(i.Get_Res_Command)
+    i.Get_SerialNum                          0x08000dbc   Section        0  usb_prop.o(i.Get_SerialNum)
+    i.HardFault_Handler                      0x08000df0   Section        0  stm32f10x_it.o(i.HardFault_Handler)
+    i.I2C1_ER_IRQHandler                     0x08000df2   Section        0  stm32f10x_it.o(i.I2C1_ER_IRQHandler)
+    i.I2C1_EV_IRQHandler                     0x08000df4   Section        0  stm32f10x_it.o(i.I2C1_EV_IRQHandler)
+    i.I2C2_ER_IRQHandler                     0x08000df6   Section        0  stm32f10x_it.o(i.I2C2_ER_IRQHandler)
+    i.I2C2_EV_IRQHandler                     0x08000df8   Section        0  stm32f10x_it.o(i.I2C2_EV_IRQHandler)
+    i.In0_Process                            0x08000dfc   Section        0  usb_core.o(i.In0_Process)
+    i.IntToUnicode                           0x08000e58   Section        0  usb_prop.o(i.IntToUnicode)
+    i.Joystick_Data_Setup                    0x08000e90   Section        0  usb_prop.o(i.Joystick_Data_Setup)
+    i.Joystick_GetConfigDescriptor           0x08000f68   Section        0  usb_prop.o(i.Joystick_GetConfigDescriptor)
+    i.Joystick_GetDeviceDescriptor           0x08000f74   Section        0  usb_prop.o(i.Joystick_GetDeviceDescriptor)
+    i.Joystick_GetHIDDescriptor              0x08000f80   Section        0  usb_prop.o(i.Joystick_GetHIDDescriptor)
+    i.Joystick_GetProtocolValue              0x08000f8c   Section        0  usb_prop.o(i.Joystick_GetProtocolValue)
+    i.Joystick_GetReportDescriptor           0x08000fa8   Section        0  usb_prop.o(i.Joystick_GetReportDescriptor)
+    i.Joystick_GetStringDescriptor           0x08000fb4   Section        0  usb_prop.o(i.Joystick_GetStringDescriptor)
+    i.Joystick_Get_Interface_Setting         0x08000fd4   Section        0  usb_prop.o(i.Joystick_Get_Interface_Setting)
+    i.Joystick_NoData_Setup                  0x08000fe4   Section        0  usb_prop.o(i.Joystick_NoData_Setup)
+    i.Joystick_Reset                         0x08001004   Section        0  usb_prop.o(i.Joystick_Reset)
+    i.Joystick_SetConfiguration              0x08001100   Section        0  usb_prop.o(i.Joystick_SetConfiguration)
+    i.Joystick_SetDeviceAddress              0x08001118   Section        0  usb_prop.o(i.Joystick_SetDeviceAddress)
+    i.Joystick_SetDeviceFeature              0x08001124   Section        0  usb_prop.o(i.Joystick_SetDeviceFeature)
+    i.Joystick_SetProtocol                   0x08001128   Section        0  usb_prop.o(i.Joystick_SetProtocol)
+    i.Joystick_Status_In                     0x08001140   Section        0  usb_prop.o(i.Joystick_Status_In)
+    i.Joystick_Status_Out                    0x08001142   Section        0  usb_prop.o(i.Joystick_Status_Out)
+    i.Joystick_init                          0x08001144   Section        0  usb_prop.o(i.Joystick_init)
+    i.LED_PWM_init                           0x08001168   Section        0  platform.o(i.LED_PWM_init)
+    i.Leave_LowPowerMode                     0x08001224   Section        0  platform.o(i.Leave_LowPowerMode)
+    i.MemManage_Handler                      0x08001240   Section        0  stm32f10x_it.o(i.MemManage_Handler)
+    i.NMI_Handler                            0x08001242   Section        0  stm32f10x_it.o(i.NMI_Handler)
+    i.NOP_Process                            0x08001244   Section        0  usb_core.o(i.NOP_Process)
+    i.NVIC_Init                              0x08001248   Section        0  misc.o(i.NVIC_Init)
+    i.NVIC_PriorityGroupConfig               0x080012ac   Section        0  misc.o(i.NVIC_PriorityGroupConfig)
+    i.NoData_Setup0                          0x080012c0   Section        0  usb_core.o(i.NoData_Setup0)
+    NoData_Setup0                            0x080012c1   Thumb Code   190  usb_core.o(i.NoData_Setup0)
+    i.Out0_Process                           0x08001394   Section        0  usb_core.o(i.Out0_Process)
+    i.PMAToUserBufferCopy                    0x080013dc   Section        0  usb_mem.o(i.PMAToUserBufferCopy)
+    i.PVD_IRQHandler                         0x080013fc   Section        0  stm32f10x_it.o(i.PVD_IRQHandler)
+    i.PendSV_Handler                         0x080013fe   Section        0  stm32f10x_it.o(i.PendSV_Handler)
+    i.Post0_Process                          0x08001400   Section        0  usb_core.o(i.Post0_Process)
+    i.PowerOn                                0x08001444   Section        0  usb_pwr.o(i.PowerOn)
+    i.RCC_ADCCLKConfig                       0x08001470   Section        0  stm32f10x_rcc.o(i.RCC_ADCCLKConfig)
+    i.RCC_APB1PeriphClockCmd                 0x08001484   Section        0  stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd)
+    i.RCC_APB1PeriphResetCmd                 0x0800149c   Section        0  stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd)
+    i.RCC_APB2PeriphClockCmd                 0x080014b4   Section        0  stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd)
+    i.RCC_APB2PeriphResetCmd                 0x080014cc   Section        0  stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd)
+    i.RCC_IRQHandler                         0x080014e4   Section        0  stm32f10x_it.o(i.RCC_IRQHandler)
+    i.RCC_USBCLKConfig                       0x080014e8   Section        0  stm32f10x_rcc.o(i.RCC_USBCLKConfig)
+    i.RTCAlarm_IRQHandler                    0x080014f4   Section        0  stm32f10x_it.o(i.RTCAlarm_IRQHandler)
+    i.RTC_IRQHandler                         0x080014f6   Section        0  stm32f10x_it.o(i.RTC_IRQHandler)
+    i.Resume                                 0x080014f8   Section        0  usb_pwr.o(i.Resume)
+    i.Resume_Init                            0x08001574   Section        0  usb_pwr.o(i.Resume_Init)
+    i.SDIO_IRQHandler                        0x08001594   Section        0  stm32f10x_it.o(i.SDIO_IRQHandler)
+    i.SOF_Callback                           0x08001598   Section        0  usb_istr.o(i.SOF_Callback)
+    i.SPI1_IRQHandler                        0x080015ac   Section        0  stm32f10x_it.o(i.SPI1_IRQHandler)
+    i.SPI2_IRQHandler                        0x080017ec   Section        0  stm32f10x_it.o(i.SPI2_IRQHandler)
+    i.SPI3_IRQHandler                        0x080017ee   Section        0  stm32f10x_it.o(i.SPI3_IRQHandler)
+    i.SPI_CalculateCRC                       0x080017f0   Section        0  stm32f10x_spi.o(i.SPI_CalculateCRC)
+    i.SPI_Cmd                                0x08001804   Section        0  stm32f10x_spi.o(i.SPI_Cmd)
+    i.SPI_I2S_GetFlagStatus                  0x08001818   Section        0  stm32f10x_spi.o(i.SPI_I2S_GetFlagStatus)
+    i.SPI_I2S_ITConfig                       0x08001826   Section        0  stm32f10x_spi.o(i.SPI_I2S_ITConfig)
+    i.SPI_I2S_ReceiveData                    0x0800183e   Section        0  stm32f10x_spi.o(i.SPI_I2S_ReceiveData)
+    i.SPI_I2S_SendData                       0x08001842   Section        0  stm32f10x_spi.o(i.SPI_I2S_SendData)
+    i.SPI_Init                               0x08001846   Section        0  stm32f10x_spi.o(i.SPI_Init)
+    i.SVC_Handler                            0x0800187e   Section        0  stm32f10x_it.o(i.SVC_Handler)
+    i.SetBTABLE                              0x08001880   Section        0  usb_regs.o(i.SetBTABLE)
+    i.SetCNTR                                0x08001890   Section        0  usb_regs.o(i.SetCNTR)
+    i.SetDeviceAddress                       0x0800189c   Section        0  usb_core.o(i.SetDeviceAddress)
+    i.SetEPDblBuf0Count                      0x080018e4   Section        0  usb_regs.o(i.SetEPDblBuf0Count)
+    i.SetEPDblBuf1Count                      0x08001940   Section        0  usb_regs.o(i.SetEPDblBuf1Count)
+    i.SetEPDblBuffAddr                       0x0800199c   Section        0  usb_regs.o(i.SetEPDblBuffAddr)
+    i.SetEPDblBuffCount                      0x080019d0   Section        0  usb_regs.o(i.SetEPDblBuffCount)
+    i.SetEPRxAddr                            0x08001a74   Section        0  usb_regs.o(i.SetEPRxAddr)
+    i.SetEPRxCount                           0x08001a94   Section        0  usb_regs.o(i.SetEPRxCount)
+    i.SetEPRxStatus                          0x08001ad4   Section        0  usb_regs.o(i.SetEPRxStatus)
+    i.SetEPRxValid                           0x08001b04   Section        0  usb_regs.o(i.SetEPRxValid)
+    i.SetEPTxAddr                            0x08001b28   Section        0  usb_regs.o(i.SetEPTxAddr)
+    i.SetEPTxCount                           0x08001b48   Section        0  usb_regs.o(i.SetEPTxCount)
+    i.SetEPTxStatus                          0x08001b64   Section        0  usb_regs.o(i.SetEPTxStatus)
+    i.SetEPTxValid                           0x08001b94   Section        0  usb_regs.o(i.SetEPTxValid)
+    i.SetEPType                              0x08001bb8   Section        0  usb_regs.o(i.SetEPType)
+    i.SetSysClockTo48                        0x08001bd4   Section        0  system_stm32f10x.o(i.SetSysClockTo48)
+    SetSysClockTo48                          0x08001bd5   Thumb Code   160  system_stm32f10x.o(i.SetSysClockTo48)
+    i.Set_Cur_Command                        0x08001c7c   Section        0  usb_prop.o(i.Set_Cur_Command)
+    i.Set_USBClock                           0x08001ca0   Section        0  platform.o(i.Set_USBClock)
+    i.Setup0_Process                         0x08001cb4   Section        0  usb_core.o(i.Setup0_Process)
+    i.Standard_ClearFeature                  0x08001d1c   Section        0  usb_core.o(i.Standard_ClearFeature)
+    i.Standard_GetConfiguration              0x08001e18   Section        0  usb_core.o(i.Standard_GetConfiguration)
+    i.Standard_GetDescriptorData             0x08001e40   Section        0  usb_core.o(i.Standard_GetDescriptorData)
+    i.Standard_GetInterface                  0x08001e5c   Section        0  usb_core.o(i.Standard_GetInterface)
+    i.Standard_GetStatus                     0x08001e84   Section        0  usb_core.o(i.Standard_GetStatus)
+    i.Standard_SetConfiguration              0x08001f18   Section        0  usb_core.o(i.Standard_SetConfiguration)
+    i.Standard_SetDeviceFeature              0x08001f50   Section        0  usb_core.o(i.Standard_SetDeviceFeature)
+    i.Standard_SetEndPointFeature            0x08001f74   Section        0  usb_core.o(i.Standard_SetEndPointFeature)
+    i.Standard_SetInterface                  0x08001ffc   Section        0  usb_core.o(i.Standard_SetInterface)
+    i.Suspend                                0x08002044   Section        0  usb_pwr.o(i.Suspend)
+    i.SysTick_Handler                        0x08002064   Section        0  stm32f10x_it.o(i.SysTick_Handler)
+    i.SystemInit                             0x08002068   Section        0  system_stm32f10x.o(i.SystemInit)
+    i.TAMPER_IRQHandler                      0x080020b8   Section        0  stm32f10x_it.o(i.TAMPER_IRQHandler)
+    i.TIM1_BRK_IRQHandler                    0x080020ba   Section        0  stm32f10x_it.o(i.TIM1_BRK_IRQHandler)
+    i.TIM1_CC_IRQHandler                     0x080020bc   Section        0  stm32f10x_it.o(i.TIM1_CC_IRQHandler)
+    i.TIM1_TRG_COM_IRQHandler                0x08002214   Section        0  stm32f10x_it.o(i.TIM1_TRG_COM_IRQHandler)
+    i.TIM1_UP_IRQHandler                     0x08002216   Section        0  stm32f10x_it.o(i.TIM1_UP_IRQHandler)
+    i.TIM2_IRQHandler                        0x08002218   Section        0  stm32f10x_it.o(i.TIM2_IRQHandler)
+    i.TIM3_IRQHandler                        0x08002220   Section        0  stm32f10x_it.o(i.TIM3_IRQHandler)
+    i.TIM4_IRQHandler                        0x08002260   Section        0  stm32f10x_it.o(i.TIM4_IRQHandler)
+    i.TIM5_IRQHandler                        0x08002262   Section        0  stm32f10x_it.o(i.TIM5_IRQHandler)
+    i.TIM6_IRQHandler                        0x08002264   Section        0  stm32f10x_it.o(i.TIM6_IRQHandler)
+    i.TIM7_IRQHandler                        0x08002266   Section        0  stm32f10x_it.o(i.TIM7_IRQHandler)
+    i.TIM8_BRK_IRQHandler                    0x08002268   Section        0  stm32f10x_it.o(i.TIM8_BRK_IRQHandler)
+    i.TIM8_CC_IRQHandler                     0x0800226a   Section        0  stm32f10x_it.o(i.TIM8_CC_IRQHandler)
+    i.TIM8_TRG_COM_IRQHandler                0x0800226c   Section        0  stm32f10x_it.o(i.TIM8_TRG_COM_IRQHandler)
+    i.TIM8_UP_IRQHandler                     0x0800226e   Section        0  stm32f10x_it.o(i.TIM8_UP_IRQHandler)
+    i.TIM_ARRPreloadConfig                   0x08002270   Section        0  stm32f10x_tim.o(i.TIM_ARRPreloadConfig)
+    i.TIM_ClearITPendingBit                  0x08002284   Section        0  stm32f10x_tim.o(i.TIM_ClearITPendingBit)
+    i.TIM_Cmd                                0x0800228a   Section        0  stm32f10x_tim.o(i.TIM_Cmd)
+    i.TIM_CtrlPWMOutputs                     0x0800229e   Section        0  stm32f10x_tim.o(i.TIM_CtrlPWMOutputs)
+    i.TIM_DeInit                             0x080022b4   Section        0  stm32f10x_tim.o(i.TIM_DeInit)
+    i.TIM_ITConfig                           0x08002424   Section        0  stm32f10x_tim.o(i.TIM_ITConfig)
+    i.TIM_OC1Init                            0x08002434   Section        0  stm32f10x_tim.o(i.TIM_OC1Init)
+    i.TIM_OC4Init                            0x080024b4   Section        0  stm32f10x_tim.o(i.TIM_OC4Init)
+    i.TIM_OC4PreloadConfig                   0x08002518   Section        0  stm32f10x_tim.o(i.TIM_OC4PreloadConfig)
+    i.TIM_OCStructInit                       0x0800252c   Section        0  stm32f10x_tim.o(i.TIM_OCStructInit)
+    i.TIM_TimeBaseInit                       0x08002540   Section        0  stm32f10x_tim.o(i.TIM_TimeBaseInit)
+    i.TIM_TimeBaseStructInit                 0x080025dc   Section        0  stm32f10x_tim.o(i.TIM_TimeBaseStructInit)
+    i.ToggleDTOG_TX                          0x080025f0   Section        0  usb_regs.o(i.ToggleDTOG_TX)
+    i.UART4_IRQHandler                       0x08002610   Section        0  stm32f10x_it.o(i.UART4_IRQHandler)
+    i.UART5_IRQHandler                       0x08002612   Section        0  stm32f10x_it.o(i.UART5_IRQHandler)
+    i.USART1_IRQHandler                      0x08002614   Section        0  stm32f10x_it.o(i.USART1_IRQHandler)
+    i.USART2_IRQHandler                      0x08002616   Section        0  stm32f10x_it.o(i.USART2_IRQHandler)
+    i.USART3_IRQHandler                      0x08002618   Section        0  stm32f10x_it.o(i.USART3_IRQHandler)
+    i.USBWakeUp_IRQHandler                   0x0800261a   Section        0  stm32f10x_it.o(i.USBWakeUp_IRQHandler)
+    i.USB_Cable_Config                       0x0800261c   Section        0  platform.o(i.USB_Cable_Config)
+    i.USB_HP_CAN1_TX_IRQHandler              0x08002634   Section        0  stm32f10x_it.o(i.USB_HP_CAN1_TX_IRQHandler)
+    i.USB_Init                               0x08002638   Section        0  usb_init.o(i.USB_Init)
+    i.USB_Interrupts_Config                  0x08002660   Section        0  platform.o(i.USB_Interrupts_Config)
+    i.USB_LP_CAN1_RX0_IRQHandler             0x080026b4   Section        0  stm32f10x_it.o(i.USB_LP_CAN1_RX0_IRQHandler)
+    i.USB_LP_IRQHandler                      0x080026cc   Section        0  usb_istr.o(i.USB_LP_IRQHandler)
+    i.USB_SIL_Init                           0x0800278c   Section        0  usb_sil.o(i.USB_SIL_Init)
+    i.UsageFault_Handler                     0x080027ac   Section        0  stm32f10x_it.o(i.UsageFault_Handler)
+    i.UserToPMABufferCopy                    0x080027b0   Section        0  usb_mem.o(i.UserToPMABufferCopy)
+    i.Vendor_Command_IN                      0x080027d8   Section        0  usb_prop.o(i.Vendor_Command_IN)
+    i.Vendor_Command_OUT                     0x08002834   Section        0  usb_prop.o(i.Vendor_Command_OUT)
+    i.WWDG_IRQHandler                        0x0800284c   Section        0  stm32f10x_it.o(i.WWDG_IRQHandler)
+    i.adc_buf_init                           0x08002850   Section        0  platform.o(i.adc_buf_init)
+    i.init_ADC_alarm                         0x08002874   Section        0  platform.o(i.init_ADC_alarm)
+    i.init_ADC_timer                         0x080028f8   Section        0  platform.o(i.init_ADC_timer)
+    i.init_adc_spi                           0x0800298c   Section        0  platform.o(i.init_adc_spi)
+    i.init_alarm_led                         0x08002a6c   Section        0  platform.o(i.init_alarm_led)
+    i.init_boost_osc                         0x08002aac   Section        0  platform.o(i.init_boost_osc)
+    i.init_daq_timer                         0x08002ae8   Section        0  platform.o(i.init_daq_timer)
+    i.init_digipot_spi                       0x08002b50   Section        0  platform.o(i.init_digipot_spi)
+    i.init_log                               0x08002c08   Section        0  platform.o(i.init_log)
+    i.init_rf_module_power_management        0x08002c20   Section        0  platform.o(i.init_rf_module_power_management)
+    i.init_usb_enable_pin                    0x08002c5c   Section        0  platform.o(i.init_usb_enable_pin)
+    i.main                                   0x08002c88   Section        0  main.o(i.main)
+    i.platform_init                          0x08002cb0   Section        0  platform.o(i.platform_init)
+    i.read_alarm_setlevel                    0x08002d10   Section        0  platform.o(i.read_alarm_setlevel)
+    i.set_LED_brightness                     0x08002d48   Section        0  platform.o(i.set_LED_brightness)
+    i.set_alarm_enable                       0x08002d54   Section        0  platform.o(i.set_alarm_enable)
+    i.set_wiper                              0x08002d60   Section        0  platform.o(i.set_wiper)
+    .constdata                               0x08002dac   Section       18  usb_desc.o(.constdata)
+    .constdata                               0x08002dbe   Section      150  usb_desc.o(.constdata)
+    .constdata                               0x08002e54   Section       74  usb_desc.o(.constdata)
+    .constdata                               0x08002e9e   Section        4  usb_desc.o(.constdata)
+    .constdata                               0x08002ea2   Section       40  usb_desc.o(.constdata)
+    .constdata                               0x08002eca   Section       50  usb_desc.o(.constdata)
+    .constdata                               0x08002efc   Section       12  usb_prop.o(.constdata)
+    .constdata                               0x08002f08   Section       64  stm32f10x_it.o(.constdata)
+    ACTIVITY_LED_BLINK_PERIOD_LOOKUP_TABLE   0x08002f08   Data          64  stm32f10x_it.o(.constdata)
+    .data                                    0x20000000   Section       20  system_stm32f10x.o(.data)
+    .data                                    0x20000014   Section        4  usb_core.o(.data)
+    .data                                    0x20000018   Section        1  usb_init.o(.data)
+    .data                                    0x2000001c   Section       12  usb_init.o(.data)
+    .data                                    0x20000028   Section        2  usb_init.o(.data)
+    .data                                    0x2000002a   Section        4  usb_int.o(.data)
+    .data                                    0x2000002e   Section       28  usb_desc.o(.data)
+    .data                                    0x2000004a   Section        6  usb_istr.o(.data)
+    .data                                    0x20000050   Section       28  usb_istr.o(.data)
+    .data                                    0x2000006c   Section       28  usb_istr.o(.data)
+    .data                                    0x20000088   Section      128  usb_prop.o(.data)
+    .data                                    0x20000108   Section        2  usb_prop.o(.data)
+    .data                                    0x2000010c   Section       36  usb_prop.o(.data)
+    .data                                    0x20000130   Section        4  usb_pwr.o(.data)
+    .data                                    0x20000134   Section        1  usb_pwr.o(.data)
+    .data                                    0x20000135   Section        2  usb_pwr.o(.data)
+    .data                                    0x20000138   Section       24  platform.o(.data)
+    .data                                    0x20000150   Section        4  platform.o(.data)
+    .data                                    0x20000154   Section        2  platform.o(.data)
+    .data                                    0x20000156   Section        2  platform.o(.data)
+    .data                                    0x20000158   Section        2  platform.o(.data)
+    .data                                    0x2000015a   Section        2  platform.o(.data)
+    .data                                    0x2000015c   Section       16  stm32f10x_it.o(.data)
+    .bss                                     0x2000016c   Section       28  usb_init.o(.bss)
+    .bss                                     0x20000188   Section      512  platform.o(.bss)
+    .bss                                     0x20000388   Section       96  libspace.o(.bss)
+    HEAP                                     0x200003e8   Section     1024  startup_stm32f10x_hd.o(HEAP)
+    Heap_Mem                                 0x200003e8   Data        1024  startup_stm32f10x_hd.o(HEAP)
+    STACK                                    0x200007e8   Section     2048  startup_stm32f10x_hd.o(STACK)
+    Stack_Mem                                0x200007e8   Data        2048  startup_stm32f10x_hd.o(STACK)
+    __initial_sp                             0x20000fe8   Data           0  startup_stm32f10x_hd.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$UX$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __ARM_exceptions_init                     - Undefined Weak Reference
+    __alloca_initialize                       - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __rt_locale                               - Undefined Weak Reference
+    __sigvec_lookup                           - Undefined Weak Reference
+    _atexit_init                              - Undefined Weak Reference
+    _call_atexit_fns                          - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _fp_trap_init                             - Undefined Weak Reference
+    _fp_trap_shutdown                         - Undefined Weak Reference
+    _get_lc_collate                           - Undefined Weak Reference
+    _get_lc_ctype                             - Undefined Weak Reference
+    _get_lc_monetary                          - Undefined Weak Reference
+    _get_lc_numeric                           - Undefined Weak Reference
+    _get_lc_time                              - Undefined Weak Reference
+    _getenv_init                              - Undefined Weak Reference
+    _handle_redirection                       - Undefined Weak Reference
+    _init_alloc                               - Undefined Weak Reference
+    _init_user_alloc                          - Undefined Weak Reference
+    _initio                                   - Undefined Weak Reference
+    _rand_init                                - Undefined Weak Reference
+    _signal_finish                            - Undefined Weak Reference
+    _signal_init                              - Undefined Weak Reference
+    _terminate_alloc                          - Undefined Weak Reference
+    _terminate_user_alloc                     - Undefined Weak Reference
+    _terminateio                              - Undefined Weak Reference
+    __Vectors_Size                           0x00000130   Number         0  startup_stm32f10x_hd.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_stm32f10x_hd.o(RESET)
+    __Vectors_End                            0x08000130   Data           0  startup_stm32f10x_hd.o(RESET)
+    __main                                   0x08000131   Thumb Code     8  __main.o(!!!main)
+    __scatterload                            0x08000139   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_rt2                        0x08000139   Thumb Code    44  __scatter.o(!!!scatter)
+    __scatterload_rt2_thumb_only             0x08000139   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_null                       0x08000147   Thumb Code     0  __scatter.o(!!!scatter)
+    __decompress                             0x0800016d   Thumb Code    90  __dczerorl2.o(!!dczerorl2)
+    __decompress1                            0x0800016d   Thumb Code     0  __dczerorl2.o(!!dczerorl2)
+    __scatterload_zeroinit                   0x080001c9   Thumb Code    28  __scatter_zi.o(!!handler_zi)
+    __rt_lib_init                            0x080001e5   Thumb Code     0  libinit.o(.ARM.Collect$$libinit$$00000000)
+    __rt_lib_init_alloca_1                   0x080001e7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    __rt_lib_init_argv_1                     0x080001e7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002A)
+    __rt_lib_init_atexit_1                   0x080001e7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    __rt_lib_init_clock_1                    0x080001e7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    __rt_lib_init_cpp_1                      0x080001e7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    __rt_lib_init_exceptions_1               0x080001e7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    __rt_lib_init_fp_1                       0x080001e7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    __rt_lib_init_fp_trap_1                  0x080001e7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    __rt_lib_init_getenv_1                   0x080001e7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    __rt_lib_init_heap_1                     0x080001e7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000008)
+    __rt_lib_init_lc_collate_1               0x080001e7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000F)
+    __rt_lib_init_lc_ctype_1                 0x080001e7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    __rt_lib_init_lc_monetary_1              0x080001e7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    __rt_lib_init_lc_numeric_1               0x080001e7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    __rt_lib_init_lc_time_1                  0x080001e7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    __rt_lib_init_rand_1                     0x080001e7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    __rt_lib_init_return                     0x080001e7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000031)
+    __rt_lib_init_signal_1                   0x080001e7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    __rt_lib_init_stdio_1                    0x080001e7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    __rt_lib_init_user_alloc_1               0x080001e7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    __rt_lib_shutdown                        0x080001e9   Thumb Code     0  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    __rt_lib_shutdown_fp_trap_1              0x080001eb   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000006)
+    __rt_lib_shutdown_heap_1                 0x080001eb   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E)
+    __rt_lib_shutdown_return                 0x080001eb   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    __rt_lib_shutdown_signal_1               0x080001eb   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000009)
+    __rt_lib_shutdown_stdio_1                0x080001eb   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000003)
+    __rt_lib_shutdown_user_alloc_1           0x080001eb   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000B)
+    __rt_entry                               0x080001ed   Thumb Code     0  rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    __rt_entry_presh_1                       0x080001ed   Thumb Code     0  rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    __rt_entry_sh                            0x080001ed   Thumb Code     0  rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    __rt_entry_li                            0x080001f3   Thumb Code     0  rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    __rt_entry_postsh_1                      0x080001f3   Thumb Code     0  rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    __rt_entry_main                          0x080001f7   Thumb Code     0  rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    __rt_entry_postli_1                      0x080001f7   Thumb Code     0  rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    __rt_exit                                0x080001ff   Thumb Code     0  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    __rt_exit_ls                             0x08000201   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    __rt_exit_prels_1                        0x08000201   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    __rt_exit_exit                           0x08000205   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    Reset_Handler                            0x0800020d   Thumb Code     8  startup_stm32f10x_hd.o(.text)
+    __user_initial_stackheap                 0x08000229   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    __use_two_region_memory                  0x0800024d   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x0800024f   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x08000251   Thumb Code     2  heapauxi.o(.text)
+    __user_setup_stackheap                   0x08000253   Thumb Code    74  sys_stackheap_outer.o(.text)
+    exit                                     0x0800029d   Thumb Code    12  exit.o(.text)
+    __user_libspace                          0x080002a9   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x080002a9   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x080002a9   Thumb Code     0  libspace.o(.text)
+    _sys_exit                                0x080002b1   Thumb Code     8  sys_exit.o(.text)
+    __I$use$semihosting                      0x080002bd   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x080002bd   Thumb Code     2  use_no_semi.o(.text)
+    __semihosting_library_function           0x080002bf   Thumb Code     0  indicate_semi.o(.text)
+    ADC1_2_IRQHandler                        0x080002c1   Thumb Code    72  stm32f10x_it.o(i.ADC1_2_IRQHandler)
+    ADC3_IRQHandler                          0x08000315   Thumb Code     2  stm32f10x_it.o(i.ADC3_IRQHandler)
+    ADC_ClearITPendingBit                    0x08000317   Thumb Code     8  stm32f10x_adc.o(i.ADC_ClearITPendingBit)
+    ADC_Cmd                                  0x0800031f   Thumb Code    20  stm32f10x_adc.o(i.ADC_Cmd)
+    ADC_ExternalTrigConvCmd                  0x08000333   Thumb Code    20  stm32f10x_adc.o(i.ADC_ExternalTrigConvCmd)
+    ADC_GetCalibrationStatus                 0x08000347   Thumb Code    14  stm32f10x_adc.o(i.ADC_GetCalibrationStatus)
+    ADC_GetConversionValue                   0x08000355   Thumb Code     6  stm32f10x_adc.o(i.ADC_GetConversionValue)
+    ADC_GetFlagStatus                        0x0800035b   Thumb Code    14  stm32f10x_adc.o(i.ADC_GetFlagStatus)
+    ADC_GetITStatus                          0x08000369   Thumb Code    28  stm32f10x_adc.o(i.ADC_GetITStatus)
+    ADC_GetResetCalibrationStatus            0x08000385   Thumb Code    14  stm32f10x_adc.o(i.ADC_GetResetCalibrationStatus)
+    ADC_ITConfig                             0x08000393   Thumb Code    18  stm32f10x_adc.o(i.ADC_ITConfig)
+    ADC_Init                                 0x080003a5   Thumb Code    62  stm32f10x_adc.o(i.ADC_Init)
+    ADC_RegularChannelConfig                 0x080003ed   Thumb Code   116  stm32f10x_adc.o(i.ADC_RegularChannelConfig)
+    ADC_ResetCalibration                     0x08000461   Thumb Code    10  stm32f10x_adc.o(i.ADC_ResetCalibration)
+    ADC_SoftwareStartConvCmd                 0x0800046b   Thumb Code    20  stm32f10x_adc.o(i.ADC_SoftwareStartConvCmd)
+    ADC_StartCalibration                     0x0800047f   Thumb Code    10  stm32f10x_adc.o(i.ADC_StartCalibration)
+    BusFault_Handler                         0x08000489   Thumb Code     2  stm32f10x_it.o(i.BusFault_Handler)
+    ByteSwap                                 0x0800048b   Thumb Code    10  usb_regs.o(i.ByteSwap)
+    CAN1_RX1_IRQHandler                      0x08000495   Thumb Code     2  stm32f10x_it.o(i.CAN1_RX1_IRQHandler)
+    CAN1_SCE_IRQHandler                      0x08000497   Thumb Code     2  stm32f10x_it.o(i.CAN1_SCE_IRQHandler)
+    CTR_HP                                   0x08000499   Thumb Code    94  usb_int.o(i.CTR_HP)
+    CTR_LP                                   0x08000511   Thumb Code   298  usb_int.o(i.CTR_LP)
+    ClearDTOG_RX                             0x08000659   Thumb Code    36  usb_regs.o(i.ClearDTOG_RX)
+    ClearDTOG_TX                             0x08000681   Thumb Code    36  usb_regs.o(i.ClearDTOG_TX)
+    Clear_Status_Out                         0x080006a9   Thumb Code    28  usb_regs.o(i.Clear_Status_Out)
+    DMA1_Channel1_IRQHandler                 0x080006c9   Thumb Code     2  stm32f10x_it.o(i.DMA1_Channel1_IRQHandler)
+    DMA1_Channel2_IRQHandler                 0x080006cb   Thumb Code     2  stm32f10x_it.o(i.DMA1_Channel2_IRQHandler)
+    DMA1_Channel3_IRQHandler                 0x080006cd   Thumb Code     2  stm32f10x_it.o(i.DMA1_Channel3_IRQHandler)
+    DMA1_Channel4_IRQHandler                 0x080006cf   Thumb Code     2  stm32f10x_it.o(i.DMA1_Channel4_IRQHandler)
+    DMA1_Channel5_IRQHandler                 0x080006d1   Thumb Code     2  stm32f10x_it.o(i.DMA1_Channel5_IRQHandler)
+    DMA1_Channel6_IRQHandler                 0x080006d3   Thumb Code     2  stm32f10x_it.o(i.DMA1_Channel6_IRQHandler)
+    DMA1_Channel7_IRQHandler                 0x080006d5   Thumb Code     2  stm32f10x_it.o(i.DMA1_Channel7_IRQHandler)
+    DMA2_Channel1_IRQHandler                 0x080006d7   Thumb Code     2  stm32f10x_it.o(i.DMA2_Channel1_IRQHandler)
+    DMA2_Channel2_IRQHandler                 0x080006d9   Thumb Code     2  stm32f10x_it.o(i.DMA2_Channel2_IRQHandler)
+    DMA2_Channel3_IRQHandler                 0x080006db   Thumb Code     2  stm32f10x_it.o(i.DMA2_Channel3_IRQHandler)
+    DMA2_Channel4_5_IRQHandler               0x080006dd   Thumb Code     2  stm32f10x_it.o(i.DMA2_Channel4_5_IRQHandler)
+    DWT_Delay                                0x080006e1   Thumb Code    30  cyccnt_delay.o(i.DWT_Delay)
+    DWT_Init                                 0x0800070d   Thumb Code    32  cyccnt_delay.o(i.DWT_Init)
+    DebugMon_Handler                         0x08000a29   Thumb Code     2  stm32f10x_it.o(i.DebugMon_Handler)
+    EP1_IN_Callback                          0x08000a2d   Thumb Code   236  usb_istr.o(i.EP1_IN_Callback)
+    EXTI0_IRQHandler                         0x08000b2d   Thumb Code     2  stm32f10x_it.o(i.EXTI0_IRQHandler)
+    EXTI15_10_IRQHandler                     0x08000b2f   Thumb Code     2  stm32f10x_it.o(i.EXTI15_10_IRQHandler)
+    EXTI1_IRQHandler                         0x08000b31   Thumb Code     2  stm32f10x_it.o(i.EXTI1_IRQHandler)
+    EXTI2_IRQHandler                         0x08000b33   Thumb Code     2  stm32f10x_it.o(i.EXTI2_IRQHandler)
+    EXTI3_IRQHandler                         0x08000b35   Thumb Code     2  stm32f10x_it.o(i.EXTI3_IRQHandler)
+    EXTI4_IRQHandler                         0x08000b37   Thumb Code     2  stm32f10x_it.o(i.EXTI4_IRQHandler)
+    EXTI9_5_IRQHandler                       0x08000b39   Thumb Code     2  stm32f10x_it.o(i.EXTI9_5_IRQHandler)
+    Enter_LowPowerMode                       0x08000b3d   Thumb Code     8  platform.o(i.Enter_LowPowerMode)
+    FLASH_IRQHandler                         0x08000b49   Thumb Code     2  stm32f10x_it.o(i.FLASH_IRQHandler)
+    FSMC_IRQHandler                          0x08000b4b   Thumb Code     2  stm32f10x_it.o(i.FSMC_IRQHandler)
+    FreeUserBuffer                           0x08000b4d   Thumb Code    48  usb_regs.o(i.FreeUserBuffer)
+    GPIO_AINConfig                           0x08000b81   Thumb Code    74  platform.o(i.GPIO_AINConfig)
+    GPIO_Init                                0x08000be1   Thumb Code   156  stm32f10x_gpio.o(i.GPIO_Init)
+    GPIO_PinRemapConfig                      0x08000c7d   Thumb Code    82  stm32f10x_gpio.o(i.GPIO_PinRemapConfig)
+    GPIO_ResetBits                           0x08000cd5   Thumb Code     4  stm32f10x_gpio.o(i.GPIO_ResetBits)
+    GPIO_SetBits                             0x08000cd9   Thumb Code     4  stm32f10x_gpio.o(i.GPIO_SetBits)
+    GPIO_StructInit                          0x08000cdd   Thumb Code    16  stm32f10x_gpio.o(i.GPIO_StructInit)
+    GetCNTR                                  0x08000ced   Thumb Code     8  usb_regs.o(i.GetCNTR)
+    GetENDPOINT                              0x08000cf9   Thumb Code    14  usb_regs.o(i.GetENDPOINT)
+    GetEPRxAddr                              0x08000d0d   Thumb Code    22  usb_regs.o(i.GetEPRxAddr)
+    GetEPTxAddr                              0x08000d2d   Thumb Code    20  usb_regs.o(i.GetEPTxAddr)
+    Get_Cur_Command                          0x08000d49   Thumb Code    28  usb_prop.o(i.Get_Cur_Command)
+    Get_Max_Command                          0x08000d6d   Thumb Code    24  usb_prop.o(i.Get_Max_Command)
+    Get_Min_Command                          0x08000d8d   Thumb Code    16  usb_prop.o(i.Get_Min_Command)
+    Get_Res_Command                          0x08000da5   Thumb Code    16  usb_prop.o(i.Get_Res_Command)
+    Get_SerialNum                            0x08000dbd   Thumb Code    44  usb_prop.o(i.Get_SerialNum)
+    HardFault_Handler                        0x08000df1   Thumb Code     2  stm32f10x_it.o(i.HardFault_Handler)
+    I2C1_ER_IRQHandler                       0x08000df3   Thumb Code     2  stm32f10x_it.o(i.I2C1_ER_IRQHandler)
+    I2C1_EV_IRQHandler                       0x08000df5   Thumb Code     2  stm32f10x_it.o(i.I2C1_EV_IRQHandler)
+    I2C2_ER_IRQHandler                       0x08000df7   Thumb Code     2  stm32f10x_it.o(i.I2C2_ER_IRQHandler)
+    I2C2_EV_IRQHandler                       0x08000df9   Thumb Code     2  stm32f10x_it.o(i.I2C2_EV_IRQHandler)
+    In0_Process                              0x08000dfd   Thumb Code    80  usb_core.o(i.In0_Process)
+    IntToUnicode                             0x08000e59   Thumb Code    54  usb_prop.o(i.IntToUnicode)
+    Joystick_Data_Setup                      0x08000e91   Thumb Code   162  usb_prop.o(i.Joystick_Data_Setup)
+    Joystick_GetConfigDescriptor             0x08000f69   Thumb Code     6  usb_prop.o(i.Joystick_GetConfigDescriptor)
+    Joystick_GetDeviceDescriptor             0x08000f75   Thumb Code     6  usb_prop.o(i.Joystick_GetDeviceDescriptor)
+    Joystick_GetHIDDescriptor                0x08000f81   Thumb Code     6  usb_prop.o(i.Joystick_GetHIDDescriptor)
+    Joystick_GetProtocolValue                0x08000f8d   Thumb Code    18  usb_prop.o(i.Joystick_GetProtocolValue)
+    Joystick_GetReportDescriptor             0x08000fa9   Thumb Code     6  usb_prop.o(i.Joystick_GetReportDescriptor)
+    Joystick_GetStringDescriptor             0x08000fb5   Thumb Code    24  usb_prop.o(i.Joystick_GetStringDescriptor)
+    Joystick_Get_Interface_Setting           0x08000fd5   Thumb Code    16  usb_prop.o(i.Joystick_Get_Interface_Setting)
+    Joystick_NoData_Setup                    0x08000fe5   Thumb Code    26  usb_prop.o(i.Joystick_NoData_Setup)
+    Joystick_Reset                           0x08001005   Thumb Code   234  usb_prop.o(i.Joystick_Reset)
+    Joystick_SetConfiguration                0x08001101   Thumb Code    16  usb_prop.o(i.Joystick_SetConfiguration)
+    Joystick_SetDeviceAddress                0x08001119   Thumb Code     8  usb_prop.o(i.Joystick_SetDeviceAddress)
+    Joystick_SetDeviceFeature                0x08001125   Thumb Code     2  usb_prop.o(i.Joystick_SetDeviceFeature)
+    Joystick_SetProtocol                     0x08001129   Thumb Code    14  usb_prop.o(i.Joystick_SetProtocol)
+    Joystick_Status_In                       0x08001141   Thumb Code     2  usb_prop.o(i.Joystick_Status_In)
+    Joystick_Status_Out                      0x08001143   Thumb Code     2  usb_prop.o(i.Joystick_Status_Out)
+    Joystick_init                            0x08001145   Thumb Code    28  usb_prop.o(i.Joystick_init)
+    LED_PWM_init                             0x08001169   Thumb Code   178  platform.o(i.LED_PWM_init)
+    Leave_LowPowerMode                       0x08001225   Thumb Code    18  platform.o(i.Leave_LowPowerMode)
+    MemManage_Handler                        0x08001241   Thumb Code     2  stm32f10x_it.o(i.MemManage_Handler)
+    NMI_Handler                              0x08001243   Thumb Code     2  stm32f10x_it.o(i.NMI_Handler)
+    NOP_Process                              0x08001245   Thumb Code     2  usb_core.o(i.NOP_Process)
+    NVIC_Init                                0x08001249   Thumb Code    94  misc.o(i.NVIC_Init)
+    NVIC_PriorityGroupConfig                 0x080012ad   Thumb Code    10  misc.o(i.NVIC_PriorityGroupConfig)
+    Out0_Process                             0x08001395   Thumb Code    62  usb_core.o(i.Out0_Process)
+    PMAToUserBufferCopy                      0x080013dd   Thumb Code    26  usb_mem.o(i.PMAToUserBufferCopy)
+    PVD_IRQHandler                           0x080013fd   Thumb Code     2  stm32f10x_it.o(i.PVD_IRQHandler)
+    PendSV_Handler                           0x080013ff   Thumb Code     2  stm32f10x_it.o(i.PendSV_Handler)
+    Post0_Process                            0x08001401   Thumb Code    52  usb_core.o(i.Post0_Process)
+    PowerOn                                  0x08001445   Thumb Code    36  usb_pwr.o(i.PowerOn)
+    RCC_ADCCLKConfig                         0x08001471   Thumb Code    14  stm32f10x_rcc.o(i.RCC_ADCCLKConfig)
+    RCC_APB1PeriphClockCmd                   0x08001485   Thumb Code    18  stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd)
+    RCC_APB1PeriphResetCmd                   0x0800149d   Thumb Code    18  stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd)
+    RCC_APB2PeriphClockCmd                   0x080014b5   Thumb Code    18  stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd)
+    RCC_APB2PeriphResetCmd                   0x080014cd   Thumb Code    18  stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd)
+    RCC_IRQHandler                           0x080014e5   Thumb Code     2  stm32f10x_it.o(i.RCC_IRQHandler)
+    RCC_USBCLKConfig                         0x080014e9   Thumb Code     8  stm32f10x_rcc.o(i.RCC_USBCLKConfig)
+    RTCAlarm_IRQHandler                      0x080014f5   Thumb Code     2  stm32f10x_it.o(i.RTCAlarm_IRQHandler)
+    RTC_IRQHandler                           0x080014f7   Thumb Code     2  stm32f10x_it.o(i.RTC_IRQHandler)
+    Resume                                   0x080014f9   Thumb Code   116  usb_pwr.o(i.Resume)
+    Resume_Init                              0x08001575   Thumb Code    26  usb_pwr.o(i.Resume_Init)
+    SDIO_IRQHandler                          0x08001595   Thumb Code     2  stm32f10x_it.o(i.SDIO_IRQHandler)
+    SOF_Callback                             0x08001599   Thumb Code    16  usb_istr.o(i.SOF_Callback)
+    SPI1_IRQHandler                          0x080015ad   Thumb Code   492  stm32f10x_it.o(i.SPI1_IRQHandler)
+    SPI2_IRQHandler                          0x080017ed   Thumb Code     2  stm32f10x_it.o(i.SPI2_IRQHandler)
+    SPI3_IRQHandler                          0x080017ef   Thumb Code     2  stm32f10x_it.o(i.SPI3_IRQHandler)
+    SPI_CalculateCRC                         0x080017f1   Thumb Code    20  stm32f10x_spi.o(i.SPI_CalculateCRC)
+    SPI_Cmd                                  0x08001805   Thumb Code    20  stm32f10x_spi.o(i.SPI_Cmd)
+    SPI_I2S_GetFlagStatus                    0x08001819   Thumb Code    14  stm32f10x_spi.o(i.SPI_I2S_GetFlagStatus)
+    SPI_I2S_ITConfig                         0x08001827   Thumb Code    24  stm32f10x_spi.o(i.SPI_I2S_ITConfig)
+    SPI_I2S_ReceiveData                      0x0800183f   Thumb Code     4  stm32f10x_spi.o(i.SPI_I2S_ReceiveData)
+    SPI_I2S_SendData                         0x08001843   Thumb Code     4  stm32f10x_spi.o(i.SPI_I2S_SendData)
+    SPI_Init                                 0x08001847   Thumb Code    56  stm32f10x_spi.o(i.SPI_Init)
+    SVC_Handler                              0x0800187f   Thumb Code     2  stm32f10x_it.o(i.SVC_Handler)
+    SetBTABLE                                0x08001881   Thumb Code    10  usb_regs.o(i.SetBTABLE)
+    SetCNTR                                  0x08001891   Thumb Code     6  usb_regs.o(i.SetCNTR)
+    SetDeviceAddress                         0x0800189d   Thumb Code    58  usb_core.o(i.SetDeviceAddress)
+    SetEPDblBuf0Count                        0x080018e5   Thumb Code    82  usb_regs.o(i.SetEPDblBuf0Count)
+    SetEPDblBuf1Count                        0x08001941   Thumb Code    82  usb_regs.o(i.SetEPDblBuf1Count)
+    SetEPDblBuffAddr                         0x0800199d   Thumb Code    42  usb_regs.o(i.SetEPDblBuffAddr)
+    SetEPDblBuffCount                        0x080019d1   Thumb Code   156  usb_regs.o(i.SetEPDblBuffCount)
+    SetEPRxAddr                              0x08001a75   Thumb Code    24  usb_regs.o(i.SetEPRxAddr)
+    SetEPRxCount                             0x08001a95   Thumb Code    54  usb_regs.o(i.SetEPRxCount)
+    SetEPRxStatus                            0x08001ad5   Thumb Code    44  usb_regs.o(i.SetEPRxStatus)
+    SetEPRxValid                             0x08001b05   Thumb Code    32  usb_regs.o(i.SetEPRxValid)
+    SetEPTxAddr                              0x08001b29   Thumb Code    22  usb_regs.o(i.SetEPTxAddr)
+    SetEPTxCount                             0x08001b49   Thumb Code    20  usb_regs.o(i.SetEPTxCount)
+    SetEPTxStatus                            0x08001b65   Thumb Code    44  usb_regs.o(i.SetEPTxStatus)
+    SetEPTxValid                             0x08001b95   Thumb Code    32  usb_regs.o(i.SetEPTxValid)
+    SetEPType                                0x08001bb9   Thumb Code    24  usb_regs.o(i.SetEPType)
+    Set_Cur_Command                          0x08001c7d   Thumb Code    28  usb_prop.o(i.Set_Cur_Command)
+    Set_USBClock                             0x08001ca1   Thumb Code    20  platform.o(i.Set_USBClock)
+    Setup0_Process                           0x08001cb5   Thumb Code    92  usb_core.o(i.Setup0_Process)
+    Standard_ClearFeature                    0x08001d1d   Thumb Code   232  usb_core.o(i.Standard_ClearFeature)
+    Standard_GetConfiguration                0x08001e19   Thumb Code    30  usb_core.o(i.Standard_GetConfiguration)
+    Standard_GetDescriptorData               0x08001e41   Thumb Code    24  usb_core.o(i.Standard_GetDescriptorData)
+    Standard_GetInterface                    0x08001e5d   Thumb Code    30  usb_core.o(i.Standard_GetInterface)
+    Standard_GetStatus                       0x08001e85   Thumb Code   130  usb_core.o(i.Standard_GetStatus)
+    Standard_SetConfiguration                0x08001f19   Thumb Code    42  usb_core.o(i.Standard_SetConfiguration)
+    Standard_SetDeviceFeature                0x08001f51   Thumb Code    26  usb_core.o(i.Standard_SetDeviceFeature)
+    Standard_SetEndPointFeature              0x08001f75   Thumb Code   118  usb_core.o(i.Standard_SetEndPointFeature)
+    Standard_SetInterface                    0x08001ffd   Thumb Code    60  usb_core.o(i.Standard_SetInterface)
+    Suspend                                  0x08002045   Thumb Code    26  usb_pwr.o(i.Suspend)
+    SysTick_Handler                          0x08002065   Thumb Code     2  stm32f10x_it.o(i.SysTick_Handler)
+    SystemInit                               0x08002069   Thumb Code    64  system_stm32f10x.o(i.SystemInit)
+    TAMPER_IRQHandler                        0x080020b9   Thumb Code     2  stm32f10x_it.o(i.TAMPER_IRQHandler)
+    TIM1_BRK_IRQHandler                      0x080020bb   Thumb Code     2  stm32f10x_it.o(i.TIM1_BRK_IRQHandler)
+    TIM1_CC_IRQHandler                       0x080020bd   Thumb Code   308  stm32f10x_it.o(i.TIM1_CC_IRQHandler)
+    TIM1_TRG_COM_IRQHandler                  0x08002215   Thumb Code     2  stm32f10x_it.o(i.TIM1_TRG_COM_IRQHandler)
+    TIM1_UP_IRQHandler                       0x08002217   Thumb Code     2  stm32f10x_it.o(i.TIM1_UP_IRQHandler)
+    TIM2_IRQHandler                          0x08002219   Thumb Code     8  stm32f10x_it.o(i.TIM2_IRQHandler)
+    TIM3_IRQHandler                          0x08002221   Thumb Code    50  stm32f10x_it.o(i.TIM3_IRQHandler)
+    TIM4_IRQHandler                          0x08002261   Thumb Code     2  stm32f10x_it.o(i.TIM4_IRQHandler)
+    TIM5_IRQHandler                          0x08002263   Thumb Code     2  stm32f10x_it.o(i.TIM5_IRQHandler)
+    TIM6_IRQHandler                          0x08002265   Thumb Code     2  stm32f10x_it.o(i.TIM6_IRQHandler)
+    TIM7_IRQHandler                          0x08002267   Thumb Code     2  stm32f10x_it.o(i.TIM7_IRQHandler)
+    TIM8_BRK_IRQHandler                      0x08002269   Thumb Code     2  stm32f10x_it.o(i.TIM8_BRK_IRQHandler)
+    TIM8_CC_IRQHandler                       0x0800226b   Thumb Code     2  stm32f10x_it.o(i.TIM8_CC_IRQHandler)
+    TIM8_TRG_COM_IRQHandler                  0x0800226d   Thumb Code     2  stm32f10x_it.o(i.TIM8_TRG_COM_IRQHandler)
+    TIM8_UP_IRQHandler                       0x0800226f   Thumb Code     2  stm32f10x_it.o(i.TIM8_UP_IRQHandler)
+    TIM_ARRPreloadConfig                     0x08002271   Thumb Code    20  stm32f10x_tim.o(i.TIM_ARRPreloadConfig)
+    TIM_ClearITPendingBit                    0x08002285   Thumb Code     6  stm32f10x_tim.o(i.TIM_ClearITPendingBit)
+    TIM_Cmd                                  0x0800228b   Thumb Code    20  stm32f10x_tim.o(i.TIM_Cmd)
+    TIM_CtrlPWMOutputs                       0x0800229f   Thumb Code    22  stm32f10x_tim.o(i.TIM_CtrlPWMOutputs)
+    TIM_DeInit                               0x080022b5   Thumb Code   304  stm32f10x_tim.o(i.TIM_DeInit)
+    TIM_ITConfig                             0x08002425   Thumb Code    16  stm32f10x_tim.o(i.TIM_ITConfig)
+    TIM_OC1Init                              0x08002435   Thumb Code   106  stm32f10x_tim.o(i.TIM_OC1Init)
+    TIM_OC4Init                              0x080024b5   Thumb Code    90  stm32f10x_tim.o(i.TIM_OC4Init)
+    TIM_OC4PreloadConfig                     0x08002519   Thumb Code    20  stm32f10x_tim.o(i.TIM_OC4PreloadConfig)
+    TIM_OCStructInit                         0x0800252d   Thumb Code    20  stm32f10x_tim.o(i.TIM_OCStructInit)
+    TIM_TimeBaseInit                         0x08002541   Thumb Code   114  stm32f10x_tim.o(i.TIM_TimeBaseInit)
+    TIM_TimeBaseStructInit                   0x080025dd   Thumb Code    18  stm32f10x_tim.o(i.TIM_TimeBaseStructInit)
+    ToggleDTOG_TX                            0x080025f1   Thumb Code    28  usb_regs.o(i.ToggleDTOG_TX)
+    UART4_IRQHandler                         0x08002611   Thumb Code     2  stm32f10x_it.o(i.UART4_IRQHandler)
+    UART5_IRQHandler                         0x08002613   Thumb Code     2  stm32f10x_it.o(i.UART5_IRQHandler)
+    USART1_IRQHandler                        0x08002615   Thumb Code     2  stm32f10x_it.o(i.USART1_IRQHandler)
+    USART2_IRQHandler                        0x08002617   Thumb Code     2  stm32f10x_it.o(i.USART2_IRQHandler)
+    USART3_IRQHandler                        0x08002619   Thumb Code     2  stm32f10x_it.o(i.USART3_IRQHandler)
+    USBWakeUp_IRQHandler                     0x0800261b   Thumb Code     2  stm32f10x_it.o(i.USBWakeUp_IRQHandler)
+    USB_Cable_Config                         0x0800261d   Thumb Code    20  platform.o(i.USB_Cable_Config)
+    USB_HP_CAN1_TX_IRQHandler                0x08002635   Thumb Code     4  stm32f10x_it.o(i.USB_HP_CAN1_TX_IRQHandler)
+    USB_Init                                 0x08002639   Thumb Code    22  usb_init.o(i.USB_Init)
+    USB_Interrupts_Config                    0x08002661   Thumb Code    82  platform.o(i.USB_Interrupts_Config)
+    USB_LP_CAN1_RX0_IRQHandler               0x080026b5   Thumb Code    18  stm32f10x_it.o(i.USB_LP_CAN1_RX0_IRQHandler)
+    USB_LP_IRQHandler                        0x080026cd   Thumb Code   172  usb_istr.o(i.USB_LP_IRQHandler)
+    USB_SIL_Init                             0x0800278d   Thumb Code    24  usb_sil.o(i.USB_SIL_Init)
+    UsageFault_Handler                       0x080027ad   Thumb Code     2  stm32f10x_it.o(i.UsageFault_Handler)
+    UserToPMABufferCopy                      0x080027b1   Thumb Code    36  usb_mem.o(i.UserToPMABufferCopy)
+    Vendor_Command_IN                        0x080027d9   Thumb Code    72  usb_prop.o(i.Vendor_Command_IN)
+    Vendor_Command_OUT                       0x08002835   Thumb Code    16  usb_prop.o(i.Vendor_Command_OUT)
+    WWDG_IRQHandler                          0x0800284d   Thumb Code     2  stm32f10x_it.o(i.WWDG_IRQHandler)
+    adc_buf_init                             0x08002851   Thumb Code    28  platform.o(i.adc_buf_init)
+    init_ADC_alarm                           0x08002875   Thumb Code   128  platform.o(i.init_ADC_alarm)
+    init_ADC_timer                           0x080028f9   Thumb Code   144  platform.o(i.init_ADC_timer)
+    init_adc_spi                             0x0800298d   Thumb Code   214  platform.o(i.init_adc_spi)
+    init_alarm_led                           0x08002a6d   Thumb Code    56  platform.o(i.init_alarm_led)
+    init_boost_osc                           0x08002aad   Thumb Code    54  platform.o(i.init_boost_osc)
+    init_daq_timer                           0x08002ae9   Thumb Code   100  platform.o(i.init_daq_timer)
+    init_digipot_spi                         0x08002b51   Thumb Code   170  platform.o(i.init_digipot_spi)
+    init_log                                 0x08002c09   Thumb Code    14  platform.o(i.init_log)
+    init_rf_module_power_management          0x08002c21   Thumb Code    56  platform.o(i.init_rf_module_power_management)
+    init_usb_enable_pin                      0x08002c5d   Thumb Code    40  platform.o(i.init_usb_enable_pin)
+    main                                     0x08002c89   Thumb Code    36  main.o(i.main)
+    platform_init                            0x08002cb1   Thumb Code    82  platform.o(i.platform_init)
+    read_alarm_setlevel                      0x08002d11   Thumb Code    52  platform.o(i.read_alarm_setlevel)
+    set_LED_brightness                       0x08002d49   Thumb Code    10  platform.o(i.set_LED_brightness)
+    set_alarm_enable                         0x08002d55   Thumb Code     6  platform.o(i.set_alarm_enable)
+    set_wiper                                0x08002d61   Thumb Code    66  platform.o(i.set_wiper)
+    Joystick_DeviceDescriptor                0x08002dac   Data          18  usb_desc.o(.constdata)
+    Joystick_ConfigDescriptor                0x08002dbe   Data         150  usb_desc.o(.constdata)
+    Joystick_ReportDescriptor                0x08002e54   Data          74  usb_desc.o(.constdata)
+    Joystick_StringLangID                    0x08002e9e   Data           4  usb_desc.o(.constdata)
+    Joystick_StringVendor                    0x08002ea2   Data          40  usb_desc.o(.constdata)
+    Joystick_StringProduct                   0x08002eca   Data          50  usb_desc.o(.constdata)
+    MIN_DATA                                 0x08002efc   Data           4  usb_prop.o(.constdata)
+    MAX_DATA                                 0x08002f00   Data           4  usb_prop.o(.constdata)
+    RES_DATA                                 0x08002f04   Data           4  usb_prop.o(.constdata)
+    Region$$Table$$Base                      0x08002f48   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08002f68   Number         0  anon$$obj.o(Region$$Table)
+    SystemCoreClock                          0x20000000   Data           4  system_stm32f10x.o(.data)
+    AHBPrescTable                            0x20000004   Data          16  system_stm32f10x.o(.data)
+    Data_Mul_MaxPacketSize                   0x20000014   Data           1  usb_core.o(.data)
+    StatusInfo                               0x20000016   Data           2  usb_core.o(.data)
+    EPindex                                  0x20000018   Data           1  usb_init.o(.data)
+    pInformation                             0x2000001c   Data           4  usb_init.o(.data)
+    pProperty                                0x20000020   Data           4  usb_init.o(.data)
+    pUser_Standard_Requests                  0x20000024   Data           4  usb_init.o(.data)
+    wInterrupt_Mask                          0x20000028   Data           2  usb_init.o(.data)
+    SaveRState                               0x2000002a   Data           2  usb_int.o(.data)
+    SaveTState                               0x2000002c   Data           2  usb_int.o(.data)
+    Joystick_StringSerial                    0x2000002e   Data          28  usb_desc.o(.data)
+    bIntPackSOF                              0x2000004a   Data           1  usb_istr.o(.data)
+    hummus                                   0x2000004b   Data           1  usb_istr.o(.data)
+    phase_8bit                               0x2000004c   Data           1  usb_istr.o(.data)
+    wIstr                                    0x2000004e   Data           2  usb_istr.o(.data)
+    pEpInt_IN                                0x20000050   Data          28  usb_istr.o(.data)
+    pEpInt_OUT                               0x2000006c   Data          28  usb_istr.o(.data)
+    MUTE_DATA                                0x20000088   Data           4  usb_prop.o(.data)
+    VOLUME_DATA                              0x2000008c   Data           4  usb_prop.o(.data)
+    usb_vendor_command_buf                   0x20000090   Data           4  usb_prop.o(.data)
+    ProtocolValue                            0x20000094   Data           4  usb_prop.o(.data)
+    Device_Descriptor                        0x20000098   Data           8  usb_prop.o(.data)
+    Config_Descriptor                        0x200000a0   Data           8  usb_prop.o(.data)
+    Joystick_Report_Descriptor               0x200000a8   Data           8  usb_prop.o(.data)
+    Mouse_Hid_Descriptor                     0x200000b0   Data           8  usb_prop.o(.data)
+    Device_Property                          0x200000b8   Data          48  usb_prop.o(.data)
+    String_Descriptor                        0x200000e8   Data          32  usb_prop.o(.data)
+    Device_Table                             0x20000108   Data           2  usb_prop.o(.data)
+    User_Standard_Requests                   0x2000010c   Data          36  usb_prop.o(.data)
+    bDeviceState                             0x20000130   Data           4  usb_pwr.o(.data)
+    fSuspendEnabled                          0x20000134   Data           1  usb_pwr.o(.data)
+    ResumeS                                  0x20000135   Data           2  usb_pwr.o(.data)
+    log_seq_num                              0x20000138   Data           1  platform.o(.data)
+    alarm_enable                             0x20000139   Data           1  platform.o(.data)
+    wiper_pos                                0x2000013a   Data           1  platform.o(.data)
+    adc_dc_offset                            0x2000013c   Data           2  platform.o(.data)
+    log_signal_level                         0x2000013e   Data           2  platform.o(.data)
+    input_level                              0x20000140   Data           2  platform.o(.data)
+    adcbuf_idx_read                          0x20000144   Data           4  platform.o(.data)
+    adcbuf_idx_write                         0x20000148   Data           4  platform.o(.data)
+    log_integration_window                   0x2000014c   Data           4  platform.o(.data)
+    log_integration_window_counter           0x20000150   Data           4  platform.o(.data)
+    prev_log_signal_level                    0x20000154   Data           2  platform.o(.data)
+    alarm_lvl                                0x20000156   Data           2  platform.o(.data)
+    input_level_tracked_fast                 0x20000158   Data           2  platform.o(.data)
+    input_level_tracker_LED                  0x2000015a   Data           2  platform.o(.data)
+    inside_usb_lp_irq                        0x2000015c   Data           1  stm32f10x_it.o(.data)
+    alarm_state_machine                      0x2000015d   Data           1  stm32f10x_it.o(.data)
+    ghostbusters                             0x2000015e   Data           1  stm32f10x_it.o(.data)
+    throw_alarm                              0x2000015f   Data           1  stm32f10x_it.o(.data)
+    lvl                                      0x20000160   Data           1  stm32f10x_it.o(.data)
+    count_dir                                0x20000161   Data           1  stm32f10x_it.o(.data)
+    blink_period                             0x20000162   Data           1  stm32f10x_it.o(.data)
+    blink_phase                              0x20000163   Data           1  stm32f10x_it.o(.data)
+    slowdown2                                0x20000164   Data           4  stm32f10x_it.o(.data)
+    slowdown3                                0x20000168   Data           4  stm32f10x_it.o(.data)
+    Device_Info                              0x2000016c   Data          28  usb_init.o(.bss)
+    adcbuf                                   0x20000188   Data         512  platform.o(.bss)
+    __libspace_start                         0x20000388   Data          96  libspace.o(.bss)
+    __temporary_stack_top$libspace           0x200003e8   Data           0  libspace.o(.bss)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x08000131
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000030d4, Max: 0x00020000, ABSOLUTE, COMPRESSED[0x00003004])
+
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00002f68, Max: 0x00020000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x00000130   Data   RO            3    RESET               startup_stm32f10x_hd.o
+    0x08000130   0x00000008   Code   RO         3431  * !!!main             c_w.l(__main.o)
+    0x08000138   0x00000034   Code   RO         3587    !!!scatter          c_w.l(__scatter.o)
+    0x0800016c   0x0000005a   Code   RO         3585    !!dczerorl2         c_w.l(__dczerorl2.o)
+    0x080001c6   0x00000002   PAD
+    0x080001c8   0x0000001c   Code   RO         3589    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x080001e4   0x00000002   Code   RO         3458    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x080001e6   0x00000000   Code   RO         3465    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x080001e6   0x00000000   Code   RO         3468    .ARM.Collect$$libinit$$00000008  c_w.l(libinit2.o)
+    0x080001e6   0x00000000   Code   RO         3470    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x080001e6   0x00000000   Code   RO         3472    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x080001e6   0x00000000   Code   RO         3475    .ARM.Collect$$libinit$$0000000F  c_w.l(libinit2.o)
+    0x080001e6   0x00000000   Code   RO         3477    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x080001e6   0x00000000   Code   RO         3479    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x080001e6   0x00000000   Code   RO         3481    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x080001e6   0x00000000   Code   RO         3483    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x080001e6   0x00000000   Code   RO         3485    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x080001e6   0x00000000   Code   RO         3487    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x080001e6   0x00000000   Code   RO         3489    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x080001e6   0x00000000   Code   RO         3491    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x080001e6   0x00000000   Code   RO         3493    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x080001e6   0x00000000   Code   RO         3495    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x080001e6   0x00000000   Code   RO         3499    .ARM.Collect$$libinit$$0000002A  c_w.l(libinit2.o)
+    0x080001e6   0x00000000   Code   RO         3501    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x080001e6   0x00000000   Code   RO         3503    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x080001e6   0x00000000   Code   RO         3505    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x080001e6   0x00000002   Code   RO         3506    .ARM.Collect$$libinit$$00000031  c_w.l(libinit2.o)
+    0x080001e8   0x00000002   Code   RO         3526    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x080001ea   0x00000000   Code   RO         3540    .ARM.Collect$$libshutdown$$00000003  c_w.l(libshutdown2.o)
+    0x080001ea   0x00000000   Code   RO         3543    .ARM.Collect$$libshutdown$$00000006  c_w.l(libshutdown2.o)
+    0x080001ea   0x00000000   Code   RO         3546    .ARM.Collect$$libshutdown$$00000009  c_w.l(libshutdown2.o)
+    0x080001ea   0x00000000   Code   RO         3548    .ARM.Collect$$libshutdown$$0000000B  c_w.l(libshutdown2.o)
+    0x080001ea   0x00000000   Code   RO         3551    .ARM.Collect$$libshutdown$$0000000E  c_w.l(libshutdown2.o)
+    0x080001ea   0x00000002   Code   RO         3552    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x080001ec   0x00000000   Code   RO         3433    .ARM.Collect$$rtentry$$00000000  c_w.l(rtentry.o)
+    0x080001ec   0x00000000   Code   RO         3435    .ARM.Collect$$rtentry$$00000002  c_w.l(rtentry2.o)
+    0x080001ec   0x00000006   Code   RO         3447    .ARM.Collect$$rtentry$$00000004  c_w.l(rtentry4.o)
+    0x080001f2   0x00000000   Code   RO         3437    .ARM.Collect$$rtentry$$00000009  c_w.l(rtentry2.o)
+    0x080001f2   0x00000004   Code   RO         3438    .ARM.Collect$$rtentry$$0000000A  c_w.l(rtentry2.o)
+    0x080001f6   0x00000000   Code   RO         3440    .ARM.Collect$$rtentry$$0000000C  c_w.l(rtentry2.o)
+    0x080001f6   0x00000008   Code   RO         3441    .ARM.Collect$$rtentry$$0000000D  c_w.l(rtentry2.o)
+    0x080001fe   0x00000002   Code   RO         3462    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x08000200   0x00000000   Code   RO         3508    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x08000200   0x00000004   Code   RO         3509    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x08000204   0x00000006   Code   RO         3510    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x0800020a   0x00000002   PAD
+    0x0800020c   0x00000040   Code   RO            4    .text               startup_stm32f10x_hd.o
+    0x0800024c   0x00000006   Code   RO         3429    .text               c_w.l(heapauxi.o)
+    0x08000252   0x0000004a   Code   RO         3449    .text               c_w.l(sys_stackheap_outer.o)
+    0x0800029c   0x0000000c   Code   RO         3451    .text               c_w.l(exit.o)
+    0x080002a8   0x00000008   Code   RO         3459    .text               c_w.l(libspace.o)
+    0x080002b0   0x0000000c   Code   RO         3518    .text               c_w.l(sys_exit.o)
+    0x080002bc   0x00000002   Code   RO         3529    .text               c_w.l(use_no_semi.o)
+    0x080002be   0x00000000   Code   RO         3531    .text               c_w.l(indicate_semi.o)
+    0x080002be   0x00000002   PAD
+    0x080002c0   0x00000054   Code   RO         2935    i.ADC1_2_IRQHandler  stm32f10x_it.o
+    0x08000314   0x00000002   Code   RO         2936    i.ADC3_IRQHandler   stm32f10x_it.o
+    0x08000316   0x00000008   Code   RO         1330    i.ADC_ClearITPendingBit  stm32f10x_adc.o
+    0x0800031e   0x00000014   Code   RO         1331    i.ADC_Cmd           stm32f10x_adc.o
+    0x08000332   0x00000014   Code   RO         1336    i.ADC_ExternalTrigConvCmd  stm32f10x_adc.o
+    0x08000346   0x0000000e   Code   RO         1339    i.ADC_GetCalibrationStatus  stm32f10x_adc.o
+    0x08000354   0x00000006   Code   RO         1340    i.ADC_GetConversionValue  stm32f10x_adc.o
+    0x0800035a   0x0000000e   Code   RO         1342    i.ADC_GetFlagStatus  stm32f10x_adc.o
+    0x08000368   0x0000001c   Code   RO         1343    i.ADC_GetITStatus   stm32f10x_adc.o
+    0x08000384   0x0000000e   Code   RO         1345    i.ADC_GetResetCalibrationStatus  stm32f10x_adc.o
+    0x08000392   0x00000012   Code   RO         1348    i.ADC_ITConfig      stm32f10x_adc.o
+    0x080003a4   0x00000048   Code   RO         1349    i.ADC_Init          stm32f10x_adc.o
+    0x080003ec   0x00000074   Code   RO         1353    i.ADC_RegularChannelConfig  stm32f10x_adc.o
+    0x08000460   0x0000000a   Code   RO         1354    i.ADC_ResetCalibration  stm32f10x_adc.o
+    0x0800046a   0x00000014   Code   RO         1356    i.ADC_SoftwareStartConvCmd  stm32f10x_adc.o
+    0x0800047e   0x0000000a   Code   RO         1358    i.ADC_StartCalibration  stm32f10x_adc.o
+    0x08000488   0x00000002   Code   RO         2937    i.BusFault_Handler  stm32f10x_it.o
+    0x0800048a   0x0000000a   Code   RO         1995    i.ByteSwap          usb_regs.o
+    0x08000494   0x00000002   Code   RO         2938    i.CAN1_RX1_IRQHandler  stm32f10x_it.o
+    0x08000496   0x00000002   Code   RO         2939    i.CAN1_SCE_IRQHandler  stm32f10x_it.o
+    0x08000498   0x00000078   Code   RO         1901    i.CTR_HP            usb_int.o
+    0x08000510   0x00000148   Code   RO         1902    i.CTR_LP            usb_int.o
+    0x08000658   0x00000028   Code   RO         1996    i.ClearDTOG_RX      usb_regs.o
+    0x08000680   0x00000028   Code   RO         1997    i.ClearDTOG_TX      usb_regs.o
+    0x080006a8   0x00000020   Code   RO         2002    i.Clear_Status_Out  usb_regs.o
+    0x080006c8   0x00000002   Code   RO         2940    i.DMA1_Channel1_IRQHandler  stm32f10x_it.o
+    0x080006ca   0x00000002   Code   RO         2941    i.DMA1_Channel2_IRQHandler  stm32f10x_it.o
+    0x080006cc   0x00000002   Code   RO         2942    i.DMA1_Channel3_IRQHandler  stm32f10x_it.o
+    0x080006ce   0x00000002   Code   RO         2943    i.DMA1_Channel4_IRQHandler  stm32f10x_it.o
+    0x080006d0   0x00000002   Code   RO         2944    i.DMA1_Channel5_IRQHandler  stm32f10x_it.o
+    0x080006d2   0x00000002   Code   RO         2945    i.DMA1_Channel6_IRQHandler  stm32f10x_it.o
+    0x080006d4   0x00000002   Code   RO         2946    i.DMA1_Channel7_IRQHandler  stm32f10x_it.o
+    0x080006d6   0x00000002   Code   RO         2947    i.DMA2_Channel1_IRQHandler  stm32f10x_it.o
+    0x080006d8   0x00000002   Code   RO         2948    i.DMA2_Channel2_IRQHandler  stm32f10x_it.o
+    0x080006da   0x00000002   Code   RO         2949    i.DMA2_Channel3_IRQHandler  stm32f10x_it.o
+    0x080006dc   0x00000002   Code   RO         2950    i.DMA2_Channel4_5_IRQHandler  stm32f10x_it.o
+    0x080006de   0x00000002   PAD
+    0x080006e0   0x0000002c   Code   RO         3394    i.DWT_Delay         cyccnt_delay.o
+    0x0800070c   0x00000028   Code   RO         3396    i.DWT_Init          cyccnt_delay.o
+    0x08000734   0x000000b4   Code   RO         1707    i.DataStageIn       usb_core.o
+    0x080007e8   0x000000a4   Code   RO         1708    i.DataStageOut      usb_core.o
+    0x0800088c   0x0000019c   Code   RO         1709    i.Data_Setup0       usb_core.o
+    0x08000a28   0x00000002   Code   RO         2951    i.DebugMon_Handler  stm32f10x_it.o
+    0x08000a2a   0x00000002   PAD
+    0x08000a2c   0x00000100   Code   RO         2428    i.EP1_IN_Callback   usb_istr.o
+    0x08000b2c   0x00000002   Code   RO         2952    i.EXTI0_IRQHandler  stm32f10x_it.o
+    0x08000b2e   0x00000002   Code   RO         2953    i.EXTI15_10_IRQHandler  stm32f10x_it.o
+    0x08000b30   0x00000002   Code   RO         2954    i.EXTI1_IRQHandler  stm32f10x_it.o
+    0x08000b32   0x00000002   Code   RO         2955    i.EXTI2_IRQHandler  stm32f10x_it.o
+    0x08000b34   0x00000002   Code   RO         2956    i.EXTI3_IRQHandler  stm32f10x_it.o
+    0x08000b36   0x00000002   Code   RO         2957    i.EXTI4_IRQHandler  stm32f10x_it.o
+    0x08000b38   0x00000002   Code   RO         2958    i.EXTI9_5_IRQHandler  stm32f10x_it.o
+    0x08000b3a   0x00000002   PAD
+    0x08000b3c   0x0000000c   Code   RO         2714    i.Enter_LowPowerMode  platform.o
+    0x08000b48   0x00000002   Code   RO         2959    i.FLASH_IRQHandler  stm32f10x_it.o
+    0x08000b4a   0x00000002   Code   RO         2960    i.FSMC_IRQHandler   stm32f10x_it.o
+    0x08000b4c   0x00000034   Code   RO         2003    i.FreeUserBuffer    usb_regs.o
+    0x08000b80   0x00000060   Code   RO         2715    i.GPIO_AINConfig    platform.o
+    0x08000be0   0x0000009c   Code   RO          144    i.GPIO_Init         stm32f10x_gpio.o
+    0x08000c7c   0x00000058   Code   RO          146    i.GPIO_PinRemapConfig  stm32f10x_gpio.o
+    0x08000cd4   0x00000004   Code   RO          151    i.GPIO_ResetBits    stm32f10x_gpio.o
+    0x08000cd8   0x00000004   Code   RO          152    i.GPIO_SetBits      stm32f10x_gpio.o
+    0x08000cdc   0x00000010   Code   RO          153    i.GPIO_StructInit   stm32f10x_gpio.o
+    0x08000cec   0x0000000c   Code   RO         2005    i.GetCNTR           usb_regs.o
+    0x08000cf8   0x00000014   Code   RO         2007    i.GetENDPOINT       usb_regs.o
+    0x08000d0c   0x00000020   Code   RO         2014    i.GetEPRxAddr       usb_regs.o
+    0x08000d2c   0x0000001c   Code   RO         2017    i.GetEPTxAddr       usb_regs.o
+    0x08000d48   0x00000024   Code   RO         2477    i.Get_Cur_Command   usb_prop.o
+    0x08000d6c   0x00000020   Code   RO         2478    i.Get_Max_Command   usb_prop.o
+    0x08000d8c   0x00000018   Code   RO         2479    i.Get_Min_Command   usb_prop.o
+    0x08000da4   0x00000018   Code   RO         2480    i.Get_Res_Command   usb_prop.o
+    0x08000dbc   0x00000034   Code   RO         2481    i.Get_SerialNum     usb_prop.o
+    0x08000df0   0x00000002   Code   RO         2961    i.HardFault_Handler  stm32f10x_it.o
+    0x08000df2   0x00000002   Code   RO         2962    i.I2C1_ER_IRQHandler  stm32f10x_it.o
+    0x08000df4   0x00000002   Code   RO         2963    i.I2C1_EV_IRQHandler  stm32f10x_it.o
+    0x08000df6   0x00000002   Code   RO         2964    i.I2C2_ER_IRQHandler  stm32f10x_it.o
+    0x08000df8   0x00000002   Code   RO         2965    i.I2C2_EV_IRQHandler  stm32f10x_it.o
+    0x08000dfa   0x00000002   PAD
+    0x08000dfc   0x0000005c   Code   RO         1710    i.In0_Process       usb_core.o
+    0x08000e58   0x00000036   Code   RO         2482    i.IntToUnicode      usb_prop.o
+    0x08000e8e   0x00000002   PAD
+    0x08000e90   0x000000d8   Code   RO         2483    i.Joystick_Data_Setup  usb_prop.o
+    0x08000f68   0x0000000c   Code   RO         2484    i.Joystick_GetConfigDescriptor  usb_prop.o
+    0x08000f74   0x0000000c   Code   RO         2485    i.Joystick_GetDeviceDescriptor  usb_prop.o
+    0x08000f80   0x0000000c   Code   RO         2486    i.Joystick_GetHIDDescriptor  usb_prop.o
+    0x08000f8c   0x0000001c   Code   RO         2487    i.Joystick_GetProtocolValue  usb_prop.o
+    0x08000fa8   0x0000000c   Code   RO         2488    i.Joystick_GetReportDescriptor  usb_prop.o
+    0x08000fb4   0x00000020   Code   RO         2489    i.Joystick_GetStringDescriptor  usb_prop.o
+    0x08000fd4   0x00000010   Code   RO         2490    i.Joystick_Get_Interface_Setting  usb_prop.o
+    0x08000fe4   0x00000020   Code   RO         2491    i.Joystick_NoData_Setup  usb_prop.o
+    0x08001004   0x000000fc   Code   RO         2492    i.Joystick_Reset    usb_prop.o
+    0x08001100   0x00000018   Code   RO         2493    i.Joystick_SetConfiguration  usb_prop.o
+    0x08001118   0x0000000c   Code   RO         2494    i.Joystick_SetDeviceAddress  usb_prop.o
+    0x08001124   0x00000002   Code   RO         2495    i.Joystick_SetDeviceFeature  usb_prop.o
+    0x08001126   0x00000002   PAD
+    0x08001128   0x00000018   Code   RO         2496    i.Joystick_SetProtocol  usb_prop.o
+    0x08001140   0x00000002   Code   RO         2497    i.Joystick_Status_In  usb_prop.o
+    0x08001142   0x00000002   Code   RO         2498    i.Joystick_Status_Out  usb_prop.o
+    0x08001144   0x00000024   Code   RO         2499    i.Joystick_init     usb_prop.o
+    0x08001168   0x000000bc   Code   RO         2716    i.LED_PWM_init      platform.o
+    0x08001224   0x0000001c   Code   RO         2717    i.Leave_LowPowerMode  platform.o
+    0x08001240   0x00000002   Code   RO         2966    i.MemManage_Handler  stm32f10x_it.o
+    0x08001242   0x00000002   Code   RO         2967    i.NMI_Handler       stm32f10x_it.o
+    0x08001244   0x00000002   Code   RO         1711    i.NOP_Process       usb_core.o
+    0x08001246   0x00000002   PAD
+    0x08001248   0x00000064   Code   RO          660    i.NVIC_Init         misc.o
+    0x080012ac   0x00000014   Code   RO          661    i.NVIC_PriorityGroupConfig  misc.o
+    0x080012c0   0x000000d4   Code   RO         1712    i.NoData_Setup0     usb_core.o
+    0x08001394   0x00000048   Code   RO         1713    i.Out0_Process      usb_core.o
+    0x080013dc   0x00000020   Code   RO         1964    i.PMAToUserBufferCopy  usb_mem.o
+    0x080013fc   0x00000002   Code   RO         2968    i.PVD_IRQHandler    stm32f10x_it.o
+    0x080013fe   0x00000002   Code   RO         2969    i.PendSV_Handler    stm32f10x_it.o
+    0x08001400   0x00000044   Code   RO         1714    i.Post0_Process     usb_core.o
+    0x08001444   0x0000002c   Code   RO         2663    i.PowerOn           usb_pwr.o
+    0x08001470   0x00000014   Code   RO          264    i.RCC_ADCCLKConfig  stm32f10x_rcc.o
+    0x08001484   0x00000018   Code   RO          266    i.RCC_APB1PeriphClockCmd  stm32f10x_rcc.o
+    0x0800149c   0x00000018   Code   RO          267    i.RCC_APB1PeriphResetCmd  stm32f10x_rcc.o
+    0x080014b4   0x00000018   Code   RO          268    i.RCC_APB2PeriphClockCmd  stm32f10x_rcc.o
+    0x080014cc   0x00000018   Code   RO          269    i.RCC_APB2PeriphResetCmd  stm32f10x_rcc.o
+    0x080014e4   0x00000002   Code   RO         2970    i.RCC_IRQHandler    stm32f10x_it.o
+    0x080014e6   0x00000002   PAD
+    0x080014e8   0x0000000c   Code   RO          294    i.RCC_USBCLKConfig  stm32f10x_rcc.o
+    0x080014f4   0x00000002   Code   RO         2971    i.RTCAlarm_IRQHandler  stm32f10x_it.o
+    0x080014f6   0x00000002   Code   RO         2972    i.RTC_IRQHandler    stm32f10x_it.o
+    0x080014f8   0x0000007c   Code   RO         2664    i.Resume            usb_pwr.o
+    0x08001574   0x00000020   Code   RO         2665    i.Resume_Init       usb_pwr.o
+    0x08001594   0x00000002   Code   RO         2973    i.SDIO_IRQHandler   stm32f10x_it.o
+    0x08001596   0x00000002   PAD
+    0x08001598   0x00000014   Code   RO         2429    i.SOF_Callback      usb_istr.o
+    0x080015ac   0x00000240   Code   RO         2974    i.SPI1_IRQHandler   stm32f10x_it.o
+    0x080017ec   0x00000002   Code   RO         2975    i.SPI2_IRQHandler   stm32f10x_it.o
+    0x080017ee   0x00000002   Code   RO         2976    i.SPI3_IRQHandler   stm32f10x_it.o
+    0x080017f0   0x00000014   Code   RO         1559    i.SPI_CalculateCRC  stm32f10x_spi.o
+    0x08001804   0x00000014   Code   RO         1560    i.SPI_Cmd           stm32f10x_spi.o
+    0x08001818   0x0000000e   Code   RO         1568    i.SPI_I2S_GetFlagStatus  stm32f10x_spi.o
+    0x08001826   0x00000018   Code   RO         1570    i.SPI_I2S_ITConfig  stm32f10x_spi.o
+    0x0800183e   0x00000004   Code   RO         1571    i.SPI_I2S_ReceiveData  stm32f10x_spi.o
+    0x08001842   0x00000004   Code   RO         1572    i.SPI_I2S_SendData  stm32f10x_spi.o
+    0x08001846   0x00000038   Code   RO         1573    i.SPI_Init          stm32f10x_spi.o
+    0x0800187e   0x00000002   Code   RO         2977    i.SVC_Handler       stm32f10x_it.o
+    0x08001880   0x00000010   Code   RO         2025    i.SetBTABLE         usb_regs.o
+    0x08001890   0x0000000c   Code   RO         2026    i.SetCNTR           usb_regs.o
+    0x0800189c   0x00000048   Code   RO         1715    i.SetDeviceAddress  usb_core.o
+    0x080018e4   0x0000005c   Code   RO         2033    i.SetEPDblBuf0Count  usb_regs.o
+    0x08001940   0x0000005c   Code   RO         2035    i.SetEPDblBuf1Count  usb_regs.o
+    0x0800199c   0x00000034   Code   RO         2036    i.SetEPDblBuffAddr  usb_regs.o
+    0x080019d0   0x000000a4   Code   RO         2037    i.SetEPDblBuffCount  usb_regs.o
+    0x08001a74   0x00000020   Code   RO         2039    i.SetEPRxAddr       usb_regs.o
+    0x08001a94   0x00000040   Code   RO         2040    i.SetEPRxCount      usb_regs.o
+    0x08001ad4   0x00000030   Code   RO         2041    i.SetEPRxStatus     usb_regs.o
+    0x08001b04   0x00000024   Code   RO         2042    i.SetEPRxValid      usb_regs.o
+    0x08001b28   0x00000020   Code   RO         2043    i.SetEPTxAddr       usb_regs.o
+    0x08001b48   0x0000001c   Code   RO         2044    i.SetEPTxCount      usb_regs.o
+    0x08001b64   0x00000030   Code   RO         2045    i.SetEPTxStatus     usb_regs.o
+    0x08001b94   0x00000024   Code   RO         2046    i.SetEPTxValid      usb_regs.o
+    0x08001bb8   0x0000001c   Code   RO         2047    i.SetEPType         usb_regs.o
+    0x08001bd4   0x000000a8   Code   RO           12    i.SetSysClockTo48   system_stm32f10x.o
+    0x08001c7c   0x00000024   Code   RO         2500    i.Set_Cur_Command   usb_prop.o
+    0x08001ca0   0x00000014   Code   RO         2718    i.Set_USBClock      platform.o
+    0x08001cb4   0x00000068   Code   RO         1716    i.Setup0_Process    usb_core.o
+    0x08001d1c   0x000000fc   Code   RO         1717    i.Standard_ClearFeature  usb_core.o
+    0x08001e18   0x00000028   Code   RO         1718    i.Standard_GetConfiguration  usb_core.o
+    0x08001e40   0x0000001c   Code   RO         1719    i.Standard_GetDescriptorData  usb_core.o
+    0x08001e5c   0x00000028   Code   RO         1720    i.Standard_GetInterface  usb_core.o
+    0x08001e84   0x00000094   Code   RO         1721    i.Standard_GetStatus  usb_core.o
+    0x08001f18   0x00000038   Code   RO         1722    i.Standard_SetConfiguration  usb_core.o
+    0x08001f50   0x00000024   Code   RO         1723    i.Standard_SetDeviceFeature  usb_core.o
+    0x08001f74   0x00000088   Code   RO         1724    i.Standard_SetEndPointFeature  usb_core.o
+    0x08001ffc   0x00000048   Code   RO         1725    i.Standard_SetInterface  usb_core.o
+    0x08002044   0x00000020   Code   RO         2666    i.Suspend           usb_pwr.o
+    0x08002064   0x00000002   Code   RO         2978    i.SysTick_Handler   stm32f10x_it.o
+    0x08002066   0x00000002   PAD
+    0x08002068   0x00000050   Code   RO           14    i.SystemInit        system_stm32f10x.o
+    0x080020b8   0x00000002   Code   RO         2979    i.TAMPER_IRQHandler  stm32f10x_it.o
+    0x080020ba   0x00000002   Code   RO         2980    i.TIM1_BRK_IRQHandler  stm32f10x_it.o
+    0x080020bc   0x00000158   Code   RO         2981    i.TIM1_CC_IRQHandler  stm32f10x_it.o
+    0x08002214   0x00000002   Code   RO         2982    i.TIM1_TRG_COM_IRQHandler  stm32f10x_it.o
+    0x08002216   0x00000002   Code   RO         2983    i.TIM1_UP_IRQHandler  stm32f10x_it.o
+    0x08002218   0x00000008   Code   RO         2984    i.TIM2_IRQHandler   stm32f10x_it.o
+    0x08002220   0x00000040   Code   RO         2985    i.TIM3_IRQHandler   stm32f10x_it.o
+    0x08002260   0x00000002   Code   RO         2986    i.TIM4_IRQHandler   stm32f10x_it.o
+    0x08002262   0x00000002   Code   RO         2987    i.TIM5_IRQHandler   stm32f10x_it.o
+    0x08002264   0x00000002   Code   RO         2988    i.TIM6_IRQHandler   stm32f10x_it.o
+    0x08002266   0x00000002   Code   RO         2989    i.TIM7_IRQHandler   stm32f10x_it.o
+    0x08002268   0x00000002   Code   RO         2990    i.TIM8_BRK_IRQHandler  stm32f10x_it.o
+    0x0800226a   0x00000002   Code   RO         2991    i.TIM8_CC_IRQHandler  stm32f10x_it.o
+    0x0800226c   0x00000002   Code   RO         2992    i.TIM8_TRG_COM_IRQHandler  stm32f10x_it.o
+    0x0800226e   0x00000002   Code   RO         2993    i.TIM8_UP_IRQHandler  stm32f10x_it.o
+    0x08002270   0x00000014   Code   RO          706    i.TIM_ARRPreloadConfig  stm32f10x_tim.o
+    0x08002284   0x00000006   Code   RO          713    i.TIM_ClearITPendingBit  stm32f10x_tim.o
+    0x0800228a   0x00000014   Code   RO          718    i.TIM_Cmd           stm32f10x_tim.o
+    0x0800229e   0x00000016   Code   RO          720    i.TIM_CtrlPWMOutputs  stm32f10x_tim.o
+    0x080022b4   0x00000170   Code   RO          723    i.TIM_DeInit        stm32f10x_tim.o
+    0x08002424   0x00000010   Code   RO          743    i.TIM_ITConfig      stm32f10x_tim.o
+    0x08002434   0x00000080   Code   RO          747    i.TIM_OC1Init       stm32f10x_tim.o
+    0x080024b4   0x00000064   Code   RO          762    i.TIM_OC4Init       stm32f10x_tim.o
+    0x08002518   0x00000014   Code   RO          764    i.TIM_OC4PreloadConfig  stm32f10x_tim.o
+    0x0800252c   0x00000014   Code   RO          765    i.TIM_OCStructInit  stm32f10x_tim.o
+    0x08002540   0x0000009c   Code   RO          789    i.TIM_TimeBaseInit  stm32f10x_tim.o
+    0x080025dc   0x00000012   Code   RO          790    i.TIM_TimeBaseStructInit  stm32f10x_tim.o
+    0x080025ee   0x00000002   PAD
+    0x080025f0   0x00000020   Code   RO         2053    i.ToggleDTOG_TX     usb_regs.o
+    0x08002610   0x00000002   Code   RO         2994    i.UART4_IRQHandler  stm32f10x_it.o
+    0x08002612   0x00000002   Code   RO         2995    i.UART5_IRQHandler  stm32f10x_it.o
+    0x08002614   0x00000002   Code   RO         2996    i.USART1_IRQHandler  stm32f10x_it.o
+    0x08002616   0x00000002   Code   RO         2997    i.USART2_IRQHandler  stm32f10x_it.o
+    0x08002618   0x00000002   Code   RO         2998    i.USART3_IRQHandler  stm32f10x_it.o
+    0x0800261a   0x00000002   Code   RO         2999    i.USBWakeUp_IRQHandler  stm32f10x_it.o
+    0x0800261c   0x00000018   Code   RO         2719    i.USB_Cable_Config  platform.o
+    0x08002634   0x00000004   Code   RO         3000    i.USB_HP_CAN1_TX_IRQHandler  stm32f10x_it.o
+    0x08002638   0x00000028   Code   RO         1867    i.USB_Init          usb_init.o
+    0x08002660   0x00000052   Code   RO         2720    i.USB_Interrupts_Config  platform.o
+    0x080026b2   0x00000002   PAD
+    0x080026b4   0x00000018   Code   RO         3001    i.USB_LP_CAN1_RX0_IRQHandler  stm32f10x_it.o
+    0x080026cc   0x000000c0   Code   RO         2430    i.USB_LP_IRQHandler  usb_istr.o
+    0x0800278c   0x00000020   Code   RO         2363    i.USB_SIL_Init      usb_sil.o
+    0x080027ac   0x00000002   Code   RO         3002    i.UsageFault_Handler  stm32f10x_it.o
+    0x080027ae   0x00000002   PAD
+    0x080027b0   0x00000028   Code   RO         1965    i.UserToPMABufferCopy  usb_mem.o
+    0x080027d8   0x0000005c   Code   RO         2501    i.Vendor_Command_IN  usb_prop.o
+    0x08002834   0x00000018   Code   RO         2502    i.Vendor_Command_OUT  usb_prop.o
+    0x0800284c   0x00000002   Code   RO         3003    i.WWDG_IRQHandler   stm32f10x_it.o
+    0x0800284e   0x00000002   PAD
+    0x08002850   0x00000024   Code   RO         2721    i.adc_buf_init      platform.o
+    0x08002874   0x00000084   Code   RO         2724    i.init_ADC_alarm    platform.o
+    0x080028f8   0x00000094   Code   RO         2725    i.init_ADC_timer    platform.o
+    0x0800298c   0x000000e0   Code   RO         2728    i.init_adc_spi      platform.o
+    0x08002a6c   0x00000040   Code   RO         2729    i.init_alarm_led    platform.o
+    0x08002aac   0x0000003c   Code   RO         2730    i.init_boost_osc    platform.o
+    0x08002ae8   0x00000068   Code   RO         2731    i.init_daq_timer    platform.o
+    0x08002b50   0x000000b8   Code   RO         2732    i.init_digipot_spi  platform.o
+    0x08002c08   0x00000018   Code   RO         2733    i.init_log          platform.o
+    0x08002c20   0x0000003c   Code   RO         2734    i.init_rf_module_power_management  platform.o
+    0x08002c5c   0x0000002c   Code   RO         2735    i.init_usb_enable_pin  platform.o
+    0x08002c88   0x00000028   Code   RO         2911    i.main              main.o
+    0x08002cb0   0x00000060   Code   RO         2738    i.platform_init     platform.o
+    0x08002d10   0x00000038   Code   RO         2739    i.read_alarm_setlevel  platform.o
+    0x08002d48   0x0000000a   Code   RO         2740    i.set_LED_brightness  platform.o
+    0x08002d52   0x00000002   PAD
+    0x08002d54   0x0000000c   Code   RO         2741    i.set_alarm_enable  platform.o
+    0x08002d60   0x0000004c   Code   RO         2742    i.set_wiper         platform.o
+    0x08002dac   0x00000012   Data   RO         2395    .constdata          usb_desc.o
+    0x08002dbe   0x00000096   Data   RO         2396    .constdata          usb_desc.o
+    0x08002e54   0x0000004a   Data   RO         2397    .constdata          usb_desc.o
+    0x08002e9e   0x00000004   Data   RO         2398    .constdata          usb_desc.o
+    0x08002ea2   0x00000028   Data   RO         2399    .constdata          usb_desc.o
+    0x08002eca   0x00000032   Data   RO         2400    .constdata          usb_desc.o
+    0x08002efc   0x0000000c   Data   RO         2503    .constdata          usb_prop.o
+    0x08002f08   0x00000040   Data   RO         3005    .constdata          stm32f10x_it.o
+    0x08002f48   0x00000020   Data   RO         3583    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00000fe8, Max: 0x00005000, ABSOLUTE, COMPRESSED[0x0000009c])
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00000014   Data   RW           15    .data               system_stm32f10x.o
+    0x20000014   0x00000004   Data   RW         1726    .data               usb_core.o
+    0x20000018   0x00000001   Data   RW         1869    .data               usb_init.o
+    0x20000019   0x00000003   PAD
+    0x2000001c   0x0000000c   Data   RW         1870    .data               usb_init.o
+    0x20000028   0x00000002   Data   RW         1872    .data               usb_init.o
+    0x2000002a   0x00000004   Data   RW         1903    .data               usb_int.o
+    0x2000002e   0x0000001c   Data   RW         2401    .data               usb_desc.o
+    0x2000004a   0x00000006   Data   RW         2431    .data               usb_istr.o
+    0x20000050   0x0000001c   Data   RW         2432    .data               usb_istr.o
+    0x2000006c   0x0000001c   Data   RW         2433    .data               usb_istr.o
+    0x20000088   0x00000080   Data   RW         2504    .data               usb_prop.o
+    0x20000108   0x00000002   Data   RW         2506    .data               usb_prop.o
+    0x2000010a   0x00000002   PAD
+    0x2000010c   0x00000024   Data   RW         2507    .data               usb_prop.o
+    0x20000130   0x00000004   Data   RW         2667    .data               usb_pwr.o
+    0x20000134   0x00000001   Data   RW         2668    .data               usb_pwr.o
+    0x20000135   0x00000002   Data   RW         2669    .data               usb_pwr.o
+    0x20000137   0x00000001   PAD
+    0x20000138   0x00000018   Data   RW         2744    .data               platform.o
+    0x20000150   0x00000004   Data   RW         2745    .data               platform.o
+    0x20000154   0x00000002   Data   RW         2746    .data               platform.o
+    0x20000156   0x00000002   Data   RW         2747    .data               platform.o
+    0x20000158   0x00000002   Data   RW         2748    .data               platform.o
+    0x2000015a   0x00000002   Data   RW         2749    .data               platform.o
+    0x2000015c   0x00000010   Data   RW         3008    .data               stm32f10x_it.o
+    0x2000016c   0x0000001c   Zero   RW         1868    .bss                usb_init.o
+    0x20000188   0x00000200   Zero   RW         2743    .bss                platform.o
+    0x20000388   0x00000060   Zero   RW         3460    .bss                c_w.l(libspace.o)
+    0x200003e8   0x00000400   Zero   RW            2    HEAP                startup_stm32f10x_hd.o
+    0x200007e8   0x00000800   Zero   RW            1    STACK               startup_stm32f10x_hd.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+        84         22          0          0          0       1659   cyccnt_delay.o
+        40          4          0          0          0        455   main.o
+       120         16          0          0          0       1339   misc.o
+      1780        160          0         36        512      13730   platform.o
+        64         26        304          0       3072        856   startup_stm32f10x_hd.o
+       370         10          0          0          0       9308   stm32f10x_adc.o
+       268          6          0          0          0       3776   stm32f10x_gpio.o
+      1228        152         64         16          0      55323   stm32f10x_it.o
+       128         34          0          0          0       3002   stm32f10x_rcc.o
+       142          0          0          0          0       4476   stm32f10x_spi.o
+       894        138          0          0          0       7879   stm32f10x_tim.o
+       248         24          0         20          0     254037   system_stm32f10x.o
+      2186        284          0          4          0      17331   usb_core.o
+         0          0        336         28          0        997   usb_desc.o
+        40         18          0         15         28       4118   usb_init.o
+       448         56          0          4          0       3629   usb_int.o
+       468         44          0         62          0       2721   usb_istr.o
+        72         10          0          0          0       1604   usb_mem.o
+      1100        226         12        166          0      17822   usb_prop.o
+       232         34          0          7          0       3418   usb_pwr.o
+      1078        154          0          0          0      13538   usb_regs.o
+        32          8          0          0          0        503   usb_sil.o
+
+    ----------------------------------------------------------------------
+     11052       1426        748        364       3612     421521   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        30          0          0          6          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+        90          0          0          0          0          0   __dczerorl2.o
+         8          0          0          0          0         68   __main.o
+        52          8          0          0          0          0   __scatter.o
+        28          0          0          0          0          0   __scatter_zi.o
+        12          0          0          0          0         72   exit.o
+         6          0          0          0          0        152   heapauxi.o
+         0          0          0          0          0          0   indicate_semi.o
+         2          0          0          0          0          0   libinit.o
+         2          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+         8          4          0          0         96         68   libspace.o
+         0          0          0          0          0          0   rtentry.o
+        12          0          0          0          0          0   rtentry2.o
+         6          0          0          0          0          0   rtentry4.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        12          4          0          0          0         68   sys_exit.o
+        74          0          0          0          0         80   sys_stackheap_outer.o
+         2          0          0          0          0         68   use_no_semi.o
+
+    ----------------------------------------------------------------------
+       336         16          0          0         96        576   Library Totals
+         6          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       330         16          0          0         96        576   c_w.l
+
+    ----------------------------------------------------------------------
+       336         16          0          0         96        576   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     11388       1442        748        364       3708     410497   Grand Totals
+     11388       1442        748        156       3708     410497   ELF Image Totals (compressed)
+     11388       1442        748        156          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                12136 (  11.85kB)
+    Total RW  Size (RW Data + ZI Data)              4072 (   3.98kB)
+    Total ROM Size (Code + RO Data + RW Data)      12292 (  12.00kB)
+
+==============================================================================
+

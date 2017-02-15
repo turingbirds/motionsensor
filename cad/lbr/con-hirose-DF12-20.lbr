@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="6.4">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<packages>
+<package name="DF12-3.0-60">
+<description>&lt;H1&gt;Hirose Electric Co&lt;/H1&gt;
+&lt;H2&gt;60 pin connector&lt;/H2&gt;
+PN: DF12D(3.0)-60DP-0.5V</description>
+<wire x1="-2.15" y1="3.6" x2="-2.15" y2="-3.6" width="0.127" layer="21"/>
+<wire x1="-2.15" y1="-3.6" x2="2.15" y2="-3.6" width="0.127" layer="21"/>
+<wire x1="2.15" y1="-3.6" x2="2.15" y2="3.6" width="0.127" layer="21"/>
+<wire x1="2.15" y1="3.6" x2="-2.15" y2="3.6" width="0.127" layer="21"/>
+<smd name="P$1" x="-2.1" y="2.25" dx="0.25" dy="1" layer="1" rot="R270"/>
+<smd name="P$2" x="-2.1" y="1.75" dx="0.25" dy="1" layer="1" rot="R270"/>
+<smd name="P$3" x="-2.1" y="1.25" dx="0.25" dy="1" layer="1" rot="R270"/>
+<smd name="P$4" x="-2.1" y="0.75" dx="0.25" dy="1" layer="1" rot="R270"/>
+<smd name="P$5" x="-2.1" y="0.25" dx="0.25" dy="1" layer="1" rot="R270"/>
+<smd name="P$6" x="-2.1" y="-0.25" dx="0.25" dy="1" layer="1" rot="R270"/>
+<smd name="P$7" x="-2.1" y="-0.75" dx="0.25" dy="1" layer="1" rot="R270"/>
+<smd name="P$8" x="-2.1" y="-1.25" dx="0.25" dy="1" layer="1" rot="R270"/>
+<smd name="P$9" x="-2.1" y="-1.75" dx="0.25" dy="1" layer="1" rot="R270"/>
+<smd name="P$10" x="-2.1" y="-2.25" dx="0.25" dy="1" layer="1" rot="R270"/>
+<smd name="P$11" x="2.1" y="-2.25" dx="0.25" dy="1" layer="1" rot="R90"/>
+<smd name="P$12" x="2.1" y="-1.75" dx="0.25" dy="1" layer="1" rot="R90"/>
+<smd name="P$14" x="2.1" y="-0.75" dx="0.25" dy="1" layer="1" rot="R90"/>
+<smd name="P$15" x="2.1" y="-0.25" dx="0.25" dy="1" layer="1" rot="R90"/>
+<smd name="P$16" x="2.1" y="0.25" dx="0.25" dy="1" layer="1" rot="R90"/>
+<smd name="P$17" x="2.1" y="0.75" dx="0.25" dy="1" layer="1" rot="R90"/>
+<smd name="P$18" x="2.1" y="1.25" dx="0.25" dy="1" layer="1" rot="R90"/>
+<smd name="P$19" x="2.1" y="1.75" dx="0.25" dy="1" layer="1" rot="R90"/>
+<smd name="P$20" x="2.1" y="2.25" dx="0.25" dy="1" layer="1" rot="R90"/>
+<smd name="P$13" x="2.1" y="-1.25" dx="0.25" dy="1" layer="1" rot="R90"/>
+<hole x="1.5" y="-3.3" drill="0.6"/>
+<hole x="1.5" y="3.3" drill="0.6"/>
+<smd name="TAB1" x="0" y="4" dx="1.8" dy="0.8" layer="1"/>
+<smd name="TAB2" x="0" y="-4" dx="1.8" dy="0.8" layer="1"/>
+</package>
+</packages>
+<symbols>
+<symbol name="DF12-3.0-60">
+<wire x1="7.62" y1="-15.24" x2="-7.62" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-15.24" x2="-7.62" y2="11.6224" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="11.6224" x2="-6.5424" y2="12.7" width="0.254" layer="94"/>
+<wire x1="-6.5424" y1="12.7" x2="7.62" y2="12.7" width="0.254" layer="94"/>
+<wire x1="7.62" y1="12.7" x2="7.62" y2="-15.24" width="0.254" layer="94"/>
+<text x="-5.08" y="15.24" size="1.778" layer="94">&gt;NAME</text>
+<text x="-5.08" y="-22.86" size="1.778" layer="94">&gt;VALUE</text>
+<pin name="1" x="-10.16" y="10.16" visible="pin" length="short"/>
+<pin name="2" x="-10.16" y="7.62" visible="pin" length="short"/>
+<pin name="3" x="-10.16" y="5.08" visible="pin" length="short"/>
+<pin name="4" x="-10.16" y="2.54" visible="pin" length="short"/>
+<pin name="5" x="-10.16" y="0" visible="pin" length="short"/>
+<pin name="6" x="-10.16" y="-2.54" visible="pin" length="short"/>
+<pin name="7" x="-10.16" y="-5.08" visible="pin" length="short"/>
+<pin name="8" x="-10.16" y="-7.62" visible="pin" length="short"/>
+<pin name="9" x="-10.16" y="-10.16" visible="pin" length="short"/>
+<pin name="10" x="-10.16" y="-12.7" visible="pin" length="short"/>
+<pin name="11" x="10.16" y="-12.7" visible="pin" length="short" rot="R180"/>
+<pin name="12" x="10.16" y="-10.16" visible="pin" length="short" rot="R180"/>
+<pin name="13" x="10.16" y="-7.62" visible="pin" length="short" rot="R180"/>
+<pin name="14" x="10.16" y="-5.08" visible="pin" length="short" rot="R180"/>
+<pin name="15" x="10.16" y="-2.54" visible="pin" length="short" rot="R180"/>
+<pin name="16" x="10.16" y="0" visible="pin" length="short" rot="R180"/>
+<pin name="17" x="10.16" y="2.54" visible="pin" length="short" rot="R180"/>
+<pin name="18" x="10.16" y="5.08" visible="pin" length="short" rot="R180"/>
+<pin name="19" x="10.16" y="7.62" visible="pin" length="short" rot="R180"/>
+<pin name="20" x="10.16" y="10.16" visible="pin" length="short" rot="R180"/>
+<pin name="TAB1" x="-1.27" y="-17.78" visible="pin" length="short" rot="R90"/>
+<pin name="TAB2" x="1.27" y="-17.78" visible="pin" length="short" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="DF12D-3.0-60">
+<gates>
+<gate name="G$1" symbol="DF12-3.0-60" x="0" y="-15.24"/>
+</gates>
+<devices>
+<device name="" package="DF12-3.0-60">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="10" pad="P$10"/>
+<connect gate="G$1" pin="11" pad="P$11"/>
+<connect gate="G$1" pin="12" pad="P$12"/>
+<connect gate="G$1" pin="13" pad="P$13"/>
+<connect gate="G$1" pin="14" pad="P$14"/>
+<connect gate="G$1" pin="15" pad="P$15"/>
+<connect gate="G$1" pin="16" pad="P$16"/>
+<connect gate="G$1" pin="17" pad="P$17"/>
+<connect gate="G$1" pin="18" pad="P$18"/>
+<connect gate="G$1" pin="19" pad="P$19"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+<connect gate="G$1" pin="20" pad="P$20"/>
+<connect gate="G$1" pin="3" pad="P$3"/>
+<connect gate="G$1" pin="4" pad="P$4"/>
+<connect gate="G$1" pin="5" pad="P$5"/>
+<connect gate="G$1" pin="6" pad="P$6"/>
+<connect gate="G$1" pin="7" pad="P$7"/>
+<connect gate="G$1" pin="8" pad="P$8"/>
+<connect gate="G$1" pin="9" pad="P$9"/>
+<connect gate="G$1" pin="TAB1" pad="TAB1"/>
+<connect gate="G$1" pin="TAB2" pad="TAB2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>
