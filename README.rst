@@ -15,15 +15,6 @@ Features
 - Driverless operation: tested on Windows XP, Windows 7, Ubuntu GNU/Linux 14.04
 
 
-.. class:: center, large
-
-`Click here for a video demo <http://www.python.org/>`_
-
-.. class:: center
-
-`http://youtu.be/??? <http://www.python.org/>`_
-
-
 ..	![Image](https://raw.githubusercontent.com/turingbirds/con-pcb-slot/master/fig1.jpg)
 
 .. image:: doc/motionsensor2.jpeg
