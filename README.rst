@@ -271,5 +271,11 @@ References
 
 
 
-..	rst2html --stylesheet=README.css  README.rst  > /tmp/readme.html
+License
+=======
 
+`Open source hardware <https://www.oshwa.org/>`_ is hardware for which the design is made publicly available, so that anyone can study, modify, distribute, make, and sell the design or hardware based on that design, subject to the following license conditions.
+
+Hardware licensed under the *CERN Open Hardware Licence Version 2 - Weakly Reciprocal,* a copy of which is included in this repository at `cern_ohl_w_v2.txt <https://github.com/turingbirds/motionsensor/blob/master/cern_ohl_w_v2.txt>`_.
+
+Software licensed under the *Apache License 2.0,* a copy of which is included at `apache_license_2.0.txt <https://github.com/turingbirds/motionsensor/blob/master/apache_license_2.0.txt>`_.
